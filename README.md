@@ -1,2 +1,2 @@
 # CapitolLion
-Capitol Lion's Repo
+Capitol Lion's Music Network
