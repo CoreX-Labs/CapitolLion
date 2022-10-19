@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Create from './pages/Create';
+import Marketplace from './pages/Marketplace';
+import Launchpad from './pages/Launchpad';
+import MusicDAO from './pages/MusicDAO';
+import Collection from './pages/Collection';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link underline"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path='/'
+					element={<Home />}
+				/>
+				<Route
+					path='/create'
+					element={<Create />}
+				/>
+				<Route
+					path='/marketplace'
+					element={<Marketplace />}
+				/>
+				<Route
+					path='/Launchpad'
+					element={<Launchpad />}
+				/>
+				<Route
+					path='/MusicDAO'
+					element={<MusicDAO />}
+				/>
+				<Route
+					path='/Collection'
+					element={<Collection />}
+				/>
+			</Routes>
+		</BrowserRouter>
+	);
 }
 
 export default App;
