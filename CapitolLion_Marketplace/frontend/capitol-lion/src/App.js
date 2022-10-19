@@ -6,36 +6,38 @@ import Marketplace from './pages/Marketplace';
 import Launchpad from './pages/Launchpad';
 import MusicDAO from './pages/MusicDAO';
 import Collection from './pages/Collection';
+import Navbar from './navbar/Navbar';
 
 function App() {
 	return (
 		<BrowserRouter>
-			<Routes>
-				<Route
-					path='/'
-					element={<Home />}
-				/>
-				<Route
-					path='/create'
-					element={<Create />}
-				/>
-				<Route
-					path='/marketplace'
-					element={<Marketplace />}
-				/>
-				<Route
-					path='/Launchpad'
-					element={<Launchpad />}
-				/>
-				<Route
-					path='/MusicDAO'
-					element={<MusicDAO />}
-				/>
-				<Route
-					path='/Collection'
-					element={<Collection />}
-				/>
-			</Routes>
+			<Navbar />
+        <Routes>
+          <Route
+            path='/'
+            element={<Home />}
+          />
+          <Route
+            path='/create'
+            element={<Create />}
+          />
+          <Route
+            path='/marketplace'
+            element={<Marketplace />}
+          />
+          <Route
+            path='/Launchpad'
+            element={<Launchpad />}
+          />
+          <Route
+            path='/MusicDAO'
+            element={<MusicDAO />}
+          />
+          <Route
+            path='/Collection'
+            element={<Collection />}
+          />
+        </Routes>
 		</BrowserRouter>
 	);
 }

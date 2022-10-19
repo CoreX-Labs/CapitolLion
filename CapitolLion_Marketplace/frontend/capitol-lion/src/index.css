@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: orbitron-header;
+    src: url('../public/Orbitron-Black.ttf');
+}
+
+.orbitron-header {
+    font-family: orbitron-header;
+}
+
+@font-face {
+    font-family: orbitron-light;
+    src: url('../public/Orbitron-Regular.ttf');
+}
+
+.orbitron-light {
+    font-family: orbitron-light;
+}
