@@ -26,15 +26,15 @@ function App() {
             element={<Marketplace />}
           />
           <Route
-            path='/Launchpad'
+            path='/launchpad'
             element={<Launchpad />}
           />
           <Route
-            path='/MusicDAO'
+            path='/musicDAO'
             element={<MusicDAO />}
           />
           <Route
-            path='/Collection'
+            path='/collection'
             element={<Collection />}
           />
         </Routes>

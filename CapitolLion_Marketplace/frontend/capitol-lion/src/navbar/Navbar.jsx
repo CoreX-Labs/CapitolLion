@@ -44,21 +44,31 @@ const Navbar = () => {
 					}
 				>
 					<ul className=''>
-						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
-							Create
-						</li>
-						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
-							Marketplace
-						</li>
-						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
-							Launchpad
-						</li>
-						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
-							MusicDAO
-						</li>
-						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
-							Collection
-						</li>
+						<Link to='/create'>
+							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+								Create
+							</li>
+						</Link>
+						<Link to='/marketplace'>
+							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+								Marketplace
+							</li>
+						</Link>
+						<Link to='/launchpad'>
+							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+								Launchpad
+							</li>
+						</Link>
+						<Link to='musicDAO'>
+							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+								MusicDAO
+							</li>
+						</Link>
+						<Link to='/collection'>
+							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+								Collection
+							</li>
+						</Link>
 						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
 							<motion.button
 								whileTap={{ scale: -0.5 }}
@@ -71,11 +81,21 @@ const Navbar = () => {
 				</div>
 				<div className='hidden lg:block'>
 					<ul className='flex gap-[24px] items-center'>
-						<li className='cursor-pointer orbitron-light'>Create</li>
-						<li className='cursor-pointer orbitron-light'>Marketplace</li>
-						<li className='cursor-pointer orbitron-light'>Launchpad</li>
-						<li className='cursor-pointer orbitron-light'>MusicDAO</li>
-						<li className='cursor-pointer orbitron-light'>Collection</li>
+						<Link to='/create'>
+							<li className='cursor-pointer orbitron-light'>Create</li>
+						</Link>
+						<Link to='/marketplace'>
+							<li className='cursor-pointer orbitron-light'>Marketplace</li>
+						</Link>
+						<Link to='/launchpad'>
+							<li className='cursor-pointer orbitron-light'>Launchpad</li>
+						</Link>
+						<Link to='/musicDA0'>
+							<li className='cursor-pointer orbitron-light'>MusicDAO</li>
+						</Link>
+						<Link to='/collection'>
+							<li className='cursor-pointer orbitron-light'>Collection</li>
+						</Link>
 						<li className='cursor-pointer orbitron-light'>
 							<motion.button
 								whileTap={{ scale: -1.0 }}
