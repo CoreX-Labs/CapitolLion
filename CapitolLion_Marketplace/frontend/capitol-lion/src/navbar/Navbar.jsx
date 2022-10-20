@@ -1,36 +1,71 @@
 import React, { useState } from 'react';
 import '../App.css';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    const [showNav, setShowNav ] = useState(false);
+	const [showNav, setShowNav] = useState(false);
 	return (
 		<React.Fragment>
 			<div className='w-screen h-[64px] bg-[#121212] border-b border-white text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px]'>
-				<div>
-					<img
-						src='/Capitol Lion Website Logo 1.png'
-						alt='Capitol Lion Website Logo'
-					/>
-				</div>
+				<Link to='/'>
+					<div className='cursor-pointer'>
+						<img
+							src='/Capitol Lion Website Logo 1.png'
+							alt='Capitol Lion Website Logo'
+						/>
+					</div>
+				</Link>
 				{/* mobile */}
-				<div onClick={() => setShowNav(!showNav)}  className='block lg:hidden'>
-					<img
-						src='/menu.png'
-						alt='Hamburger-menu'
-					/>
+				<div
+					onClick={() => setShowNav(!showNav)}
+					className='block transition-all duration-500 lg:hidden'
+				>
+					{showNav ? (
+						<img
+							className='pr-[10px]'
+							src='/close-icon.png'
+							alt='close-icon'
+						/>
+					) : (
+						<img
+							src='/menu.png'
+							alt='Hamburger-menu'
+						/>
+					)}
 				</div>
 				{/* dropdown */}
-				<div className={(showNav ? "top-[65px] left-0" : "-top-[500px]") + " absolute w-full h-[357px] bg-[#121212] dropdown"}>
-					<ul className="">
-						<li className="h-[56px] pl-[24px] orbitron-light border-b pt-[18px]">Create</li>
-						<li className="h-[56px] pl-[24px] orbitron-light border-b pt-[18px]">Marketplace</li>
-						<li className="h-[56px] pl-[24px] orbitron-light border-b pt-[18px]">Launchpad</li>
-						<li className="h-[56px] pl-[24px] orbitron-light border-b pt-[18px]">MusicDAO</li>
-						<li className="h-[56px] pl-[24px] orbitron-light border-b pt-[18px]">Collection</li>
-						<li className="h-[56px] px-[12px] orbitron-light pt-[18px]">
-							<button className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
+				<div
+					className={
+						(showNav
+							? 'top-[65px] left-0 right-0'
+							: '-top-[500px] left-0 right-0') +
+						' absolute w-full h-[357px] bg-[#121212] dropdown transition-top duration-500'
+					}
+				>
+					<ul className=''>
+						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+							Create
+						</li>
+						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+							Marketplace
+						</li>
+						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+							Launchpad
+						</li>
+						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+							MusicDAO
+						</li>
+						<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+							Collection
+						</li>
+						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
+							<motion.button
+								whileTap={{ scale: -0.5 }}
+								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'
+							>
 								Connect Wallet
-							</button>
+							</motion.button>
 						</li>
 					</ul>
 				</div>
@@ -42,9 +77,12 @@ const Navbar = () => {
 						<li className='cursor-pointer orbitron-light'>MusicDAO</li>
 						<li className='cursor-pointer orbitron-light'>Collection</li>
 						<li className='cursor-pointer orbitron-light'>
-							<button className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
+							<motion.button
+								whileTap={{ scale: -1.0 }}
+								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'
+							>
 								Connect Wallet
-							</button>
+							</motion.button>
 						</li>
 					</ul>
 				</div>

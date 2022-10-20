@@ -4,7 +4,7 @@ import React from 'react';
 const Home = () => {
 	return (
 		<React.Fragment>
-			<div className="bg-black h-screen">Home Page</div>
+			<div className="bg-[#121212] h-screen">Home Page</div>
 		</React.Fragment>
 	);
 };
