@@ -3,3 +3,10 @@
     box-shadow: 0px 0px 50px rgba(91, 46, 157, 0.25);
     border-radius: 10px;
 }
+
+.herologobackground {
+    background-image: url("./Ellipse 4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
