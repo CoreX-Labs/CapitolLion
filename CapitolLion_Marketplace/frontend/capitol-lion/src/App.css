@@ -10,3 +10,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.partner__div {
+    background: rgba(91, 46, 157, 0.15);
+}
