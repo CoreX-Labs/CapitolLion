@@ -5,7 +5,7 @@ import '../../App.css';
 const Hero = () => {
 	return (
 		<React.Fragment>
-			<div className='md:pt-[159px] flex gap-[81px]'>
+			<div className='md:pt-[159px] flex gap-[160px]'>
 				<div>
 					<p className='uppercase orbitron-light font-[700] text-[16px] leading-[20px] text-[#5B2E9D] pb-[30px]'>
 						capitol lion
@@ -45,9 +45,9 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
-				<div className='herologobackground'>
+				<div className=''>
 					<img
-						src='/herologo.png'
+						src='/meta.png'
 						alt='Capitol Lion Loogo'
 					/>
 				</div>
