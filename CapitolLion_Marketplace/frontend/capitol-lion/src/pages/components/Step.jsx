@@ -1,33 +1,45 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Step = () => {
+	useEffect(() => {
+		AOS.init({
+			duration : 3000
+		});
+	}, []);
 	return (
 		<React.Fragment>
-		<div className="flex items-center justify-center">
-			<div className="pb-[100px]">
-				<h1 className='text-center font-[500] text-[36px] leading-[80px] orbitron-light pb-[42px]'>
-					Create and List your NFT
-				</h1>
-				<div className='flex items-center gap-[45.33px]'>
-					<Card
-						icon='/credit-card.png'
-						title='Connect Wallet'
-						detail='Connect wallet to gain access to the Capitol Lion Music Network'
-					/>
-					<Card
-						icon='/shopping-bag.png'
-						title='NFT Marketplace'
-						detail='Capitol Lion’s NFT Marketplace is Fueled by Music & Entertainment.'
-					/>
-					<Card
-						icon='/heart.png'
-						title='Collect NFT'
-						detail='Build your collection with the Capitol Lion Music Platform.'
-					/>
+			<div className='flex items-center justify-center'>
+				<div className='pb-[100px]'>
+					<h1 className='text-center font-[500] text-[36px] leading-[80px] orbitron-light pb-[42px]'>
+						Create and List your NFT
+					</h1>
+					<div
+						data-aos='fade-up'
+						data-aos-easing='linear'
+						data-aos-duration='1500'
+						data-aos-anchor-placement="top-bottom"
+						className='flex items-center gap-[45.33px]'>
+						<Card
+							icon='/credit-card.png'
+							title='Connect Wallet'
+							detail='Connect wallet to gain access to the Capitol Lion Music Network'
+						/>
+						<Card
+							icon='/shopping-bag.png'
+							title='NFT Marketplace'
+							detail='Capitol Lion’s NFT Marketplace is Fueled by Music & Entertainment.'
+						/>
+						<Card
+							icon='/heart.png'
+							title='Collect NFT'
+							detail='Build your collection with the Capitol Lion Music Platform.'
+						/>
+					</div>
 				</div>
 			</div>
-		</div>
 		</React.Fragment>
 	);
 };
@@ -45,7 +57,7 @@ export const Card = ({ icon, title, detail }) => {
 					<TitleText className='orbitron-light'>{title}</TitleText>
 				</TitleDiv>
 				<div>
-					<SubheaderText className="orbitron-light">{detail}</SubheaderText>
+					<SubheaderText className='orbitron-light'>{detail}</SubheaderText>
 				</div>
 			</InnerContainer>
 		</CardBox>
