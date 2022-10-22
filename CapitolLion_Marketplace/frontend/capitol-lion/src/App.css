@@ -19,3 +19,11 @@
 	border: 3px solid #5b2e9d;
 	border-radius: 30px;
 }
+
+.creators__card {
+	width: 296px;
+	height: 107px;
+	background: rgba(91, 46, 157, 0.15);
+	border: 1px solid #5B2E9D;
+	border-radius: 60px;
+}

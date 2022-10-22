@@ -1,4 +1,5 @@
 import React from 'react';
+import Artists from './components/Artists';
 import Hero from './components/Hero';
 import Nfts from './components/Nfts';
 import Partners from './components/Partners';
@@ -10,6 +11,7 @@ const Home = () => {
 				<Hero />
 				<Partners />
 				<Nfts />
+				<Artists />
 			</div>
 		</React.Fragment>
 	);
