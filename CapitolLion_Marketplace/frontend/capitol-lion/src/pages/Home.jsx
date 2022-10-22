@@ -3,6 +3,7 @@ import Artists from './components/Artists';
 import Hero from './components/Hero';
 import Nfts from './components/Nfts';
 import Partners from './components/Partners';
+import Step from './components/Step';
 
 const Home = () => {
 	return (
@@ -12,6 +13,7 @@ const Home = () => {
 				<Partners />
 				<Nfts />
 				<Artists />
+				<Step />
 			</div>
 		</React.Fragment>
 	);
