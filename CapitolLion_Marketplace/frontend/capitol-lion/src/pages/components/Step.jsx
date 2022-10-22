@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Step = () => {
 	return (
 		<React.Fragment>
+		<div className="flex items-center justify-center">
 			<div className="pb-[100px]">
 				<h1 className='text-center font-[500] text-[36px] leading-[80px] orbitron-light pb-[42px]'>
 					Create and List your NFT
@@ -26,6 +27,7 @@ const Step = () => {
 					/>
 				</div>
 			</div>
+		</div>
 		</React.Fragment>
 	);
 };
@@ -51,6 +53,7 @@ export const Card = ({ icon, title, detail }) => {
 };
 
 const CardBox = styled.div`
+	cursor: pointer;
 	width: 372.45px;
 	height: 313px;
 	background: rgba(91, 46, 157, 0.15);

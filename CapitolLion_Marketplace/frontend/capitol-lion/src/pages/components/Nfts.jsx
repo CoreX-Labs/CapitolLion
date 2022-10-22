@@ -103,7 +103,7 @@ const Nfts = () => {
 				</h1>
 				<div className='flex gap-[20px] overflow-x-scroll'>
 					{popularnfts.map((nft, idx) => (
-						<div key={idx} className='w-[305.23px] h-[421.25px] rounded-[20px] nft__div'>
+						<div key={idx} className='w-[305.23px] h-[421.25px] rounded-[20px] nft__div cursor-pointer'>
 							<div>
 								<img src={nft.nftimage} alt='NFT Pic' />
 							</div>

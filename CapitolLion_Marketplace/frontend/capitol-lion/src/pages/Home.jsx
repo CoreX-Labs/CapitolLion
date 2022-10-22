@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Nfts from './components/Nfts';
 import Partners from './components/Partners';
 import Step from './components/Step';
+import Footer from "../footer/Footer";
 
 const Home = () => {
 	return (
@@ -14,6 +15,7 @@ const Home = () => {
 				<Nfts />
 				<Artists />
 				<Step />
+				<Footer />
 			</div>
 		</React.Fragment>
 	);
