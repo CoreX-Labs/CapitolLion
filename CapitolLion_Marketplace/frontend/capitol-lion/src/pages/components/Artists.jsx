@@ -60,7 +60,7 @@ const Artists = () => {
     ]
 	return (
 		<React.Fragment>
-			<div className="pb-[100px]">
+			<div className="pb-[100px] hidden md:block">
                 <h1 className='text-center font-[500] text-[36px] leading-[80px] orbitron-light pb-[42px]'>
                         Popular Creators
                 </h1>

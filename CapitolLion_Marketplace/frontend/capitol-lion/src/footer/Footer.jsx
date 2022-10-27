@@ -8,41 +8,41 @@ const Footer = () => {
 				<div className='flex items-center justify-center pb-[92px]'>
 					<img src='/line.png' alt='' />
 				</div>
-				<div className='flex gap-[241px] justify-between'>
+				<div className='md:flex md:gap-[241px] md:justify-between'>
 					<div className='pl-[40px]'>
 						<img src='footerlogo.png' alt='' />
 					</div>
 					<div className='pr-[90px]'>
 						<div className='pb-[32px]'>
-							<ul className='flex gap-[24px] orbitron-light'>
+							<ul className='pl-[10px] flex gap-[24px] orbitron-light'>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p>Docs</p>
+										<p className="text-[13px] ">Docs</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p>Forum</p>
+										<p className="text-[13px] ">Forum</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p>Newsletter</p>
+										<p className="text-[13px] ">Newsletter</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p>LDA Token</p>
+										<p className="text-[13px] ">LDA Token</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p>LionX</p>
+										<p className="text-[13px] ">LionX</p>
 									</a>
 								</li>
 							</ul>
 						</div>
-						<div className='flex gap-[36px]'>
+						<div className='flex gap-[36px] justify-center'>
 							<Socials>
 								<a href='https://discord.gg/7ypPS5fhch' target='_blank' rel='noreferrer'>
 									<div className=''>
@@ -86,4 +86,5 @@ const Socials = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 20px;
 `;

@@ -13,7 +13,7 @@ const Step = () => {
 		<React.Fragment>
 			<div className='flex items-center justify-center'>
 				<div className='pb-[100px]'>
-					<h1 className='text-center font-[500] text-[36px] leading-[80px] orbitron-light pb-[42px]'>
+					<h1 className='text-center font-[500] text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[42px]'>
 						Create and List your NFT
 					</h1>
 					<div
@@ -21,7 +21,7 @@ const Step = () => {
 						data-aos-easing='linear'
 						data-aos-duration='1500'
 						data-aos-anchor-placement="top-bottom"
-						className='flex items-center gap-[45.33px]'>
+						className='md:flex md:items-center md:gap-[45.33px]'>
 						<Card
 							icon='/credit-card.png'
 							title='Connect Wallet'
@@ -71,6 +71,11 @@ const CardBox = styled.div`
 	background: rgba(91, 46, 157, 0.15);
 	border: 0.5px solid #5b2e9d;
 	border-radius: 20px;
+	margin-bottom: 25px;
+		&:hover {
+			box-shadow: #5B2E9D 0px 0px 26px 5px;
+			transition: 500ms ease-in-out;
+		}
 `;
 
 const InnerContainer = styled.div`
