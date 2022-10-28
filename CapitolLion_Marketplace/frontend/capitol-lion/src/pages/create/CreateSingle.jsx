@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useForm } from 'react-hook-form';
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup" ;
 
 const CreateSingle = () => {
 	const details = [
@@ -19,6 +22,24 @@ const CreateSingle = () => {
 			text : 'Open bids'
 		}
 	];
+
+
+    const schema = yup.object().shape({
+        price: yup.number().positive().integer().required("Please Enter a price for your NFT"),
+        collection: yup.string().required("Please enter a collection for your NFT"),
+        title: yup.string().required("Give your NFT a name"),
+        description: yup.string().required("Add a description for your NFT"),
+        royalties: yup.number().positive().integer().min(1).max(70).required("Please Enter a price for your NFT"),
+    }) 
+
+    const { register, handleSubmit, formState: {errors} } = useForm({
+        resolver: yupResolver(schema)
+    });
+
+	const onFormSubmit = (data) => {
+		console.log(data);
+	};
+
 	return (
 		<React.Fragment>
 			<div className='flex items-center justify-center pb-[100px]'>
@@ -33,7 +54,7 @@ const CreateSingle = () => {
 									PNG, JPG, GIF WEBP or MP4. Max 200MB
 								</h1>
 								<div className='flex items-center justify-center pt-[24px]'>
-									<input type='file' />
+									<input type='file' name='picture' />
 								</div>
 							</div>
 						</InputSection>
@@ -55,30 +76,44 @@ const CreateSingle = () => {
 							</div>
 						</div>
 						<div>
-							<form>
+							<form onSubmit={handleSubmit(onFormSubmit)}>
 								<label>
 									<h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
 								</label>
-								<Input className='orbitron-light' type='' placeholder='enter price for one item (ETH)' />
+								<Input
+									className='orbitron-light'
+									type='number'
+									placeholder='enter price for one item (ETH)'
+									{...register('price')}
+								/>
+                                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.price?.message}</p>
 								{/*  */}
 								<label>
 									<h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
 										Choose collection
 									</h1>
 								</label>
-								<Input className='orbitron-light' type='' placeholder='Choose collection' />
+								<Input className='orbitron-light' type='text' placeholder='Choose collection' {...register('collection')} />
+                                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.collection?.message}</p>
 								{/*  */}
 								<label>
 									<h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Title</h1>
 								</label>
-								<Input className='orbitron-light' type='' placeholder='e.g “Crypto Punk”' />
+								<Input className='orbitron-light' type='text' placeholder='e.g “Crypto Punk”' {...register('title')} />
+                                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.title?.message}</p>
 								{/*  */}
 								<label>
 									<h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
 										Description
 									</h1>
 								</label>
-								<Input className='orbitron-light' type='' placeholder='e.g “this is a very limited item”' />
+								<Input
+									className='orbitron-light'
+									type='text'
+									placeholder='e.g “this is a very limited item”'
+									{...register('description')}
+								/>
+                                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.description?.message}</p>
 								{/*  */}
 								<label>
 									<h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
@@ -89,7 +124,9 @@ const CreateSingle = () => {
 									className='orbitron-light'
 									type=''
 									placeholder='suggested: 0, 10%, 20%, 30%. Maximum is 70%'
+									{...register('royalties')}
 								/>
+                                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
 								<div className='pt-[52px]'>
 									<button className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
 										Create Item
