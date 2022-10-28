@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
 	return (
 		<React.Fragment>
-			<div className='pb-[107.31px]'>
+			<div className='pb-[107.31px] bg-[#121212] text-white'>
 				<div className='flex items-center justify-center pb-[92px]'>
 					<img src='/line.png' alt='' />
 				</div>
@@ -17,27 +17,27 @@ const Footer = () => {
 							<ul className='pl-[10px] flex gap-[24px] orbitron-light'>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p className="text-[13px] ">Docs</p>
+										<p className="text-[13px] md:text-[19px]">Docs</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p className="text-[13px] ">Forum</p>
+										<p className="text-[13px] md:text-[19px]">Forum</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p className="text-[13px] ">Newsletter</p>
+										<p className="text-[13px] md:text-[19px]">Newsletter</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p className="text-[13px] ">LDA Token</p>
+										<p className="text-[13px] md:text-[19px]">LDA Token</p>
 									</a>
 								</li>
 								<li>
 									<a href='https://google.com' target='_blank' rel='noreferrer'>
-										<p className="text-[13px] ">LionX</p>
+										<p className="text-[13px] md:text-[19px]">LionX</p>
 									</a>
 								</li>
 							</ul>

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
 	return (
 		<React.Fragment>
-			<div className='w-screen h-[64px] bg-[#121212] border-b border-white text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px]'>
+			<div className='w-screen h-[64px] bg-[#121212] border-b border-white text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px] fixed z-50'>
 				<Link to='/'>
 					<div className='cursor-pointer'>
 						<img src='/Capitol Lion Website Logo 1.png' alt='Capitol Lion Website Logo' />
@@ -30,21 +30,21 @@ const Navbar = () => {
 						' absolute w-full h-[357px] bg-[#121212] dropdown transition-top duration-500'
 					}>
 					<ul className=''>
-						<Link to='/create'>
+						<NavLink to='/create'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Create</li>
-						</Link>
-						<Link to='/marketplace'>
+						</NavLink>
+						<NavLink to='/marketplace'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Marketplace</li>
-						</Link>
-						<Link to='/launchpad'>
+						</NavLink>
+						<NavLink to='/launchpad'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Launchpad</li>
-						</Link>
-						<Link to='musicDAO'>
+						</NavLink>
+						<NavLink to='musicDAO'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>MusicDAO</li>
-						</Link>
-						<Link to='/collection'>
+						</NavLink>
+						<NavLink to='/collection'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Collection</li>
-						</Link>
+						</NavLink>
 						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
 							<motion.button
 								whileTap={{ scale: -0.5 }}
@@ -56,21 +56,21 @@ const Navbar = () => {
 				</div>
 				<div className='hidden lg:block'>
 					<ul className='flex gap-[24px] items-center'>
-						<Link to='/create'>
+						<NavLink className="" to='/create'>
 							<li className='cursor-pointer orbitron-light'>Create</li>
-						</Link>
-						<Link to='/marketplace'>
+						</NavLink>
+						<NavLink to='/marketplace'>
 							<li className='cursor-pointer orbitron-light'>Marketplace</li>
-						</Link>
-						<Link to='/launchpad'>
+						</NavLink>
+						<NavLink to='/launchpad'>
 							<li className='cursor-pointer orbitron-light'>Launchpad</li>
-						</Link>
-						<Link to='/musicDA0'>
+						</NavLink>
+						<NavLink to='/musicDA0'>
 							<li className='cursor-pointer orbitron-light'>MusicDAO</li>
-						</Link>
-						<Link to='/collection'>
+						</NavLink>
+						<NavLink to='/collection'>
 							<li className='cursor-pointer orbitron-light'>Collection</li>
-						</Link>
+						</NavLink>
 						<li className='cursor-pointer orbitron-light'>
 							<motion.button
 								whileTap={{ scale: -1.0 }}

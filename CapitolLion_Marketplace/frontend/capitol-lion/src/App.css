@@ -27,3 +27,8 @@
 	border: 1px solid #5B2E9D;
 	border-radius: 60px;
 }
+
+ul a.active {
+	color: #5B2E9D;
+	border-bottom: 1px solid #5B2E9D;
+}
