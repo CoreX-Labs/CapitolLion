@@ -85,6 +85,7 @@ const MultipleCard = styled.div`
 	border: 1px solid #5B2E9D;
 	border-radius: 20px;
 	cursor: pointer;
+	margin-bottom: 30px;
 	&:hover {
 		box-shadow: #5B2E9D 0px 0px 26px 5px;
 		transition: 500ms ease-in-out;

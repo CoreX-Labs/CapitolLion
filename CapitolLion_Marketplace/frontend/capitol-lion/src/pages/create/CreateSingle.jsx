@@ -2,7 +2,36 @@ import React from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup" ;
+import { yupResolver } from "@hookform/resolvers/yup";
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast('Successfully created NFT.', {
+	duration: 5000,
+	position: 'top-right',
+
+	// Styling
+	style: {
+		border: '1px solid #5b2e9d',
+		borderRadius: '20px',
+		padding: '16px',
+		color: '#ffffff',
+		background: '#121212',
+		boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
+		fontSize: '18px',
+		fontFamily: 'orbitron-light',
+		marginTop: '60px'
+	},
+	className: '',
+
+	// Custom Icon
+	icon: '👏',
+
+	// Aria
+	ariaProps: {
+		role: 'status',
+		'aria-live': 'polite',
+	},
+});
 
 const CreateSingle = () => {
     const schema = yup.object().shape({
@@ -26,11 +55,12 @@ const CreateSingle = () => {
 		<React.Fragment>
 			<div className='flex items-center justify-center pb-[100px]'>
 				<div>
+				<Toaster />
 					<div className=''>
 						<div className='pb-[32px]'>
 							<h1 className='orbitron-light font-[600] text-[24px] leading-[30px]'>Upload file</h1>
 						</div>
-                        <form>
+                        <form onSubmit={handleSubmit(onFormSubmit)}>
 						<InputSection>
 							<div>
 								<h1 className='text-center orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px]'>
@@ -38,6 +68,7 @@ const CreateSingle = () => {
 								</h1>
 								<div className='flex items-center justify-center pt-[24px]'>
 									<input type='file' name='picture' {...register("metadata")} />
+                                    <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.metadata?.message}</p>
 								</div>
 							</div>
 						</InputSection>
@@ -47,7 +78,7 @@ const CreateSingle = () => {
 									<h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
 								</label>
 								<Input
-									className='orbitron-light'
+									className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
 									type='number'
 									placeholder='enter price for one item (TRX)'
 									{...register('price')}
@@ -94,7 +125,7 @@ const CreateSingle = () => {
 								/>
                                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
 								<div className='pt-[52px]'>
-									<button onClick={handleSubmit(onFormSubmit)} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+									<button onClick={notify} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
 										Create Item
 									</button>
 								</div>

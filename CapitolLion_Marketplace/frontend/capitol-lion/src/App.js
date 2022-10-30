@@ -17,9 +17,9 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/create' element={<Create />}>
-          <Route path="create-single" element={<CreateSingle />} />
-          <Route path="create-multiple" element={<CreateMultiple />} />
-        </Route>
+					<Route path="create-single" element={<CreateSingle />} />
+					<Route path="create-multiple" element={<CreateMultiple />} />
+				</Route>
 				<Route path='/marketplace' element={<Marketplace />} />
 				<Route path='/launchpad' element={<Launchpad />} />
 				<Route path='/musicDAO' element={<MusicDAO />} />

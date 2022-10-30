@@ -16,27 +16,27 @@ const Footer = () => {
 						<div className='pb-[32px]'>
 							<ul className='pl-[10px] flex gap-[24px] orbitron-light'>
 								<li>
-									<a href='https://google.com' target='_blank' rel='noreferrer'>
+									<a href='https://lionx.one/documents' target='_blank' rel='noreferrer'>
 										<p className="text-[13px] md:text-[19px]">Docs</p>
 									</a>
 								</li>
 								<li>
-									<a href='https://google.com' target='_blank' rel='noreferrer'>
+									<a href='https://forum.trondao.org/t/the-establishment-of-lionx/2660?u=tashlion' target='_blank' rel='noreferrer'>
 										<p className="text-[13px] md:text-[19px]">Forum</p>
 									</a>
 								</li>
 								<li>
-									<a href='https://google.com' target='_blank' rel='noreferrer'>
+									<a href='https://lionx.one/' target='_blank' rel='noreferrer'>
 										<p className="text-[13px] md:text-[19px]">Newsletter</p>
 									</a>
 								</li>
 								<li>
-									<a href='https://google.com' target='_blank' rel='noreferrer'>
+									<a href='https://sunswap.com/#/scan/detail/TNP1D18nJCqQHhv4i38qiNtUUuL5VyNoC1' target='_blank' rel='noreferrer'>
 										<p className="text-[13px] md:text-[19px]">LDA Token</p>
 									</a>
 								</li>
 								<li>
-									<a href='https://google.com' target='_blank' rel='noreferrer'>
+									<a href='https://lionxeco.net/' target='_blank' rel='noreferrer'>
 										<p className="text-[13px] md:text-[19px]">LionX</p>
 									</a>
 								</li>
