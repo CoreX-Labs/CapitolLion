@@ -144,7 +144,6 @@ const CreateMultiple = () => {
 										Create Item
 									</motion.button>
 								</div>
-							
 						</div>
                         </form>
 					</div>
