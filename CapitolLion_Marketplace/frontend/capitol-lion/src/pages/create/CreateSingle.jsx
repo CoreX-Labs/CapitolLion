@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import toast, { Toaster } from 'react-hot-toast';
+import { motion } from 'framer-motion'
 
 const notify = () => toast('Successfully created NFT.', {
 	duration: 5000,
@@ -125,9 +126,9 @@ const CreateSingle = () => {
 								/>
                                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
 								<div className='pt-[52px]'>
-									<button onClick={notify} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+									<motion.button whileTap={{ scale: -0.5 }} onClick={notify} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
 										Create Item
-									</button>
+									</motion.button>
 								</div>
 							
 						</div>
