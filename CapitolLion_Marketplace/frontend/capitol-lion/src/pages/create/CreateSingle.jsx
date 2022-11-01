@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom';
 
 const notify = () => toast('Successfully created NFT.', {
 	duration: 5000,
@@ -35,6 +36,10 @@ const notify = () => toast('Successfully created NFT.', {
 });
 
 const CreateSingle = () => {
+	const [details, setDetails] = useState([]);
+
+	const navigate = useNavigate();
+
     const schema = yup.object().shape({
         metadata: yup.mixed().required("Please provide a file"),
         price: yup.number().positive().integer().min(1).required("Please Enter a price for your NFT"),
@@ -48,9 +53,19 @@ const CreateSingle = () => {
         resolver: yupResolver(schema)
     });
 
-	const onFormSubmit = (data) => {
+	const onFormSubmit = async (data) => {
 		console.log(data);
+		const details = setDetails(data);
+		console.log(details)
+		await notify();
+		await setTimeout(() => {
+			navigate("/");
+		}, 1500);
 	};
+
+	useEffect(() => {
+		localStorage.setItem('dataKey', JSON.stringify(details));
+	}, [details]);
 
 	return (
 		<React.Fragment>
@@ -126,7 +141,7 @@ const CreateSingle = () => {
 								/>
                                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
 								<div className='pt-[52px]'>
-									<motion.button whileTap={{ scale: -0.5 }} onClick={notify} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+									<motion.button whileTap={{ scale: -0.5 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
 										Create Item
 									</motion.button>
 								</div>
