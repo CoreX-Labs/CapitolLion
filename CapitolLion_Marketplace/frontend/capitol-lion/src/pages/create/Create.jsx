@@ -2,10 +2,12 @@ import React from 'react';
 import styled from "styled-components";
 import Footer from "../../footer/Footer"
 import { Link, Outlet } from "react-router-dom";
+import Navbar from '../../navbar/Navbar';
 
 const Create = () => {
   return (
     <React.Fragment>
+    <Navbar />
       <div className="bg-[#121212] h-auto pt-[110px] text-white px-[24px] md:px-[70px] 2xl:px-[300px]">
         <Container>
           <h1 className="orbitron-header font-[700] text-[50px] leading-[63px]">Create collectible</h1>

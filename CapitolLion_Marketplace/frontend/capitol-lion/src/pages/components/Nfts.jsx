@@ -98,7 +98,7 @@ const Nfts = () => {
   ];
   return (
     <React.Fragment>
-      <div className='pb-[135px]'>
+      <div className='pb-[135px] px-[24px] md:px-[70px] 2xl:px-[300px] bg-[#121212]'>
         <h1 className='text-center font-[500] text-[24px] md:text-[36px] leading-[80px] orbitron-light pb-[42px]'>
           Popular Items
         </h1>

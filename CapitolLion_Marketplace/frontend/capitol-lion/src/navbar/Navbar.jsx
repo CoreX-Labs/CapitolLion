@@ -7,10 +7,10 @@ const Navbar = () => {
   const [ showNav, setShowNav ] = useState(false);
   return (
     <React.Fragment>
-      <div className='w-screen h-[64px] bg-[#121212] border-b border-white text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px] fixed z-50'>
+      <div className='w-screen h-[64px] p-[55px] text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px]'>
         <Link to='/'>
           <div className='cursor-pointer'>
-            <img src='/Capitol Lion Website Logo 1.png' alt='Capitol Lion Website Logo' />
+            <img src='/CapitolLion Website Logo.png' alt='Capitol Lion Website Logo' />
           </div>
         </Link>
         {/* mobile */}
@@ -57,19 +57,19 @@ const Navbar = () => {
         <div className='hidden lg:block'>
           <ul className='flex gap-[24px] items-center'>
             <NavLink className="" to='/create'>
-              <li className='cursor-pointer orbitron-light'>Create</li>
+              <li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Create</li>
             </NavLink>
             <NavLink to='/marketplace'>
-              <li className='cursor-pointer orbitron-light'>Marketplace</li>
+              <li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Marketplace</li>
             </NavLink>
             <NavLink to='/launchpad'>
-              <li className='cursor-pointer orbitron-light'>Launchpad</li>
+              <li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Launchpad</li>
             </NavLink>
             <NavLink to='/musicDA0'>
-              <li className='cursor-pointer orbitron-light'>MusicDAO</li>
+              <li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>MusicDAO</li>
             </NavLink>
             <NavLink to='/collection'>
-              <li className='cursor-pointer orbitron-light'>Collection</li>
+              <li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Collection</li>
             </NavLink>
             <li className='cursor-pointer orbitron-light'>
               <motion.button

@@ -32,3 +32,21 @@ ul a.active {
 	color: #5B2E9D;
 	border-bottom: 1px solid #5B2E9D;
 }
+
+.launch__bg {
+	background-image: url('rectangle.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+}
+
+.timer{
+	align-items: center;
+	justify-content: center;
+}
+
+.timer div:last-child{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}

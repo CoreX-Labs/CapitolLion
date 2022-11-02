@@ -5,7 +5,7 @@ import '../../App.css';
 const Hero = () => {
   return (
     <React.Fragment>
-      <div className='pt-[80px] md:pt-[159px] md:flex md:gap-[160px]'>
+      <div className='pt-[80px] md:pt-[70px] md:flex md:gap-[160px] bg-[#121212] px-[24px] md:px-[70px] 2xl:px-[300px]'>
         <div className="pb-[80px]">
           <p className='uppercase orbitron-light font-[700] text-[16px] leading-[20px] text-[#5B2E9D] pb-[30px]'>
             capitol lion

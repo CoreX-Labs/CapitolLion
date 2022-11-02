@@ -77,76 +77,76 @@ const CreateSingle = () => {
               <h1 className='orbitron-light font-[600] text-[24px] leading-[30px]'>Upload file</h1>
             </div>
             <form onSubmit={handleSubmit(onFormSubmit)}>
-            <InputSection>
+              <InputSection>
+                <div>
+                  <h1 className='text-center orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px]'>
+                    PNG, JPG, GIF WEBP or MP4. Max 200MB
+                  </h1>
+                  <div className='flex items-center justify-center pt-[24px]'>
+                    <input type='file' name='picture' {...register("metadata")} />
+                    <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.metadata?.message}</p>
+                  </div>
+                </div>
+              </InputSection>
               <div>
-                <h1 className='text-center orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px]'>
-                  PNG, JPG, GIF WEBP or MP4. Max 200MB
-                </h1>
-                <div className='flex items-center justify-center pt-[24px]'>
-                  <input type='file' name='picture' {...register("metadata")} />
-                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.metadata?.message}</p>
-                </div>
+                
+                  <label>
+                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
+                  </label>
+                  <Input
+                    className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
+                    type='number'
+                    placeholder='enter price for one item (TRX)'
+                    {...register('price')}
+                  />
+                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.price?.message}</p>
+                  {/*  */}
+                  <label>
+                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
+                      Choose collection
+                    </h1>
+                  </label>
+                  <Input className='orbitron-light' type='text' placeholder='Choose collection' {...register('collection')} />
+                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.collection?.message}</p>
+                  {/*  */}
+                  <label>
+                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Title</h1>
+                  </label>
+                  <Input className='orbitron-light' type='text' placeholder='e.g “Crypto Punk”' {...register('title')} />
+                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.title?.message}</p>
+                  {/*  */}
+                  <label>
+                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
+                      Description
+                    </h1>
+                  </label>
+                  <Input
+                    className='orbitron-light'
+                    type='text'
+                    placeholder='e.g “this is a very limited item”'
+                    {...register('description')}
+                  />
+                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.description?.message}</p>
+                  {/*  */}
+                  <label>
+                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
+                      Royalties
+                    </h1>
+                  </label>
+                  <Input
+                    className='orbitron-light'
+                    type=''
+                    placeholder='suggested: 0, 10%, 20%, 30%. Maximum is 70%'
+                    {...register('royalties')}
+                  />
+                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
+                  <div className='pt-[52px]'>
+                    <motion.button whileTap={{ scale: -0.5 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+                      Create Item
+                    </motion.button>
+                  </div>
+                
               </div>
-            </InputSection>
-            <div>
-              
-                <label>
-                  <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
-                </label>
-                <Input
-                  className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
-                  type='number'
-                  placeholder='enter price for one item (TRX)'
-                  {...register('price')}
-                />
-                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.price?.message}</p>
-                {/*  */}
-                <label>
-                  <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
-                    Choose collection
-                  </h1>
-                </label>
-                <Input className='orbitron-light' type='text' placeholder='Choose collection' {...register('collection')} />
-                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.collection?.message}</p>
-                {/*  */}
-                <label>
-                  <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Title</h1>
-                </label>
-                <Input className='orbitron-light' type='text' placeholder='e.g “Crypto Punk”' {...register('title')} />
-                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.title?.message}</p>
-                {/*  */}
-                <label>
-                  <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
-                    Description
-                  </h1>
-                </label>
-                <Input
-                  className='orbitron-light'
-                  type='text'
-                  placeholder='e.g “this is a very limited item”'
-                  {...register('description')}
-                />
-                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.description?.message}</p>
-                {/*  */}
-                <label>
-                  <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
-                    Royalties
-                  </h1>
-                </label>
-                <Input
-                  className='orbitron-light'
-                  type=''
-                  placeholder='suggested: 0, 10%, 20%, 30%. Maximum is 70%'
-                  {...register('royalties')}
-                />
-                <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
-                <div className='pt-[52px]'>
-                  <motion.button whileTap={{ scale: -0.5 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
-                    Create Item
-                  </motion.button>
-                </div>
-              
-            </div>
             </form>
           </div>
         </div>
