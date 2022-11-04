@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Create from './pages/create/Create';
 import Marketplace from './pages/Marketplace';
-import Launchpad from './pages/Launchpad';
 import MusicDAO from './pages/MusicDAO';
 import Collection from './pages/Collection';
 import CreateSingle from './pages/create/CreateSingle';
@@ -20,7 +19,6 @@ function App() {
           <Route path="create-multiple" element={<CreateMultiple />} />
         </Route>
         <Route path='/marketplace' element={<Marketplace />} />
-        <Route path='/launchpad' element={<Launchpad />} />
         <Route path='/musicDAO' element={<MusicDAO />} />
         <Route path='/collection' element={<Collection />} />
       </Routes>

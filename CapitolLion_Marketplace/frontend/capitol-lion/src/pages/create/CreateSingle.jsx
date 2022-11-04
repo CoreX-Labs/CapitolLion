@@ -21,7 +21,7 @@ const notify = () => toast('Successfully created NFT.', {
     boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
     fontSize: '18px',
     fontFamily: 'orbitron-light',
-    marginTop: '60px'
+    marginTop: '20px'
   },
   className: '',
 
@@ -59,7 +59,7 @@ const CreateSingle = () => {
     console.log(details)
     await notify();
     await setTimeout(() => {
-      navigate("/");
+      navigate("/", window.scrollTo(0, 0));
     }, 1500);
   };
 
@@ -83,7 +83,11 @@ const CreateSingle = () => {
                     PNG, JPG, GIF WEBP or MP4. Max 200MB
                   </h1>
                   <div className='flex items-center justify-center pt-[24px]'>
-                    <input type='file' name='picture' {...register("metadata")} />
+                    <input className="file:mr-4 file:py-2 file:px-4
+                      file:rounded-[30px] file:border-0
+                      file:text-sm file:font-semibold
+                    file:bg-[#5B2E9D] file:text-white orbitron-light
+                    hover:file:bg-[#6736b1] transition-all" type='file' name='picture' {...register("metadata")} />
                     <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.metadata?.message}</p>
                   </div>
                 </div>
@@ -141,7 +145,7 @@ const CreateSingle = () => {
                   />
                   <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
                   <div className='pt-[52px]'>
-                    <motion.button whileTap={{ scale: -0.5 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+                    <motion.button whileTap={{ scale: -0.8 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
                       Create Item
                     </motion.button>
                   </div>
@@ -165,9 +169,6 @@ const InputSection = styled.div`
   @media (max-width: 600px) {
     width: 340px;
   }
-  @media (min-width: 710px) {
-    width: 500px;
-  }
 `;
 
 const Input = styled.input`
@@ -179,8 +180,5 @@ const Input = styled.input`
   padding: 10px;
   @media (max-width: 600px) {
     width: 340px;
-  }
-  @media (min-width: 710px) {
-    width: 500px;
   }
 `;

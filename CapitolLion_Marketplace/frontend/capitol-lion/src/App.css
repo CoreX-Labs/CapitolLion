@@ -37,18 +37,22 @@ ul a.active {
 
 .launch__bg {
 	background-image: url('rectangle.png');
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
-.timer{
+.timer {
 	align-items: center;
 	justify-content: center;
 }
 
-.timer div:last-child{
+.timer div:last-child {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+}
+
+.dropdown__menu {
+	border: 1px solid #5B2E9D;
 }
