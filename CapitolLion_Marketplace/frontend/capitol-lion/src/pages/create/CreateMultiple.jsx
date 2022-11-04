@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect  } from 'react';
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom'
 
 const notify = () => toast('Successfully created NFT.', {
   duration: 5000,
-  position: 'top-right',
+  position: 'top-center',
 
   // Styling
   style: {
@@ -20,7 +21,7 @@ const notify = () => toast('Successfully created NFT.', {
     boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
     fontSize: '18px',
     fontFamily: 'orbitron-light',
-    marginTop: '60px'
+    marginTop: '30px',
   },
   className: '',
 
@@ -35,6 +36,10 @@ const notify = () => toast('Successfully created NFT.', {
 });
 
 const CreateMultiple = () => {
+  const [details, setDetails] = useState([]);
+
+  const navigate = useNavigate();
+  
   const schema = yup.object().shape({
     metadata: yup.mixed().required("Please provide a file"),
     price: yup.number().positive().integer().min(1).required("Please Enter a price for your NFT"),
@@ -42,16 +47,26 @@ const CreateMultiple = () => {
     title: yup.string().required("Give your NFT a name"),
     description: yup.string().required("Add a description for your NFT"),
     royalties: yup.number().positive().integer().min(0).max(70).required("Please Enter a price for your NFT"),
-    numberofsupply: yup.number().positive().integer().min(1).required("Please Enter number of supplies"),
+    numberofsupply: yup.number().positive().integer().min(1).max(90).required("Please Enter number of supplies"),
   });
 
   const { register, handleSubmit, formState: {errors} } = useForm({
     resolver: yupResolver(schema)
   });
 
-  const onFormSubmit = (data) => {
+  const onFormSubmit = async (data) => {
     console.log(data);
+    const details = setDetails(data);
+    console.log(details)
+    await notify();
+    await setTimeout(() => {
+      navigate("/");
+    }, 1500);
   };
+
+  useEffect(() => {
+    localStorage.setItem('dataKey', JSON.stringify(details));
+  }, [details]);
 
   return (
     <React.Fragment>
@@ -122,7 +137,7 @@ const CreateMultiple = () => {
                 <Input
                   className='orbitron-light'
                   type=''
-                  placeholder='suggested: 0, 10%, 20%, 30%. Maximum is 70%'
+                  placeholder='suggested: 10%, 20%. Max is 70%'
                   {...register('royalties')}
                 />
                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
@@ -140,7 +155,7 @@ const CreateMultiple = () => {
                 />
                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.numberofsupply?.message}</p> 
                 <div className='pt-[52px]'>
-                  <motion.button whileTap={{ scale: -0.5 }} onClick={notify} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+                  <motion.button whileTap={{ scale: -0.5 }} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
                     Create Item
                   </motion.button>
                 </div>
@@ -160,6 +175,12 @@ const InputSection = styled.div`
   height: 170px;
   border: 2.5px dashed #5b2e9d;
   border-radius: 20px;
+  @media (max-width: 600px) {
+    width: 340px;
+  }
+  @media (min-width: 710px) {
+    width: 500px;
+  }
 `;
 
 const Input = styled.input`
@@ -169,4 +190,10 @@ const Input = styled.input`
   border: 0.5px solid #5b2e9d;
   border-radius: 10px;
   padding: 10px;
+  @media (max-width: 600px) {
+    width: 340px;
+  }
+  @media (min-width: 710px) {
+    width: 500px;
+  }
 `;

@@ -6,7 +6,6 @@ import Marketplace from './pages/Marketplace';
 import Launchpad from './pages/Launchpad';
 import MusicDAO from './pages/MusicDAO';
 import Collection from './pages/Collection';
-import Navbar from './navbar/Navbar';
 import CreateSingle from './pages/create/CreateSingle';
 import CreateMultiple from './pages/create/CreateMultiple';
 

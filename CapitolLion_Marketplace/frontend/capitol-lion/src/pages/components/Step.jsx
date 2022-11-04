@@ -16,27 +16,38 @@ const Step = () => {
           <h1 className='text-center font-[500] text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[42px]'>
             Create and List your NFT
           </h1>
-          <div
-            data-aos='fade-up'
-            data-aos-easing='linear'
-            data-aos-duration='1500'
-            data-aos-anchor-placement="top-bottom"
-            className='block sm:block md:block lg:flex'>
-            <Card
-              icon='/credit-card.png'
-              title='Connect Wallet'
-              detail='Connect wallet to gain access to the Capitol Lion Music Network'
-            />
-            <Card
-              icon='/shopping-bag.png'
-              title='NFT Marketplace'
-              detail={`Capitol Lion's NFT Marketplace is Fueled by Music & Entertainment`}
-            />
-            <Card
-              icon='/heart.png'
-              title='Collect NFT'
-              detail='Build your collection with the Capitol Lion Music Platform.'
-            />
+          <div className="flex justify-center items-center">
+            <div
+              data-aos='fade-up'
+              data-aos-easing='linear'
+              data-aos-duration='1500'
+              data-aos-anchor-placement="top-bottom"
+              className='block md:flex gap-[1.25rem]'>
+                <div className="md:flex gap-[1.25rem] block">
+                  <Card
+                    icon='/credit-card.png'
+                    title='Connect Wallet'
+                    detail='Connect wallet to gain access to the Capitol Lion Music Network'
+                  />
+                  <Card
+                    icon='/credit-card.png'
+                    title='Connect Wallet'
+                    detail='Connect wallet to gain access to the Capitol Lion Music Network'
+                  />
+                </div>
+                <div className="md:flex gap-[1.25rem] block">
+                  <Card
+                    icon='/shopping-bag.png'
+                    title='NFT Marketplace'
+                    detail={`Capitol Lion's NFT Marketplace is Fueled by Music & Entertainment`}
+                  />
+                  <Card
+                    icon='/heart.png'
+                    title='Collect NFT'
+                    detail='Build your collection with the Capitol Lion Music Platform.'
+                  />
+                </div>
+            </div>
           </div>
         </div>
       </div>
@@ -66,8 +77,8 @@ export const Card = ({ icon, title, detail }) => {
 
 const CardBox = styled.div`
   cursor: pointer;
-  width: 372.45px;
-  height: 313px;
+  width: 298.06px;
+  height: 250.48px;
   background: rgba(91, 46, 157, 0.15);
   border: 0.5px solid #5b2e9d;
   border-radius: 20px;
@@ -81,8 +92,8 @@ const CardBox = styled.div`
 const InnerContainer = styled.div`
   width: 293.63px;
   height: 172px;
-  margin-top: 89px;
-  margin-left: 39.41px;
+  margin-top: 60px;
+  margin-left: 28.21px;
 `;
 
 const ImageDiv = styled.div`padding-bottom: 30px;`;
@@ -92,7 +103,7 @@ const TitleDiv = styled.div`padding-bottom: 8px;`;
 const TitleText = styled.p`
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 21px;
 `;
 

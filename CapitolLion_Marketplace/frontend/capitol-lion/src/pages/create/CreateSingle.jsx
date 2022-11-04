@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const notify = () => toast('Successfully created NFT.', {
   duration: 5000,
-  position: 'top-right',
+  position: 'top-center',
 
   // Styling
   style: {
@@ -136,7 +136,7 @@ const CreateSingle = () => {
                   <Input
                     className='orbitron-light'
                     type=''
-                    placeholder='suggested: 0, 10%, 20%, 30%. Maximum is 70%'
+                    placeholder='suggested: 10%, 20%. Max is 70%'
                     {...register('royalties')}
                   />
                   <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
@@ -162,13 +162,25 @@ const InputSection = styled.div`
   height: 170px;
   border: 2.5px dashed #5b2e9d;
   border-radius: 20px;
+  @media (max-width: 600px) {
+    width: 340px;
+  }
+  @media (min-width: 710px) {
+    width: 500px;
+  }
 `;
 
 const Input = styled.input`
-  width: 699px;
+  width: 43.6875rem;
   height: 40px;
   background: #121212;
   border: 0.5px solid #5b2e9d;
   border-radius: 10px;
   padding: 10px;
+  @media (max-width: 600px) {
+    width: 340px;
+  }
+  @media (min-width: 710px) {
+    width: 500px;
+  }
 `;

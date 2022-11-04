@@ -26,7 +26,7 @@ const Partners = () => {
   ];
   return (
     <React.Fragment>
-      <div className='pt-[130px] md:pt-[40px] 2xl:pt-[172px] bg-[#121212] pb-[100px] md:pb-[172px]'>
+      <div className='pt-[130px] md:pt-[40px] 2xl:pt-[172px] pb-[100px] md:pb-[100px]'>
         <h1 className='text-center font-[500] text-[24px] md:text-[36px] md:leading-[80px] orbitron-light'>
           Strategic Partners
         </h1>

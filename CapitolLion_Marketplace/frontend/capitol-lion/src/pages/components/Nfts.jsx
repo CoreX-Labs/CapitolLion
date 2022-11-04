@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import { motion } from 'framer-motion';
 import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
 
 const Nfts = () => {
   const popularnfts = [
@@ -98,45 +99,38 @@ const Nfts = () => {
   ];
   return (
     <React.Fragment>
-      <div className='pb-[135px] px-[24px] md:px-[70px] 2xl:px-[300px] bg-[#121212]'>
+      <div className="pb-[135px] px-[24px] md:px-[70px] 2xl:px-[300px]">
         <h1 className='text-center font-[500] text-[24px] md:text-[36px] leading-[80px] orbitron-light pb-[42px]'>
           Popular Items
         </h1>
-        <div className='hidden md:flex md:gap-[20px] md:overflow-x-scroll'>
+        <div className='hidden md:flex md:gap-[3.1875rem] md:overflow-x-scroll'>
           {popularnfts.map((nft, idx) => (
             <Fade key={idx} right>
-              <div className='w-[305.23px] h-[421.25px] rounded-[20px] nft__div cursor-pointer'>
-                <div>
-                  <img src={nft.nftimage} alt='NFT Pic' />
-                </div>
-                <div className='flex'>
-                  <div className='px-[18px] pt-[10.75px] orbitron-light capitalize'>
-                    <h1 className='pb-[12px]'>{nft.title}</h1>
-                    <h1 className='pb-[12px]'>{nft.author}</h1>
-                    <div className='flex items-center'>
-                      <div>
-                        <p>{nft.ethprice}</p>
+              <Card>
+                <img className="object-cover" src={nft.nftimage} alt="NFT pic" />
+                <div className="px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]">
+                  <div>
+                    <h3 className="font-[700] text-[18px] leading-[21px] pb-[6px] capitalize">{nft.title}</h3>
+                    <p className="capitalize font-[400] text-[14px] leading-[16px] pb-[6px]">{nft.author}</p>
+                    <div className="flex gap-[0.7188rem] align-center justify-start">
+                      <div className=''>
+                        <img src={nft.ethlogo} alt="ETH Logo" />
                       </div>
                       <div>
-                        <img src={nft.ethlogo} alt='Etherun Logo' />
+                        <p className="uppercase font-[400] text-[18px]">{nft.ethprice}</p>
                       </div>
                     </div>
                   </div>
-                  {/*  */}
-                  <div className='pt-[18.75px]'>
-                    <motion.button
-                      whileTap={{ scale: -0.5 }}
-                      className='capitalize transition-all bid__button orbitron-light'>
-                      bid
-                    </motion.button>
-                    <p className='text-center orbitron-light pt-[12px]'>{nft.dollarprice}</p>
+                  <div>
+                    <Button>Bid</Button>
+                    <p className="text-center pt-[18px]">{nft.dollarprice}</p>
                   </div>
                 </div>
-              </div>
+              </Card>
             </Fade>
           ))}
         </div>
-        <div className="block md:hidden">
+        <div className="md:hidden flex justify-center items-center">
           <MobileNftCardSection />
         </div>
       </div>
@@ -145,6 +139,25 @@ const Nfts = () => {
 };
 
 export default Nfts;
+
+const Card = styled.div`
+  width: 374px;
+  height: 26.75rem;
+  background: rgba(91, 46, 157, 0.15);
+  backdrop-filter: blur(7.5px);
+  border-radius: 20px;
+  margin-bottom: 25px;
+  @media (max-width: 568px) {
+    width: 340px;
+  }
+`
+
+const Button = styled.button`
+  width: 139px;
+  height: 36px;
+  border: 3px solid #5B2E9D;
+  border-radius: 30px;
+`
 
 export const MobileNftCardSection = () => {
   const popularnfts = [
@@ -240,37 +253,30 @@ export const MobileNftCardSection = () => {
     }
   ];
   return(
-    <div className="flex-col overflow-y-scroll  h-[500px] pl-[30px]">
+    <div className="flex-col overflow-y-scroll h-[500px]">
           {popularnfts.map((nft, idx) => (
-            <Fade key={idx} right>
-              <div className='w-[305.23px] h-[421.25px] rounded-[20px] nft__div cursor-pointer mb-[30px]'>
-                <div>
-                  <img src={nft.nftimage} alt='NFT Pic' />
-                </div>
-                <div className='flex'>
-                  <div className='px-[18px] pt-[10.75px] orbitron-light capitalize'>
-                    <h1 className='pb-[12px]'>{nft.title}</h1>
-                    <h1 className='pb-[12px]'>{nft.author}</h1>
-                    <div className='flex items-center'>
-                      <div>
-                        <p>{nft.ethprice}</p>
+            <Fade key={idx} bottom>
+            <Card>
+              <img className="object-cover" src={nft.nftimage} alt="NFT pic" />
+                <div className="px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]">
+                  <div>
+                    <h3 className="font-[700] text-[18px] leading-[21px] pb-[6px] capitalize">{nft.title}</h3>
+                    <p className="capitalize font-[400] text-[14px] leading-[16px] pb-[6px]">{nft.author}</p>
+                    <div className="flex gap-[0.7188rem] align-center justify-start">
+                      <div className=''>
+                        <img src={nft.ethlogo} alt="ETH Logo" />
                       </div>
                       <div>
-                        <img src={nft.ethlogo} alt='Etherun Logo' />
+                        <p className="uppercase font-[400] text-[18px]">{nft.ethprice}</p>
                       </div>
                     </div>
                   </div>
-                  {/*  */}
-                  <div className='pt-[18.75px]'>
-                    <motion.button
-                      whileTap={{ scale: -0.5 }}
-                      className='capitalize transition-all bid__button orbitron-light'>
-                      bid
-                    </motion.button>
-                    <p className='text-center orbitron-light pt-[12px]'>{nft.dollarprice}</p>
+                  <div>
+                    <Button>Bid</Button>
+                    <p className="text-center pt-[18px]">{nft.dollarprice}</p>
                   </div>
                 </div>
-              </div>
+              </Card>
             </Fade>
           ))}
           </div>

@@ -8,19 +8,21 @@ import Footer from '../footer/Footer';
 import styled from 'styled-components';
 import '../App.css';
 import Navbar from '../navbar/Navbar';
+import Objective from '../pages/components/Objective';
 
 const Home = () => {
 	return (
 		<React.Fragment>
-			<div className='text-white h-1000'>
-				<div className='h-screen bg-red-200 launch__bg'>
+			<div className='text-white h-1000 bg-[#121212]'>
+				<div className="h-screen bg-[url('rectangle.png')] bg-no-repeat bg-cover">
 					<Navbar />
 					<div className='pt-[110px]'>
 						<Launchpad />
 					</div>
 				</div>
-				<Hero />
+				{/* <Hero /> */}
 				<Partners />
+				<Objective />
 				<Nfts />
 				<Artists />
 				<Step />
@@ -35,7 +37,7 @@ export default Home;
 export const Launchpad = () => {
 	return (
 		<Container>
-			<div>
+			<div className="hidden sm:block">
 				<img src='/LaunchNFT.png' alt='Texture' />
 			</div>
 			<Sub>
@@ -47,16 +49,22 @@ export const Launchpad = () => {
 						kevin's heart
 					</h2>
 				</div>
-				<div className="pb-[12px]">
+				<div className='pb-[12px]'>
 					<Timer />
 				</div>
-				<div className="pb-[12px]">
-					<HeroButtonOne><p className="tracking-wide orbitron-light">View Song</p></HeroButtonOne>
+				<div className='pb-[12px]'>
+					<HeroButtonOne>
+						<p className='tracking-wide orbitron-light'>View Song</p>
+					</HeroButtonOne>
 				</div>
-				<div className="tracking-widest orbitron-light">
+				<div className='tracking-widest orbitron-light'>
 					<HeroButtonTwo>
-						<div><img src="/bell.png" alt="Bell Icon" /></div>
-						<div><p className="tracking-wide orbitron-light">Get Notified</p></div>
+						<div>
+							<img src='/bell.png' alt='Bell Icon' />
+						</div>
+						<div>
+							<p className='tracking-wide orbitron-light'>Get Notified</p>
+						</div>
 					</HeroButtonTwo>
 				</div>
 			</Sub>
@@ -66,12 +74,15 @@ export const Launchpad = () => {
 
 const Container = styled.div`
 	margin-top: 170px;
-	width: 1440px;
 	height: 122px;
 	display: flex;
 	gap: 135px;
 	align-items: center;
 	padding-left: 90px;
+	@media (max-width: 568px) {
+			margin-top: 6.25rem;
+   padding-left: 0.625rem;
+  }
 `;
 
 const Sub = styled.div`padding: 1px;`;
@@ -105,7 +116,7 @@ export const Timer = () => {
 	let interval = useRef();
 
 	const startTimer = () => {
-		const countdownDate = new Date('November 29 2022 00:00:00').getTime();
+		const countdownDate = new Date('November 14 2022 00:00:00').getTime();
 
 		interval = setInterval(() => {
 			const now = new Date().getTime();
@@ -133,7 +144,7 @@ export const Timer = () => {
 	useEffect(() => {
 		startTimer();
 		return () => {
-			clearInterval(interval.current);
+			clearInterval();
 		};
 	});
 

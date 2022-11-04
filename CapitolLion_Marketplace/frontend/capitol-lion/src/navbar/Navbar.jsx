@@ -26,8 +26,8 @@ const Navbar = () => {
         {/* dropdown */}
         <div
           className={
-            (showNav ? 'top-[65px] left-0 right-0' : '-top-[500px] left-0 right-0') +
-            ' absolute w-full h-[357px] bg-[#121212] dropdown transition-top duration-500'
+            (showNav ? 'top-[90px] left-0 right-0' : '-top-[500px] left-0 right-0') +
+            ' absolute w-full h-[357px] bg-[#121212] dropdown transition-top duration-500 z-50'
           }>
           <ul className=''>
             <NavLink to='/create'>

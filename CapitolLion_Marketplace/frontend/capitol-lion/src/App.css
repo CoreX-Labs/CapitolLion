@@ -10,7 +10,9 @@
 }
 
 .partner__div {
-	background: rgba(91, 46, 157, 0.15);
+	background: linear-gradient(91.5deg, rgba(91, 46, 157, 0.15) 2.36%, rgba(86, 16, 16, 0.15) 101.4%);
+	backdrop-filter: blur(7.5px);
+	border-radius: 20px;
 }
 
 .bid__button {

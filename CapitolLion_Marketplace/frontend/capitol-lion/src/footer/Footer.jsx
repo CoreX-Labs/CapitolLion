@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='flex items-center justify-center pb-[92px]'>
           <img src='/line.png' alt='' />
         </div>
-        <div className='md:flex md:gap-[241px] md:justify-between'>
+        <div className='block sm:flex md:gap-[241px] md:justify-between'>
           <div className='pl-[40px]'>
             <img src='footerlogo.png' alt='' />
           </div>
