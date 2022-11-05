@@ -56,3 +56,11 @@ ul a.active {
 .dropdown__menu {
 	border: 1px solid #5B2E9D;
 }
+
+input#file-input {
+	display: none;
+}
+
+input#dp-input {
+	display: none;
+}
