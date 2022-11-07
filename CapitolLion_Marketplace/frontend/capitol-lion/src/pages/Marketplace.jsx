@@ -88,10 +88,10 @@ const Marketplace = () => {
 									<button
 										id='hs-dropdown-hover-event'
 										type='button'
-										class='hs-dropdown-toggle py-3 px-[20px] inline-flex justify-center items-center gap-2 rounded-md bg-[#121212]  text-white align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm orbitron-light font-[700] dropdown__menu'>
+										className='hs-dropdown-toggle py-3 px-[20px] inline-flex justify-center items-center gap-2 rounded-md bg-[#121212]  text-white align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm orbitron-light font-[700] dropdown__menu'>
 										Categories
 										<svg
-											class='hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-'
+											className='hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-'
 											width='16'
 											height='16'
 											viewBox='0 0 16 16'
@@ -106,25 +106,25 @@ const Marketplace = () => {
 										</svg>
 									</button>
 									<div
-										class='hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2  dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 after:h-4 after:absolute after:-bottom-4 after:left-0 after:w-full before:h-4 before:absolute before:-top-4 before:left-0 before:w-full'
+										className='hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2  dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 after:h-4 after:absolute after:-bottom-4 after:left-0 after:w-full before:h-4 before:absolute before:-top-4 before:left-0 before:w-full'
 										aria-labelledby='hs-dropdown-hover-event'>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Newsletter
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Purchases
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Downloads
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Team Account
 										</a>
@@ -133,14 +133,14 @@ const Marketplace = () => {
 							</div>
 							{/*  */}
 							<div className='lg:block hidden'>
-								<div class='hs-dropdown relative inline-flex [--trigger:hover]'>
+								<div className='hs-dropdown relative inline-flex [--trigger:hover]'>
 									<button
 										id='hs-dropdown-hover-event'
 										type='button'
 										class='hs-dropdown-toggle py-3 px-[20px] inline-flex justify-center items-center gap-2 rounded-md bg-[#121212]  text-white align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm orbitron-light font-[700] dropdown__menu'>
 										Buy
 										<svg
-											class='hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600'
+											className='hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600'
 											width='16'
 											height='16'
 											viewBox='0 0 16 16'
@@ -155,25 +155,25 @@ const Marketplace = () => {
 										</svg>
 									</button>
 									<div
-										class='hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2  dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 after:h-4 after:absolute after:-bottom-4 after:left-0 after:w-full before:h-4 before:absolute before:-top-4 before:left-0 before:w-full'
+										className='hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2  dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 after:h-4 after:absolute after:-bottom-4 after:left-0 after:w-full before:h-4 before:absolute before:-top-4 before:left-0 before:w-full'
 										aria-labelledby='hs-dropdown-hover-event'>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Newsletter
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Purchases
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Downloads
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Team Account
 										</a>
@@ -182,14 +182,14 @@ const Marketplace = () => {
 							</div>
 							{/*  */}
 							<div className='lg:block hidden'>
-								<div class='hs-dropdown relative inline-flex [--trigger:hover]'>
+								<div className='hs-dropdown relative inline-flex [--trigger:hover]'>
 									<button
 										id='hs-dropdown-hover-event'
 										type='button'
-										class='hs-dropdown-toggle py-3 px-[20px] inline-flex justify-center items-center gap-2 rounded-md bg-[#121212]  text-white align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm orbitron-light font-[700] dropdown__menu'>
+										className='hs-dropdown-toggle py-3 px-[20px] inline-flex justify-center items-center gap-2 rounded-md bg-[#121212]  text-white align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm orbitron-light font-[700] dropdown__menu'>
 										All
 										<svg
-											class='hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600'
+											className='hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600'
 											width='16'
 											height='16'
 											viewBox='0 0 16 16'
@@ -204,25 +204,25 @@ const Marketplace = () => {
 										</svg>
 									</button>
 									<div
-										class='hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2  dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 after:h-4 after:absolute after:-bottom-4 after:left-0 after:w-full before:h-4 before:absolute before:-top-4 before:left-0 before:w-full'
+										className='hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 min-w-[15rem] bg-white shadow-md rounded-lg p-2  dark:bg-gray-800 dark:border dark:border-gray-700 dark:divide-gray-700 after:h-4 after:absolute after:-bottom-4 after:left-0 after:w-full before:h-4 before:absolute before:-top-4 before:left-0 before:w-full'
 										aria-labelledby='hs-dropdown-hover-event'>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Newsletter
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Purchases
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Downloads
 										</a>
 										<a
-											class='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
+											className='flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300'
 											href='www.google.com'>
 											Team Account
 										</a>

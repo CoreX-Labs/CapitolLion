@@ -1,11 +1,91 @@
 import React, { useState } from 'react';
 import Navbar from '../navbar/Navbar';
-import '../App.css';
+import '../../App.css';
 import toast, { Toaster } from 'react-hot-toast';
 import styled from 'styled-components';
+import Footer from '../footer/Footer';
+// import Fade from 'react-reveal';
+
+const onsale = [
+	{
+		id       : 1,
+		nftimage : '/three.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 2,
+		nftimage : '/six.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 3,
+		nftimage : '/four.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 4,
+		nftimage : '/one.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 5,
+		nftimage : '/two.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 6,
+		nftimage : '/five.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 7,
+		nftimage : '/five.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 8,
+		nftimage : '/two.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 9,
+		nftimage : '/one.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	}
+];
+
+const owned = [
+	{
+		id       : 1,
+		nftimage : '/two.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 2,
+		nftimage : '/four.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	},
+	{
+		id       : 3,
+		nftimage : '/five.png',
+		title    : 'face of man',
+		price    : 'by Angie_00'
+	}
+];
 
 const notify = () =>
-	toast('Wallet Address copied to Clipboard', {
+	toast('Copied to Clipboard', {
 		duration  : 1500,
 		position  : 'top-center',
 
@@ -48,22 +128,22 @@ const Collection = () => {
 	};
 
 	const handleCopyEvent = async () => {
-		await navigator.clipboard.writeText('TRxvdndjdgsvsgndfgdjkdfsdfg');
+		await navigator.clipboard.writeText('random');
 		await notify();
 	};
 
 	return (
 		<React.Fragment>
-			<div className='bg-[#121212] h-[2000px] text-white'>
+			<div className='bg-[#121212] h-auto text-white'>
 				<Toaster />
 				<Navbar />
 				<div className=''>
-					<img className='h-[404px] w-[100vw] object-cover object-top' src={banner} alt='Banner' />
+					<img className='h-[200px] md:h-[404px] w-[100vw] object-cover object-top' src={banner} alt='Banner' />
 				</div>
-				<div className='flex justify-end items-center -mt-[60px] pr-[20px] cursor-pointer relative'>
+				<div className='flex justify-end items-center -mt-[50px] cursor-pointer absolute right-[10px]'>
 					<form>
 						<input type='file' name='picture' id='file-input' onChange={handleBannerChange} />
-						<label className='cursor-pointer' for='file-input'>
+						<label className='cursor-pointer' htmlFor='file-input'>
 							<img src='/camera.png' alt='camera' />
 						</label>
 					</form>
@@ -73,10 +153,10 @@ const Collection = () => {
 						<img className='rounded-full w-[208px] h-[208px] object-cover' src={profilePic} alt='User' />
 					</div>
 				</div>
-				<div className='flex justify-center items-center pl-[175px] -mt-[75px] cursor-pointer relative'>
+				<div className='flex justify-center items-center -mt-[75px] cursor-pointer absolute right-[90px] md:right-[610px] 2xl:right-[750px]'>
 					<form>
 						<input type='file' name='picture' id='dp-input' onChange={handleProfilePicChange} />
-						<label className='cursor-pointer' for='dp-input'>
+						<label className='cursor-pointer' htmlFor='dp-input'>
 							<img src='/dpcamera.png' alt='camera' />
 						</label>
 					</form>
@@ -85,9 +165,9 @@ const Collection = () => {
 				<div className='flex justify-center mt-[65px]'>
 					<h1 className='orbitron-light font-[500] text-[24px] leading-[31px] text-center inline-flex items-center gap-[10px]'>
 						User45948{' '}
-						<span class='flex h-3 w-3'>
-							<span class='animate-ping absolute inline-flex h-[13px] w-[13px] rounded-full bg-[#008000]  -mt-[1px]' />
-							<span class='relative inline-flex rounded-full h-3 w-3 bg-[#008000]' />
+						<span className='flex h-3 w-3'>
+							<span className='animate-ping absolute inline-flex h-[13px] w-[13px] rounded-full bg-[#008000]  -mt-[1px]' />
+							<span className='relative inline-flex rounded-full h-3 w-3 bg-[#008000]' />
 						</span>
 					</h1>
 				</div>
@@ -97,7 +177,72 @@ const Collection = () => {
 				<div className='flex justify-center mt-[10px]'>
 					<CopyButton onClick={handleCopyEvent}>Copy</CopyButton>
 				</div>
+     {/*  */}
+					<div className="flex gap-[0.5506rem] justify-center items-center mt-[40px] md:mt-[50px]">
+						<select id="tab-select" class="sm:hidden py-3 px-4 pr-9 block w-full rounded-md text-sm" aria-label="Tabs" role="tablist">
+								<option value="#hs-tab-to-select-1">On Sale</option>
+								<option value="#hs-tab-to-select-2">Owned</option>
+						</select>
+						{/*  */}
+						<div class="hidden sm:block border-b border-gray-200 dark:border-gray-700">
+								<nav class="flex space-x-2" aria-label="Tabs" role="tablist" hs-data-tab-select="#tab-select">
+										<button type="button" class="hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active" id="hs-tab-to-select-item-1" data-hs-tab="#hs-tab-to-select-1" aria-controls="hs-tab-to-select-1" role="tab">
+												On Sale
+										</button>
+										<button type="button" class="hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active" id="hs-tab-to-select-item-2" data-hs-tab="#hs-tab-to-select-2" aria-controls="hs-tab-to-select-2" role="tab">
+												Owned
+										</button>
+								</nav>
+						</div>
+					</div>
+					<div class="mt-3">
+							<div id="hs-tab-to-select-1" role="tabpanel" aria-labelledby="hs-tab-to-select-item-1">
+								<div className='flex justify-center items-center mt-[30px]'>
+									<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
+										{onsale.map((item, idx) => (
+												<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
+													<img
+														className='object-cover lg:opacity-50 lg:hover:opacity-100 transition-all duration-300'
+														src={item.nftimage}
+														alt='NFT pic'
+													/>
+													<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
+														<div>
+															<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
+															<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
+															<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
+														</div>
+													</div>
+												</Card>
+										))}
+									</div>
+								</div>
+							</div>
+							<div id="hs-tab-to-select-2" class="hidden" role="tabpanel" aria-labelledby="hs-tab-to-select-item-2">
+								<div className='flex justify-center items-center mt-[30px]'>
+										<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
+											{owned.map((item, idx) => (
+													<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
+														<img
+															className='object-cover lg:opacity-50 lg:hover:opacity-100 transition-all duration-300'
+															src={item.nftimage}
+															alt='NFT pic'
+														/>
+														<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
+															<div>
+																<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
+																<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
+																<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
+															</div>
+														</div>
+													</Card>
+											))}
+										</div>
+									</div>
+							</div>
+					</div>
 			</div>
+			<Footer />
 		</React.Fragment>
 	);
 };
@@ -109,4 +254,12 @@ const CopyButton = styled.button`
 	height: 30px;
 	background: #5b2e9d;
 	border-radius: 5px;
+  font-family: orbitron-light;
+`;
+
+const Card = styled.div`
+	background: rgba(91, 46, 157, 0.15);
+	backdrop-filter: blur(7.5px);
+	border-radius: 20px;
+	margin-bottom: 30px;
 `;

@@ -83,7 +83,7 @@ const CreateSingle = () => {
                     PNG, JPG, GIF WEBP or MP4. Max 200MB
                   </h1>
                   <div className='flex items-center justify-center pt-[24px]'>
-                    <input className="file:mr-4 file:py-2 file:px-4
+                    <input accept=".mp4,.mp3" className="file:mr-4 file:py-2 file:px-4
                       file:rounded-[30px] file:border-0
                       file:text-sm file:font-semibold
                     file:bg-[#5B2E9D] file:text-white orbitron-light
