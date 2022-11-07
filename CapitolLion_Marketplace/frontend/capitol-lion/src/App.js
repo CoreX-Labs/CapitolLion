@@ -7,13 +7,9 @@ import MusicDAO from './pages/MusicDAO';
 import Collection from './pages/Collection';
 import CreateSingle from './pages/create/CreateSingle';
 import CreateMultiple from './pages/create/CreateMultiple';
-import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
-
-const activeChainId = ChainId.Goerli;
 
 function App() {
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}>
       <BrowserRouter>
         {/* <Navbar /> */}
         <Routes>
@@ -27,7 +23,6 @@ function App() {
           <Route path='/collection' element={<Collection />} />
         </Routes>
       </BrowserRouter>
-    </ThirdwebProvider>
   );
 }
 
