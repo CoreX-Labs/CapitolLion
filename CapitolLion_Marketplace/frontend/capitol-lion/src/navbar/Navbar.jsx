@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-import { ConnectWallet } from "@thirdweb-dev/react";
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
@@ -36,7 +35,11 @@ const Navbar = () => {
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Marketplace</li>
 						</NavLink>
 						<NavLink to='musicDAO'>
-							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>MusicDAO</li>
+							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
+								<a href='https://lionxeco.net/capitol-lion-genesis.html' target='_blank' rel='noreferrer'>
+									<p className='text-[14px]'>LionX</p>
+								</a>
+							</li>
 						</NavLink>
 						<NavLink to='/collection'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Collection</li>
@@ -58,21 +61,21 @@ const Navbar = () => {
 						<NavLink to='/marketplace'>
 							<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Marketplace</li>
 						</NavLink>
-						<NavLink to='/musicDA0'>
-							<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>MusicDAO</li>
-						</NavLink>
+						<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>
+							<a href='https://lionxeco.net/capitol-lion-genesis.html' target='_blank' rel='noreferrer'>
+								<p className='text-[14px]'>LionX</p>
+							</a>
+						</li>
 						<NavLink to='/collection'>
 							<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Collection</li>
 						</NavLink>
-						<ConnectWallet accentColor="#5B2E9D" >
-						<li className='cursor-pointer orbitron-light'>
-							<motion.button
-								whileTap={{ scale: -1.0 }}
-								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
-								Connect Wallet
-							</motion.button>
-						</li>
-						</ConnectWallet>
+							<li className='cursor-pointer orbitron-light'>
+								<motion.button
+									whileTap={{ scale: -1.0 }}
+									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
+									Connect Wallet
+								</motion.button>
+							</li>
 					</ul>
 				</div>
 			</div>
