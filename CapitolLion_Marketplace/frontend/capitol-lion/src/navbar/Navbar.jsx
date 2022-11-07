@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
+import { ConnectWallet } from "@thirdweb-dev/react";
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
@@ -63,6 +64,7 @@ const Navbar = () => {
 						<NavLink to='/collection'>
 							<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Collection</li>
 						</NavLink>
+						<ConnectWallet accentColor="#5B2E9D" >
 						<li className='cursor-pointer orbitron-light'>
 							<motion.button
 								whileTap={{ scale: -1.0 }}
@@ -70,6 +72,7 @@ const Navbar = () => {
 								Connect Wallet
 							</motion.button>
 						</li>
+						</ConnectWallet>
 					</ul>
 				</div>
 			</div>
