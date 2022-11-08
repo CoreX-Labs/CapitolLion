@@ -39,16 +39,21 @@ export default Home;
 export const Launchpad = () => {
 	return (
 		<Container>
-			<div className="hidden sm:block">
-				<img src='/LaunchNFT.png' alt='Texture' />
+			<div className="hidden sm:block md:flex">
+				{/* <div>
+					<img src='/label.png' alt='Texture' />
+				</div> */}
+				<div className="md:pl-[60px]">
+					<video className="rounded-lg" width="600px" height="100px" src="IMG_3637.MOV" autoPlay loop muted></video>
+				</div>
 			</div>
 			<Sub>
 				<div>
-					<p className='orbitron-light font-[400] text-[14px] leading-[26px] pb-[25px] capitalize'>j. cole</p>
+					<p className='orbitron-light font-[400] text-[14px] leading-[26px] pb-[25px] capitalize'>Tron</p>
 				</div>
 				<div>
 					<h2 className='orbitron-light font-[700] text-[32px] leading-[48px] pb-[25px] capitalize'>
-						kevin's heart
+						Tron soundup
 					</h2>
 				</div>
 				<div className='pb-[12px]'>

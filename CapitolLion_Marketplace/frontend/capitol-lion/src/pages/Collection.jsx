@@ -150,7 +150,7 @@ const Collection = () => {
 				</div>
 				<div className='flex justify-center items-center -mt-[90px]'>
 					<div>
-						<img className='rounded-full w-[208px] h-[208px] object-cover' src={profilePic} alt='User' />
+						<img className='rounded-full md:w-[208px] md:h-[208px] object-cover w-[195px] h-[195px]' src={profilePic} alt='User' />
 					</div>
 				</div>
 				<div className='flex justify-center items-center -mt-[75px] cursor-pointer absolute right-[90px] md:right-[610px] 2xl:right-[750px]'>
