@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import '../App.css';
 import Navbar from '../navbar/Navbar';
 import Objective from '../pages/components/Objective';
+import UpcomingDrops from './components/UpcomingDrops';
 
 const Home = () => {
 	return (
@@ -21,6 +22,7 @@ const Home = () => {
 					</div>
 				</div>
 				{/* <Hero /> */}
+				<UpcomingDrops />
 				<Partners />
 				<Objective />
 				<Nfts />

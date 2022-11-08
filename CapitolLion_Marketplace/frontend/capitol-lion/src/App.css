@@ -64,3 +64,14 @@ input#file-input {
 input#dp-input {
 	display: none;
 }
+
+.upcoming{
+	background: rgba(38, 34, 40, 0.76);
+	position: relative;
+	top:3.4em;
+	height: 15em;
+	margin-bottom: 3em;
+	width: 100%;
+	padding: 2.5em;
+	
+}
