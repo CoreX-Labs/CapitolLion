@@ -102,7 +102,7 @@ const Nfts = () => {
 				<h1 className='text-center font-[500] text-[24px] md:text-[36px] leading-[80px] orbitron-light pb-[42px]'>
 					Popular Items
 				</h1>
-				<div className='hidden md:flex md:gap-[3.1875rem] md:overflow-x-scroll'>
+				<div className='hidden md:flex md:gap-[40px] md:overflow-x-scroll overflow-hidden'>
 					{popularnfts.map((nft, idx) => (
 						<Fade key={idx} right>
 							<Card>
@@ -140,7 +140,7 @@ const Nfts = () => {
 export default Nfts;
 
 const Card = styled.div`
-	width: 374px;
+	width: 349px;
 	height: 26.75rem;
 	background: rgba(91, 46, 157, 0.15);
 	backdrop-filter: blur(7.5px);

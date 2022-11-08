@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Artists from './components/Artists';
-import Hero from './components/Hero';
+// import Hero from './components/Hero';
 import Nfts from './components/Nfts';
 import Partners from './components/Partners';
 import Step from './components/Step';
@@ -54,7 +54,7 @@ export const Launchpad = () => {
 				</div>
 				<div className='pb-[12px]'>
 					<HeroButtonOne>
-						<p className='tracking-wide orbitron-light'>View Song</p>
+						<a href='https://kraftly.io/mintable/111/gallery?page=1' target='_blank' rel='noreferrer' className='tracking-wide orbitron-light'>View Song</a>
 					</HeroButtonOne>
 				</div>
 				<div className='tracking-widest orbitron-light'>

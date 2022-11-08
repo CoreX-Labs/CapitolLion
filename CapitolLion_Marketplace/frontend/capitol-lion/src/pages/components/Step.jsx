@@ -39,12 +39,12 @@ const Step = () => {
                   <Card
                     icon='/shopping-bag.png'
                     title='NFT Marketplace'
-                    detail={`Capitol Lion's NFT Marketplace is Fueled by Music & Entertainment`}
+                    detail='A Marketplace Fueled by Music & Entertainment'
                   />
                   <Card
                     icon='/heart.png'
                     title='Collect NFT'
-                    detail='Build your collection with the Capitol Lion Music Platform.'
+                    detail='Build your collection with the Music Platform.'
                   />
                 </div>
             </div>
