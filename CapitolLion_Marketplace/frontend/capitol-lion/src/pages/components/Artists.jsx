@@ -12,49 +12,49 @@ const Artists = () => {
     {
       id: 2,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Carlos M.",
       worth: "3.2 ETH"
     },
     {
       id: 3,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Sarah M.",
       worth: "3.2 ETH"
     },
     {
       id: 4,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Chandler S.",
       worth: "3.2 ETH"
     },
     {
       id: 5,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Anne K.",
       worth: "3.2 ETH"
     },
     {
       id: 6,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Connor M.",
       worth: "3.2 ETH"
     },
     {
       id: 7,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Pedro O.",
       worth: "3.2 ETH"
     },
     {
       id: 8,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Elon M.",
       worth: "3.2 ETH"
     },
     {
       id: 9,
       artistpicture: "/image.png",
-      artistname: "Shaun P.",
+      artistname: "Deark G.",
       worth: "3.2 ETH"
     },
   ]
@@ -67,12 +67,12 @@ const Artists = () => {
         <div className="grid grid-cols-3 grid-row-3">
           {
             artistdetails.map((data, idx) => (
-              <div key={idx} className="w-[347px] h-[107px] flex items-center gap-[24px] mb-[42px]">
+              <div key={idx} className="w-[347px] h-[107px] flex items-center  mb-[42px]">
                 <div>
                   <h1 className='orbitron-light font-[700] text-[32px] leading-[37px]'>{ data.id }.</h1>
                 </div>
                 <div className="flex items-center pl-[31px] creators__card gap-[28px]">
-                  <div>
+                  <div className="w-[95px] h-[90px] bg-[#5B2E9D26] rounded-full flex justify-center items-center">
                     <img src="/passport.png" alt="Artist Pic" />
                   </div>
                   <div>
