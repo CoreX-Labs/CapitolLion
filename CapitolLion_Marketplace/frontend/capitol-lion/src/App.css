@@ -79,13 +79,6 @@ input#dp-input {
 
 
 @media only screen and (max-width: 992px){
-	/* media query partner div section */
-	.partner__div {
-		background: linear-gradient(91.5deg, rgba(91, 46, 157, 0.15) 2.36%, rgba(86, 16, 16, 0.15) 101.4%);
-		backdrop-filter: blur(7.5px);
-		border-radius: 20px;
-		width: 55em;
-	}
-	/* stemp js section media queries */
+	
 	
 }
