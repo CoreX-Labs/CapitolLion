@@ -15,6 +15,7 @@
 	border-radius: 20px;
 }
 
+
 .bid__button {
 	width: 139px;
 	height: 36px;
@@ -74,4 +75,34 @@ input#dp-input {
 	width: 100%;
 	padding: 2.5em;
 
+}
+
+
+@media only screen and (max-width: 992px){
+	/* media query partner div section */
+	.partner__div {
+		background: linear-gradient(91.5deg, rgba(91, 46, 157, 0.15) 2.36%, rgba(86, 16, 16, 0.15) 101.4%);
+		backdrop-filter: blur(7.5px);
+		border-radius: 20px;
+		width: 55em;
+	}
+
+	/* stemp js section media queries */
+	.steps{
+		width: 60.9em;
+	}
+
+	/* .cardsWrap{
+		width: 30em
+	} */
+	.cmXQBO {
+		cursor: pointer;
+		width: 218.06px;
+		height: 250.48px;
+		background: rgba(91,46,157,0.15);
+		border: 0.5px solid #5b2e9d;
+		border-radius: 20px;
+		margin-bottom: 25px;
+	}
+	
 }

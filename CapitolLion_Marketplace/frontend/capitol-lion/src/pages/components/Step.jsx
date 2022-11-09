@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../../App.css';
 
 const Step = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const Step = () => {
   }, []);
   return (
     <React.Fragment>
-      <div className='flex items-center justify-center px-[24px] md:px-[70px] 2xl:px-[300px] bg-[#121212]'>
+      <div className='flex items-center justify-center px-[24px] md:px-[70px] 2xl:px-[300px] bg-[#121212] steps'>
         <div className='pb-[100px]'>
           <h1 className='text-center font-[500] text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[42px]'>
             Create and List your NFT
@@ -23,7 +24,7 @@ const Step = () => {
               data-aos-duration='1500'
               data-aos-anchor-placement="top-bottom"
               className='block md:flex gap-[1.25rem]'>
-                <div className="md:flex gap-[1.25rem] block">
+                <div className="md:flex gap-[1.25rem] block cardsWrap">
                   <Card
                     icon='/credit-card.png'
                     title='Connect Wallet'
@@ -33,9 +34,7 @@ const Step = () => {
                     icon='/credit-card.png'
                     title='Connect Wallet'
                     detail='Connect wallet to gain access to the Capitol Lion Music Network'
-                  />
-                </div>
-                <div className="md:flex gap-[1.25rem] block">
+                  />                
                   <Card
                     icon='/shopping-bag.png'
                     title='NFT Marketplace'
@@ -46,7 +45,7 @@ const Step = () => {
                     title='Collect NFT'
                     detail='Build your collection with the Music Platform.'
                   />
-                </div>
+                  </div>
             </div>
           </div>
         </div>
@@ -68,7 +67,7 @@ export const Card = ({ icon, title, detail }) => {
           <TitleText className='orbitron-light'>{title}</TitleText>
         </TitleDiv>
         <div>
-          <SubheaderText className='orbitron-light'>{detail}</SubheaderText>
+          <SubheaderText className='orbitron-light pb-8'>{detail}</SubheaderText>
         </div>
       </InnerContainer>
     </CardBox>
@@ -77,8 +76,8 @@ export const Card = ({ icon, title, detail }) => {
 
 const CardBox = styled.div`
   cursor: pointer;
-  width: 298.06px;
-  height: 250.48px;
+  width: 30%;
+  /* height: 250.48px; */
   background: rgba(91, 46, 157, 0.15);
   border: 0.5px solid #5b2e9d;
   border-radius: 20px;
@@ -90,8 +89,8 @@ const CardBox = styled.div`
 `;
 
 const InnerContainer = styled.div`
-  width: 293.63px;
-  height: 172px;
+  /* width: 293.63px;
+  height: 172px; */
   margin-top: 60px;
   margin-left: 28.21px;
 `;
