@@ -14,7 +14,7 @@ const Step = () => {
     <React.Fragment>
       <div className='flex items-center justify-center px-[24px] md:px-[70px] 2xl:px-[300px] bg-[#121212] steps'>
         <div className='pb-[100px]'>
-          <h1 className='text-center font-[500] text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[42px]'>
+          <h1 className='text-center font-[500] text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[20]'>
             Create and List your NFT
           </h1>
           <div className="flex items-center justify-center">
@@ -35,8 +35,6 @@ const Step = () => {
                     title='Connect Wallet'
                     detail='Connect wallet to gain access to the Capitol Lion Music Network'
                   />
-                </div>
-                <div className="md:flex 2xl:grid  gap-[1.25rem] block">
                   <Card
                     icon='/shopping-bag.png'
                     title='NFT Marketplace'
@@ -78,7 +76,7 @@ export const Card = ({ icon, title, detail }) => {
 
 const CardBox = styled.div`
   cursor: pointer;
-  width: 30%;
+  width: 34%;
   /* height: 250.48px; */
   background: rgba(91, 46, 157, 0.15);
   border: 0.5px solid #5b2e9d;

@@ -86,23 +86,6 @@ input#dp-input {
 		border-radius: 20px;
 		width: 55em;
 	}
-
 	/* stemp js section media queries */
-	.steps{
-		width: 60.9em;
-	}
-
-	/* .cardsWrap{
-		width: 30em
-	} */
-	.cmXQBO {
-		cursor: pointer;
-		width: 218.06px;
-		height: 250.48px;
-		background: rgba(91,46,157,0.15);
-		border: 0.5px solid #5b2e9d;
-		border-radius: 20px;
-		margin-bottom: 25px;
-	}
 	
 }
