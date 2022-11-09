@@ -64,7 +64,7 @@ const Artists = () => {
         <h1 className='text-center font-[500] text-[36px] leading-[80px] orbitron-light pb-[42px]'>
             Popular Creators
         </h1>
-        <div className="grid grid-cols-3 grid-row-3">
+        <div className="lg:grid-cols-3 lg:grid lg:grid-row-3 md:grid-cols-2 md:grid">
           {
             artistdetails.map((data, idx) => (
               <div key={idx} className="w-[347px] h-[107px] flex items-center  mb-[42px]">

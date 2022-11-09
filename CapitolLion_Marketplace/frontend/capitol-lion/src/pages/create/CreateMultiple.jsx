@@ -99,7 +99,7 @@ const CreateMultiple = () => {
                   <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
                 </label>
                 <Input
-                  className='orbitron-light'
+                  className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
                   type='number'
                   placeholder='enter price for one item (TRX)'
                   {...register('price')}
@@ -111,13 +111,13 @@ const CreateMultiple = () => {
                     Choose collection
                   </h1>
                 </label>
-                <Input className='orbitron-light' type='text' placeholder='Choose collection' {...register('collection')} />
+                <Input className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]' type='text' placeholder='Choose collection' {...register('collection')} />
                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.collection?.message}</p>
                 {/*  */}
                 <label>
                   <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Title</h1>
                 </label>
-                <Input className='orbitron-light' type='text' placeholder='e.g “Crypto Punk”' {...register('title')} />
+                <Input className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]' type='text' placeholder='e.g “Crypto Punk”' {...register('title')} />
                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.title?.message}</p>
                 {/*  */}
                 <label>
@@ -126,7 +126,7 @@ const CreateMultiple = () => {
                   </h1>
                 </label>
                 <Input
-                  className='orbitron-light'
+                  className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
                   type='text'
                   placeholder='e.g “this is a very limited item”'
                   {...register('description')}
@@ -139,7 +139,7 @@ const CreateMultiple = () => {
                   </h1>
                 </label>
                 <Input
-                  className='orbitron-light'
+                  className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
                   type=''
                   placeholder='suggested: 10%, 20%. Max is 70%'
                   {...register('royalties')}
@@ -152,7 +152,7 @@ const CreateMultiple = () => {
                   </h1>
                 </label>
                 <Input
-                  className='orbitron-light'
+                  className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
                   type=''
                   placeholder='e.g "20"'
                   {...register('numberofsupply')}

@@ -67,12 +67,12 @@ const Marketplace = () => {
 		<React.Fragment>
 			<div className='bg-[#121212] h-auto text-white'>
 				<Navbar />
-				<div className='px-[24px] md:px-[70px] 2xl:px-[300px]'>
+				<div className='px-[24px] md:px-[30px] 2xl:px-[300px]'>
 					<Container>
 						<h1 className='orbitron-header font-[700] text-[50px] leading-[63px]'>Marketplace</h1>
 					</Container>
 					<div className='h-auto'>
-						<div className='px-[140px] md:block md:gap-[134px] pb-[86px] hidden sm:hiddem lg:flex'>
+						<div className='hidden'>
 							<div>
 								<SearchInput>
 									<div>
@@ -84,7 +84,7 @@ const Marketplace = () => {
 								</SearchInput>
 							</div>
 							{/*  */}
-							<div className='lg:block hidden'>
+							<div className='hidden lg:block'>
 								<div class='hs-dropdown relative inline-flex [--trigger:hover]'>
 									<button
 										id='hs-dropdown-hover-event'
@@ -123,7 +123,7 @@ const Marketplace = () => {
 								</div>
 							</div>
 							{/*  */}
-							<div className='lg:block hidden'>
+							<div className='hidden lg:block'>
 								<div class='hs-dropdown relative inline-flex [--trigger:hover]'>
 									<button
 										id='hs-dropdown-hover-event'
@@ -162,7 +162,7 @@ const Marketplace = () => {
 								</div>
 							</div>
 							{/*  */}
-							<div className='lg:block hidden'>
+							<div className='hidden lg:block'>
 								<div class='hs-dropdown relative inline-flex [--trigger:hover]'>
 									<button
 										id='hs-dropdown-hover-event'
@@ -202,13 +202,13 @@ const Marketplace = () => {
 							</div>
 						</div>
 						{/* TO LIST CARDS */}
-						<div className='flex justify-center items-center'>
-							<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
+						<div className='flex items-center justify-center'>
+							<div className='md:grid md:grid-cols-2 md:gap-[30px] lg:grid lg:grid-cols-3'>
 								{market.map((item, idx) => (
 									<Fade bottom>
 										<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
 											<img
-												className='object-cover lg:opacity-50 lg:hover:opacity-100 transition-all duration-300'
+												className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
 												src={item.nftimage}
 												alt='NFT pic'
 											/>
@@ -226,7 +226,7 @@ const Marketplace = () => {
 						</div>
 					</div>
 				</div>
-				<Footer />
+				{/* <Footer /> */}
 			</div>
 		</React.Fragment>
 	);
