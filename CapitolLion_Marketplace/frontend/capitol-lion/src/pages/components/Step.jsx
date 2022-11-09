@@ -17,7 +17,7 @@ const Step = () => {
           <h1 className='text-center font-[500] text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[42px]'>
             Create and List your NFT
           </h1>
-          <div className="flex justify-center items-center">
+          <div className="flex items-center justify-center">
             <div
               data-aos='fade-up'
               data-aos-easing='linear'
@@ -34,7 +34,9 @@ const Step = () => {
                     icon='/credit-card.png'
                     title='Connect Wallet'
                     detail='Connect wallet to gain access to the Capitol Lion Music Network'
-                  />                
+                  />
+                </div>
+                <div className="md:flex 2xl:grid  gap-[1.25rem] block">
                   <Card
                     icon='/shopping-bag.png'
                     title='NFT Marketplace'
@@ -86,6 +88,9 @@ const CardBox = styled.div`
       box-shadow: #5B2E9D 0px 0px 26px 5px;
       transition: 500ms ease-in-out;
     }
+    @media (max-width: 1024px) {
+			
+		}
 `;
 
 const InnerContainer = styled.div`

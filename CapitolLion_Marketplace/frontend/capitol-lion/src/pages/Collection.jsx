@@ -140,32 +140,32 @@ const Collection = () => {
 				<div className=''>
 					<img className='h-[200px] md:h-[404px] w-[100vw] object-cover object-top' src={banner} alt='Banner' />
 				</div>
-				<div className='flex justify-end items-center -mt-[50px] cursor-pointer absolute right-[10px]'>
+				<div className='flex justify-end items-center -mt-[38px] cursor-pointer absolute right-[10px]'>
 					<form>
 						<input type='file' name='picture' id='file-input' onChange={handleBannerChange} />
 						<label className='cursor-pointer' htmlFor='file-input'>
-							<img src='/camera.png' alt='camera' />
+							<img className="" src='/camera.png' alt='camera' />
 						</label>
 					</form>
 				</div>
-				<div className='flex justify-center items-center -mt-[90px]'>
+				<div className='flex justify-center items-center -mt-[60px] md:-mt-[90px]'>
 					<div>
-						<img className='rounded-full md:w-[208px] md:h-[208px] object-cover w-[195px] h-[195px]' src={profilePic} alt='User' />
+						<img className='rounded-full md:w-[208px] md:h-[208px] object-cover w-[120px] h-[120px]' src={profilePic} alt='User' />
 					</div>
 				</div>
-				<div className='flex justify-center items-center -mt-[75px] cursor-pointer absolute right-[90px] md:right-[610px] 2xl:right-[750px]'>
-					<form>
+				<div className=''>
+					{/* <form>
 						<input type='file' name='picture' id='dp-input' onChange={handleProfilePicChange} />
 						<label className='cursor-pointer' htmlFor='dp-input'>
 							<img src='/dpcamera.png' alt='camera' />
 						</label>
-					</form>
+					</form> */}
 				</div>
 				{/*  */}
 				<div className='flex justify-center mt-[65px]'>
 					<h1 className='orbitron-light font-[500] text-[24px] leading-[31px] text-center inline-flex items-center gap-[10px]'>
 						User45948{' '}
-						<span className='flex h-3 w-3'>
+						<span className='flex w-3 h-3'>
 							<span className='animate-ping absolute inline-flex h-[13px] w-[13px] rounded-full bg-[#008000]  -mt-[1px]' />
 							<span className='relative inline-flex rounded-full h-3 w-3 bg-[#008000]' />
 						</span>
@@ -174,7 +174,15 @@ const Collection = () => {
 				<h1 className='orbitron-light font-[400] text-[16px] leading-[31px] text-center'>
 					TRxvdndjdgsvsgndfgdjkdfsdfg
 				</h1>
-				<div className='flex justify-center mt-[10px]'>
+				<div className='flex justify-center mt-[10px] gap-[10px]'>
+					<CopyButton>
+						<form>
+						<input type='file' name='picture' id='dp-input' onChange={handleProfilePicChange} />
+						<label className='cursor-pointer' htmlFor='dp-input'>
+							Edit
+						</label>
+					</form>
+					</CopyButton>
 					<CopyButton onClick={handleCopyEvent}>Copy</CopyButton>
 				</div>
      {/*  */}
@@ -202,7 +210,7 @@ const Collection = () => {
 										{onsale.map((item, idx) => (
 												<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
 													<img
-														className='object-cover lg:opacity-50 lg:hover:opacity-100 transition-all duration-300'
+														className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
 														src={item.nftimage}
 														alt='NFT pic'
 													/>
@@ -220,11 +228,11 @@ const Collection = () => {
 							</div>
 							<div id="hs-tab-to-select-2" class="hidden" role="tabpanel" aria-labelledby="hs-tab-to-select-item-2">
 								<div className='flex justify-center items-center mt-[30px]'>
-										<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
+										<div className='md:grid md:grid-cols-2 md:gap-[30px] lg:grid lg:grid-cols-2'>
 											{owned.map((item, idx) => (
 													<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
 														<img
-															className='object-cover lg:opacity-50 lg:hover:opacity-100 transition-all duration-300'
+															className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
 															src={item.nftimage}
 															alt='NFT pic'
 														/>
@@ -242,7 +250,7 @@ const Collection = () => {
 							</div>
 					</div>
 			</div>
-			<Footer />
+			{/* <Footer /> */}
 		</React.Fragment>
 	);
 };

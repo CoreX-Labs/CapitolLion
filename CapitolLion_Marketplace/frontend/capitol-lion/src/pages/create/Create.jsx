@@ -15,7 +15,7 @@ const Create = () => {
         </Container>
           <div>
             <h1 className="text-center orbitron-light font-[400] text-[1.375rem] leading-[28px] opacity-25">Choose “Single” if you want your collectible to be one of a kind<br /> or “Multiple” if you want to sell one collectible multiple times</h1>
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <div className="md:flex md:items-center md:justify-center gap-[90px] pt-[70px] pb-[100px] ">
                 <div>
                   <Link to="create-single">
@@ -50,7 +50,7 @@ const Create = () => {
             <Outlet />
           </div>
         </div>
-      <Footer />
+      {/* <Footer /> */}
       </div>
     </React.Fragment>
   );
