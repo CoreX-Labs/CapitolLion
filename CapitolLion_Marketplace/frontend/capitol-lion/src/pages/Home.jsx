@@ -44,7 +44,7 @@ export const Launchpad = () => {
 					<img src='/label.png' alt='Texture' />
 				</div> */}
 				<div className="md:pl-[60px]">
-					<video className="rounded-lg" width="600px" height="100px" src="IMG_3637.MOV" autoPlay loop muted></video>
+					<video className="rounded-lg" width="600px" height="100px" src="vid.webm" autoPlay loop muted></video>
 				</div>
 			</div>
 			<Sub>
