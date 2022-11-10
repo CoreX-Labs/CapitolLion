@@ -28,7 +28,7 @@ const Navbar = () => {
 						(showNav ? 'top-[90px] left-0 right-0' : '-top-[500px] left-0 right-0') +
 						' absolute w-full h-[300px] bg-[#121212] dropdown transition-top duration-500 z-50'
 					}>
-					<ul className=''>
+					<ul className='mr-40px'>
 						<NavLink to='/create'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Create</li>
 						</NavLink>

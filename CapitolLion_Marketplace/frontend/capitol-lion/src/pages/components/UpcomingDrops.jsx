@@ -7,6 +7,11 @@ import '../../../src/App.css';
 // import FotoFive from '../../Assets/photo5.jpg'
 
 const UpcomingDrops = () => {
-	return <div />;
+	return (
+		<div>
+
+		
+		</div>
+	)
 };
 export default UpcomingDrops;

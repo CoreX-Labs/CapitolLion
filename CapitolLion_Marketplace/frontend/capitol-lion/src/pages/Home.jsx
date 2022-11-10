@@ -10,42 +10,10 @@ import '../App.css';
 import Navbar from '../navbar/Navbar';
 import Objective from '../pages/components/Objective';
 import UpcomingDrops from './components/UpcomingDrops';
-import toast, { Toaster } from 'react-hot-toast';
-
-const notify = () => toast('Notification set successfully', {
-	duration: 5000,
-	position: 'top-center',
-
-	// Styling
-	style: {
-			border: '1px solid #5b2e9d',
-			borderRadius: '20px',
-			padding: '16px',
-			color: '#ffffff',
-			background: '#121212',
-			boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
-			fontSize: '18px',
-			fontFamily: 'orbitron-light',
-			marginTop: '20px',
-	},
-	className: '',
-
-	// Custom Icon
-	icon: '👏',
-
-	// Aria
-	ariaProps: {
-			role: 'status',
-			'aria-live': 'polite',
-	},
-});
-
-
 
 const Home = () => {
 	return (
 		<React.Fragment>
-		<Toaster />
 			<div className='text-white h-1000 bg-[#121212]'>
 				<div className="h-screen bg-[url('rectangle.png')] bg-no-repeat bg-cover">
 					<Navbar />
@@ -69,14 +37,9 @@ const Home = () => {
 export default Home;
 
 export const Launchpad = () => {
-
-	const setNotification = () => {
-		notify();
-	}	
-
 	return (
 		<Container>
-			<div className="hidden sm:hidden md:flex">
+			<div className="hidden sm:block md:flex">
 				{/* <div>
 					<img src='/label.png' alt='Texture' />
 				</div> */}
@@ -86,11 +49,11 @@ export const Launchpad = () => {
 			</div>
 			<Sub>
 				<div>
-					<p className='orbitron-light font-[400] text-[14px] leading-[26px] pb-[25px] capitalize'>OneM1nd</p>
+					<p className='orbitron-light font-[400] text-[14px] leading-[26px] pb-[25px] capitalize'>Tron</p>
 				</div>
 				<div>
 					<h2 className='orbitron-light font-[700] text-[32px] leading-[48px] pb-[25px] capitalize'>
-						Tronics Anthem
+						Tron soundup
 					</h2>
 				</div>
 				<div className='pb-[12px]'>
@@ -102,7 +65,7 @@ export const Launchpad = () => {
 					</HeroButtonOne>
 				</div>
 				<div className='tracking-widest orbitron-light'>
-					<HeroButtonTwo onClick={setNotification}>
+					<HeroButtonTwo>
 						<div>
 							<img src='/bell.png' alt='Bell Icon' />
 						</div>
@@ -117,28 +80,16 @@ export const Launchpad = () => {
 };
 
 const Container = styled.div`
-	margin-top: 150px;
+	margin-top: 170px;
 	height: 122px;
 	display: flex;
 	gap: 135px;
 	align-items: center;
 	padding-left: 90px;
-	@media (max-width: 800px) {
-			margin-top: -20px;
-   padding-left: 50px;
-			gap: 20px;
-			padding-right: 50px;
+	@media (max-width: 568px) {
+			margin-top: 6.25rem;
+   padding-left: 0.625rem;
   }
-		@media (max-width: 1024px) {
-			margin-top: -20px;
-   padding-left: 50px;
-			gap: 80px;
-			padding-right: 50px;
-			video {
-				width: 350px;
-				height: 350px;
-			}
-		}
 `;
 
 const Sub = styled.div`padding: 1px;`;
@@ -172,7 +123,7 @@ export const Timer = () => {
 	let interval = useRef();
 
 	const startTimer = () => {
-		const countdownDate = new Date('December 1 2022 00:00:00').getTime();
+		const countdownDate = new Date('November 14 2022 00:00:00').getTime();
 
 		interval = setInterval(() => {
 			const now = new Date().getTime();
