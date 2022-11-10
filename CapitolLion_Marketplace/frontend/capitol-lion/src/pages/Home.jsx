@@ -60,7 +60,7 @@ const Home = () => {
 				<Nfts />
 				<Artists />
 				<Step />
-				<Footer />
+				{/* <Footer /> */}
 			</div>
 		</React.Fragment>
 	);
