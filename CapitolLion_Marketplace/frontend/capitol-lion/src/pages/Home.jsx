@@ -4,7 +4,7 @@ import Artists from './components/Artists';
 import Nfts from './components/Nfts';
 import Partners from './components/Partners';
 import Step from './components/Step';
-import Footer from '../footer/Footer';
+// import Footer from '../footer/Footer';
 import styled from 'styled-components';
 import '../App.css';
 import Navbar from '../navbar/Navbar';
