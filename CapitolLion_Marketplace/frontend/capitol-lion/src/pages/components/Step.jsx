@@ -14,8 +14,8 @@ const Step = () => {
     <React.Fragment>
       <div className='flex items-center justify-center px-[24px] md:px-[70px] 2xl:px-[300px] bg-[#121212] steps'>
         <div className='pb-[100px]'>
-          <h1 className='text-center font-[500]+ text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[20]'>
-            Create and List your NFT+
+          <h1 className='text-center font-[500]+ text-[24px] md:text-[36px] md:leading-[80px] orbitron-light pb-[20px]'>
+            Create and List your NFT
           </h1>
           <div className="flex items-center justify-center">
             <div

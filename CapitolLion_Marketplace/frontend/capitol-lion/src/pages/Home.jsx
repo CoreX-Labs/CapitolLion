@@ -10,10 +10,40 @@ import '../App.css';
 import Navbar from '../navbar/Navbar';
 import Objective from '../pages/components/Objective';
 import UpcomingDrops from './components/UpcomingDrops';
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast('Notification set successfully', {
+	duration: 5000,
+	position: 'top-center',
+
+	// Styling
+	style: {
+			border: '1px solid #5b2e9d',
+			borderRadius: '20px',
+			padding: '16px',
+			color: '#ffffff',
+			background: '#121212',
+			boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
+			fontSize: '18px',
+			fontFamily: 'orbitron-light',
+			marginTop: '20px',
+	},
+	className: '',
+
+	// Custom Icon
+	icon: '👏',
+
+	// Aria
+	ariaProps: {
+			role: 'status',
+			'aria-live': 'polite',
+	},
+});
 
 const Home = () => {
 	return (
 		<React.Fragment>
+		<Toaster />
 			<div className='text-white h-1000 bg-[#121212]'>
 				<div className="h-screen bg-[url('rectangle.png')] bg-no-repeat bg-cover">
 					<Navbar />
@@ -37,6 +67,9 @@ const Home = () => {
 export default Home;
 
 export const Launchpad = () => {
+	const setNotification = () => {
+		notify();
+	}
 	return (
 		<Container>
 			<div className="hidden sm:block md:flex">
@@ -65,7 +98,7 @@ export const Launchpad = () => {
 					</HeroButtonOne>
 				</div>
 				<div className='tracking-widest orbitron-light'>
-					<HeroButtonTwo>
+					<HeroButtonTwo onClick={setNotification}>
 						<div>
 							<img src='/bell.png' alt='Bell Icon' />
 						</div>
