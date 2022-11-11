@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-import styled from "styled-components"
-import { useForm } from 'react-hook-form';
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+// import styled from "styled-components"
+// import { useForm } from 'react-hook-form';
+// import * as yup from "yup";
+// import { yupResolver } from "@hookform/resolvers/yup";
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
 
-	const schema = yup.object().shape({ 
-		username: yup.string().required("Enter a username"),
-		legalname: yup.string().required("Enter your Legal name"),
-		email: yup.string().email().required("Enter a valid Email address"),
-		tronwalletaddress: yup.string().required("Input your Tron wallet address"),
-});
+// 	const schema = yup.object().shape({ 
+// 		username: yup.string().required("Enter a username"),
+// 		legalname: yup.string().required("Enter your Legal name"),
+// 		email: yup.string().email().required("Enter a valid Email address"),
+// 		tronwalletaddress: yup.string().required("Input your Tron wallet address"),
+// });
 
-const { register, handleSubmit, formState: {errors} } = useForm({
-		resolver: yupResolver(schema)
-});
+// const { register, handleSubmit, formState: {errors} } = useForm({
+// 		resolver: yupResolver(schema)
+// });
 
-const onFormSubmit = async (data) => {
-		console.log(data);
-};
+// const onFormSubmit = async (data) => {
+// 		console.log(data);
+// };
 	return (
 		<React.Fragment>
 			<div className='w-screen h-[64px] p-[55px] text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px]'>
@@ -98,7 +98,7 @@ const onFormSubmit = async (data) => {
 										Connect Wallet
 								</button>
 
-								<div id="hs-focus-management-modal" class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+								{/* <div id="hs-focus-management-modal" class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
 										<div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
 												<div class="flex flex-col bg-[#121212] border border-[#5b2e9d] shadow-sm rounded-xl">
 														<div class="flex justify-between items-center py-3 px-4 border-b border-b-[#5b2e9d]">
@@ -119,19 +119,19 @@ const onFormSubmit = async (data) => {
 																<p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.username?.message}</p>
 														</div>
 														{/*  */}
-														<div class="px-4 py-[14px] overflow-y-auto">
+														{/* <div class="px-4 py-[14px] overflow-y-auto">
 																<label for="input-label" class="block text-sm font-medium mb-2 dark:text-white">Enter Legal name</label>
 																<Input {...register('legalname')} type="text" id="input-label" class="text-black py-3 px-4 block w-full text-sm focus:ring-[#5B2E9D] focus:border-[#5B2E9D]" placeholder="e.g John Doe" autofocus />
 																<p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.legalname?.message}</p>
-														</div>
+														</div> */}
 														{/*  */}
-														<div class="px-4 py-[14px] overflow-y-auto">
+														{/* <div class="px-4 py-[14px] overflow-y-auto">
 																<label for="input-label" class="block text-sm font-medium mb-2 dark:text-white">Email Address(Optional)</label>
 																<Input {...register('email')} type="text" id="input-label" class="text-black py-3 px-4 block w-full text-sm focus:ring-[#5B2E9D] focus:border-[#5B2E9D]" placeholder="you@gmail.com" autofocus />
 																<p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.email?.message}</p>
 														</div>
-														{/*  */}
-														<div class="relative flex items-start px-[22px] pb-[40px]">
+														 */}
+														{/* <div class="relative flex items-start px-[22px] pb-[40px]">
 															<div class="flex items-center h-5 mt-1">
 																	<input {...register('agree', { required: 'Agreement is reqired'})} id="hs-checkbox-delete" name="hs-checkbox-delete" type="checkbox" value="yes" class="border-[#5B2E9D] rounded text-[#5B2E9D] dark:border-[#5B2E9D] dark:checked:bg-[#5B2E9D] checked:focus:border-[#5B2E9D]" aria-describedby="hs-checkbox-delete-description" />
 																	<p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.agree && <span>{errors.agree?.message}</span>}</p>
@@ -146,9 +146,9 @@ const onFormSubmit = async (data) => {
                </motion.button>
 														</div>
 													</form>
-												</div>
-										</div>
-								</div>
+												</div> */}
+										{/* </div>
+								</div> */}
 							</li>
 					</ul>
 				</div>
@@ -161,10 +161,10 @@ export default Navbar;
 
 
 
-const Input = styled.input`
-  background: #121212;
-  border: 0.5px solid #5b2e9d;
-  border-radius: 10px;
-  padding: 10px;
-		width: 100%;
-`;
+// const Input = styled.input`
+//   background: #121212;
+//   border: 0.5px solid #5b2e9d;
+//   border-radius: 10px;
+//   padding: 10px;
+// 		width: 100%;
+// `;

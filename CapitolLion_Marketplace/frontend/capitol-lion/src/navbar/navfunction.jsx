@@ -45,7 +45,7 @@ setMyDetails({
 });
         } else {
             //we have a wallet and are not logged  in 
-            setMyMessag(<h3>Wallet Detected Please Log In</h3>);
+            setMyMessage(<h3>Wallet Detected Please Log In</h3>);
             setMyDetails({
                 name: 'none',
                 address: 'none',
