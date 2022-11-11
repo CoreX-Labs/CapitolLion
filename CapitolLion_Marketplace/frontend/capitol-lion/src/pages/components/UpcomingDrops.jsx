@@ -51,21 +51,21 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel my-12 mx-auto p-8">
-      <h2 className="text-4xl leading-8 font-semibold mb-12 text-slate-100  ml-9">
+    <div className="p-8 mx-auto my-12 carousel">
+      <h2 className="mb-12 text-4xl font-semibold leading-8 text-slate-100 ml-9">
         Upcoming drops
       </h2>
 	  <small className='text-slate-100 ml-9'>SEE All</small>
       <div className="relative overflow-hidden">
-        <div className="flex justify-between absolute top left w-full h-full">
+        <div className="absolute flex justify-between w-full h-full top left">
           <button
             onClick={movePrev}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className="z-10 w-10 h-full p-0 m-0 text-center text-white transition-all duration-300 ease-in-out opacity-75 hover:bg-purple-700/75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed"
             disabled={isDisabled('prev')}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
+              className="w-20 h-12 -ml-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -81,12 +81,12 @@ const Carousel = () => {
           </button>
           <button
             onClick={moveNext}
-            className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+            className="z-10 w-10 h-full p-0 m-0 text-center text-white transition-all duration-300 ease-in-out opacity-75 hover:bg-purple-700/75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed"
             disabled={isDisabled('next')}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-20 -ml-5"
+              className="w-20 h-12 -ml-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -103,30 +103,30 @@ const Carousel = () => {
         </div>
         <div
           ref={carousel}
-          className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+          className="relative z-0 flex gap-1 overflow-hidden carousel-container scroll-smooth snap-x snap-mandatory touch-pan-x"
         >
           {data.resources.map((resource, index) => {
             return (
               <div
                 key={index}
-                className="carousel-item text-center relative w-64 h-64 snap-start"
+                className="relative w-64 h-64 text-center carousel-item snap-start"
               >
                 <a
                   href={resource.link}
-                  className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
+                  className="z-0 block w-full h-full bg-left-top bg-no-repeat bg-cover aspect-square bg-origin-padding"
                   style={{ backgroundImage: `url(${resource.imageUrl || ''})` }}
                 >
                   <img
                     src={resource.imageUrl || ''}
                     alt={resource.title}
-                    className="w-full aspect-square hidden"
+                    className="hidden w-full aspect-square"
                   />
                 </a>
                 <a
                   href={resource.link}
-                  className="h-full w-full aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-50 bg-purple-700/75 z-10"
+                  className="absolute top-0 left-0 z-10 block w-full h-full transition-opacity duration-300 opacity-0 aspect-square hover:opacity-50 bg-purple-700/75"
                 >
-                  <h3 className="text-white py-6 px-3 mx-auto text-xl">
+                  <h3 className="px-3 py-6 mx-auto text-xl text-white">
                     {resource.title}
                   </h3>
                 </a>

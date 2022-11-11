@@ -114,7 +114,7 @@ const notify = () =>
 	});
 
 const Collection = () => {
-	const [ profilePic, setProfilePicture ] = useState('/user.png');
+	const [ profilePic, setProfilePicture ] = useState('/blank.png');
 	const [ banner, setBanner ] = useState('/banner.png');
 
 	const handleProfilePicChange = (e) => {
