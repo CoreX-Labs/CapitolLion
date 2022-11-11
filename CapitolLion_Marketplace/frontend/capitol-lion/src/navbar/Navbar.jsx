@@ -56,7 +56,7 @@ const onFormSubmit = async (data) => {
 						<NavLink to='musicDAO'>
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>
 								<a href='https://lionxeco.net/capitol-lion-genesis.html' target='_blank' rel='noreferrer'>
-									<p className='text-[14px]'>LionX</p>
+									<p className='text-[14px]'>MusicDAO</p>
 								</a>
 							</li>
 						</NavLink>
@@ -64,11 +64,11 @@ const onFormSubmit = async (data) => {
 							<li className='h-[56px] pl-[24px] orbitron-light border-b pt-[18px]'>Collection</li>
 						</NavLink>
 						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
-							{/* <motion.button
+							<motion.button
 								whileTap={{ scale: -0.5 }}
 								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
 								Connect Wallet
-							</motion.button> */}
+							</motion.button>
 						</li>
 					</ul>
 				</div>

@@ -162,7 +162,7 @@ const Collection = () => {
 					</form> */}
 				</div>
 				{/*  */}
-				<div className='flex justify-center mt-[65px]'>
+				<div className='flex justify-center mt-[30px]'>
 					<h1 className='orbitron-light font-[500] text-[24px] leading-[31px] text-center inline-flex items-center gap-[10px]'>
 						User45948{' '}
 						<span className='flex w-3 h-3'>
