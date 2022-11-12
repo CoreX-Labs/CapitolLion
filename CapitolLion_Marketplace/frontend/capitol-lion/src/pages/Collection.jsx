@@ -249,8 +249,9 @@ const Collection = () => {
 									</div>
 							</div>
 					</div>
+					<Footer /> 
 			</div>
-			{/* <Footer /> */}
+			
 		</React.Fragment>
 	);
 };

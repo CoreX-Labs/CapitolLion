@@ -50,7 +50,7 @@ const Create = () => {
             <Outlet />
           </div>
         </div>
-      {/* <Footer /> */}
+      <Footer />
       </div>
     </React.Fragment>
   );

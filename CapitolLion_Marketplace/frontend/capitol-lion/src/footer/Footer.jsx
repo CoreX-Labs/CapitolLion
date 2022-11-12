@@ -24,42 +24,42 @@ const Footer = () => {
                   <div>
                     <ul class="text-white dark:text-gray-400">
                       <li class="mb-4">
-                        <a href="http://localhost:3000/" class="hover:underline">Docs</a>
+                        <a href="https://lionx.one/documents" class="hover:underline">Docs</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul class="text-white dark:text-gray-400">
                       <li class="mb-4">
-                        <a href="http://localhost:3000/" class="hover:underline ">Forum</a>
+                        <a href="https://forum.trondao.org/t/the-establishment-of-lionx/2660?u=tashlion" class="hover:underline ">Forum</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul class="text-white dark:text-gray-400">
                       <li class="mb-4">
-                        <a href="http://localhost:3000/" class="hover:underline">Newsletter</a>
+                        <a href="https://lionx.one/" class="hover:underline">Newsletter</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul class="text-white dark:text-gray-400">
                       <li class="mb-4">
-                        <a href="http://localhost:3000/" class="hover:underline">LDA Token</a>
+                        <a href="https://sunswap.com/#/scan/detail/TNP1D18nJCqQHhv4i38qiNtUUuL5VyNoC1" class="hover:underline">LDA Token</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul class="text-white dark:text-gray-400">
                       <li class="mb-4">
-                        <a href="http://localhost:3000/" class="hover:underline">Lanchpad</a>
+                        <a href="https://sunswap.com/#/scan/detail/TNP1D18nJCqQHhv4i38qiNtUUuL5VyNoC1" class="hover:underline">Lanchpad</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul class="text-white dark:text-gray-400">
                       <li class="mb-4">
-                        <a href="http://localhost:3000/" class="hover:text-red">LionX</a>
+                        <a href="https://lionxeco.net/" class="hover:text-red">LionX</a>
                       </li>
                     </ul>
                   </div>
