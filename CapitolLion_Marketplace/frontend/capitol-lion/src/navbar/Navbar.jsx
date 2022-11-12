@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-import styled from "styled-components"
+// import styled from "styled-components"
 // import { useForm } from 'react-hook-form';
 // import * as yup from "yup";
 // import { yupResolver } from "@hookform/resolvers/yup";
@@ -12,6 +12,7 @@ const Navbar = () => {
 
 // 	const schema = yup.object().shape({ 
 // 		username: yup.string().required("Enter a username"),
+
 // 		legalname: yup.string().required("Enter your Legal name"),
 // 		email: yup.string().email().required("Enter a valid Email address"),
 // 		tronwalletaddress: yup.string().required("Input your Tron wallet address"),
