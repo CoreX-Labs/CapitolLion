@@ -6,6 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 // import { useForm } from 'react-hook-form';
 // import * as yup from "yup";
 // import { yupResolver } from "@hookform/resolvers/yup";
+import NavFunction from './Navfunction';
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
@@ -97,6 +98,7 @@ const Navbar = () => {
 								<button type="button" className="w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 py-3 px-4 inline-flex justify-center items-center gap-2 text-sm" data-hs-overlay="#hs-focus-management-modal">
 										Connect Wallet
 								</button>
+								<NavFunction />
 
 								{/* <div id="hs-focus-management-modal" class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
 										<div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">

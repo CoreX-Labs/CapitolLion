@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 
 //creating the connect button functionality 
-export default function navFunction() {
+export default function NavFunction() {
     const [myMessage, setMyMessage] = useState(<h3>LOADING...</h3>);
     const [myDetails, setMyDetails] = useState({
         name: 'none',
