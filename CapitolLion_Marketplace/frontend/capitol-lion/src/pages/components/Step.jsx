@@ -32,8 +32,8 @@ const Step = () => {
                   />
                   <Card
                     icon='/credit-card.png'
-                    title='Connect Wallet'
-                    detail='Connect wallet to gain access to the Capitol Lion Music Network'
+                    title='Setup Wallet'
+                    detail='Setup wallet to gain access to the Capitol Lion Music Network'
                   />
                   <Card
                     icon='/shopping-bag.png'
