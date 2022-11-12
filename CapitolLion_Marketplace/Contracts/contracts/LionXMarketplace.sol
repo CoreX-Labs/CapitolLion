@@ -67,7 +67,19 @@ contract LionXMarketplace is Ownable, ReentrancyGuard {
     /// @notice NftAddress -> Token ID -> Owner -> Listing item
     mapping(address => mapping(uint256 => mapping(address => Listing)))
         public listings;
+    ///this keep track of all the items listed for purchase on the marketplace
+    uint256 public numberOfItems_onList;
 
+    struct itemInfo {
+        address NftAddress;
+        uint256 tokenId;
+        address owner;
+        uint256 quantity;
+        address payToken;
+        uint256 pricePerItem;
+    }
+
+    mapping(uint256 => itemInfo) allItemAvailable;
     /// @notice Platform fee
     uint256 public platformFee;
 
@@ -107,7 +119,7 @@ contract LionXMarketplace is Ownable, ReentrancyGuard {
     }
 
     /// @notice Contract initializer
-    constructor(address payable _feeRecipient, uint16 _platformFee) {
+    constructor(address payable _feeRecipient, uint256 _platformFee) {
         platformFee = _platformFee;
         feeReceipient = _feeRecipient;
     }
@@ -140,6 +152,14 @@ contract LionXMarketplace is Ownable, ReentrancyGuard {
 
         //registeredToken(_payToken);
         ownerOf[_nftAddress][_tokenId] = _msgSender();
+        allItemAvailable[numberOfItems_onList] = itemInfo(
+            _nftAddress,
+            _tokenId,
+            _msgSender(),
+            _quantity,
+            _payToken,
+            _pricePerItem
+        );
         listings[_nftAddress][_tokenId][_msgSender()] = Listing(
             _quantity,
             _payToken,
@@ -286,6 +306,21 @@ contract LionXMarketplace is Ownable, ReentrancyGuard {
         require(nft.ownerOf(_tokenId) == _owner, "not owning item");
     }
 
+    function viewListings() public view returns (List[] memory) {
+        uint256 nftCount = nft.totalSupply();
+        uint currentIndex = 0;
+        List[] memory items = new List[](nftCount);
+        for (uint i = 0; i < nftCount; i++) {
+            if (vaultItems[i + 1].holder == address(this)) {
+                uint currentId = i + 1;
+                List storage currentItem = vaultItems[currentId];
+                items[currentIndex] = currentItem;
+                currentIndex += 1;
+            }
+        }
+        return items;
+    }
+
     function _cancelListing(
         address _nftAddress,
         uint256 _tokenId,
@@ -301,5 +336,13 @@ contract LionXMarketplace is Ownable, ReentrancyGuard {
 
     function addCurrency(ITRC20 _paytoken) public onlyOwner {
         AllowedCrypto.push(TokenInfo({paytoken: _paytoken}));
+    }
+
+    function getListing(address nftAddress, uint256 tokenId)
+        external
+        view
+        returns (Listing memory)
+    {
+        return s_listings[nftAddress][tokenId];
     }
 }
