@@ -12,7 +12,6 @@ const Navbar = () => {
 
 // 	const schema = yup.object().shape({ 
 // 		username: yup.string().required("Enter a username"),
-
 // 		legalname: yup.string().required("Enter your Legal name"),
 // 		email: yup.string().email().required("Enter a valid Email address"),
 // 		tronwalletaddress: yup.string().required("Input your Tron wallet address"),
