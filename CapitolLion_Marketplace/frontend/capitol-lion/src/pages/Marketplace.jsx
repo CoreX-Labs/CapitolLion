@@ -226,7 +226,7 @@ const Marketplace = () => {
 						</div>
 					</div>
 				</div>
-				{/* <Footer /> */}
+				<Footer /> 
 			</div>
 		</React.Fragment>
 	);
