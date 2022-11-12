@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../App.css';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
+import axios from "axios";
 
 const Nfts = () => {
+
+	// const [databaseData, setDatabaseData] = useState({});
+
+	// useEffect(() => {
+	// 		axios.get('http://localhost:8080/createsingle')
+	// 		.then(response => setDatabaseData(response))
+	// }, [])
+	
+
 	const popularnfts = [
 		{
 			id          : 1,
@@ -128,6 +138,15 @@ const Nfts = () => {
 							</Card>
 						</Fade>
 					))}
+					<div>
+						{/* {
+							databaseData?databaseData.map((data, idx) => (
+								<div key={idx}>
+									<h1>{data.price}</h1>
+								</div>
+							)) : null
+						} */}
+					</div>
 				</div>
 				<div className='md:hidden flex justify-center items-center'>
 					<MobileNftCardSection />

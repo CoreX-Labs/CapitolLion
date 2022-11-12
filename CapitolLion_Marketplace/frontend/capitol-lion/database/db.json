@@ -1,0 +1,13 @@
+{
+ "createsingle": [
+  {
+   "id": 1,
+   "metadata": "/public/four.png",
+   "price": "10",
+   "collection": "Crypto",
+   "title": "crypto-punk",
+   "description": "this is a very limited item",
+   "royalties": "50"
+  }
+ ]
+}
