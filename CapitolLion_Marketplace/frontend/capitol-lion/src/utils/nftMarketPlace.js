@@ -9,7 +9,7 @@ export default function viewListings(connectedAddress){
     //grab the connected wallet 
     let contractAddress = myDetails.address;
     let tokenId = this.tokenId;
-    let sellerAddress = listItem()._nftAddress_address;
+    let sellerAddress = listItem()._nftAddress_address;                                                  
 
     return {
     'tokenId':tokenId,
@@ -19,7 +19,7 @@ export default function viewListings(connectedAddress){
 
 export default function listingNft() {
     let nftAddress = myDetails().address;                                                                                     
-    let tokenNftTokenId = listItem()._tokenId_uint256;
+    let tokenNftTokenId = listItem()._tokenId_uint256                                                                                                              ;
     let noOfNfts = listItem()._quantity_uint256;
     let payTokenAddress = listItem()._payToken_address;
     let nftPrice = listItem()._pricePerItem_uint256;
@@ -45,3 +45,5 @@ export default function buyNft() {
     let addressToPay = buyItem()._payToken_address;
     let ownerAddress = buyItem()._owner_address;
 }
+
+
