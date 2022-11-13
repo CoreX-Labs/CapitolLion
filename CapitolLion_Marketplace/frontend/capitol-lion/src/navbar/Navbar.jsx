@@ -6,41 +6,9 @@ import { Link, NavLink } from 'react-router-dom';
 // import { useForm } from 'react-hook-form';
 // import * as yup from "yup";
 // import { yupResolver } from "@hookform/resolvers/yup";
-const TronWeb = require('tronweb')
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
-
-	const tronWeb=new TronWeb();
-	const connect =  () => {
-  if(!(window.tronWeb && window.tronWeb.ready)){
-    let waitingTime;
-	 waitingTime += 1;
-    if (waitingTime === 50) {
-        console.error('Could not connect to TronLink.');
-        return;
-    }
-    setTimeout(connect, 500);
-    console.warn('main retries', 'Could not connect to TronLink', waitingTime);
-  }else{
-    let connected = true;
-    //updateClaim();
-  }
-};
-
-window.addEventListener('message', (res) => {
-    if (res.data.message && res.data.message.action == "setAccount") {
-      if (window.tronWeb) {
-        if (res.data.message.data.address != tronWeb.defaultAddress.base58) {
-          console.log('changed');
-            window.location.reload();
-        }
-      }
-    }
-    if (res.data.message && res.data.message.action == "setNode") {
-      window.location.reload();
-    }
-});
 
 	return (
 		<React.Fragment>
@@ -83,7 +51,6 @@ window.addEventListener('message', (res) => {
 						</NavLink>
 						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
 							<motion.button
-							onClick={connect}
 								whileTap={{ scale: -0.5 }}
 								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
 								Connect Wallet
@@ -112,7 +79,6 @@ window.addEventListener('message', (res) => {
 						</NavLink>
 							<li className='cursor-pointer orbitron-light'>
 								<motion.button
-								onClick={connect}
 									whileTap={{ scale: -1.0 }}
 									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
 									Connect Wallet
