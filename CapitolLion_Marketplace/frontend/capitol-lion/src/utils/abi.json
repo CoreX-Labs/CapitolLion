@@ -1,0 +1,418 @@
+{
+  "entrys": [
+    {
+      "inputs": [
+        {
+          "name": "_feeRecipient",
+          "type": "address"
+        },
+        {
+          "name": "_platformFee",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "Nonpayable",
+      "type": "Constructor"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "nft",
+          "type": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ItemCanceled",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "nft",
+          "type": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "quantity",
+          "type": "uint256"
+        },
+        {
+          "name": "payToken",
+          "type": "address"
+        },
+        {
+          "name": "pricePerItem",
+          "type": "uint256"
+        }
+      ],
+      "name": "ItemListed",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "buyer",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "nft",
+          "type": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "quantity",
+          "type": "uint256"
+        },
+        {
+          "name": "payToken",
+          "type": "address"
+        },
+        {
+          "name": "pricePerItem",
+          "type": "uint256"
+        }
+      ],
+      "name": "ItemSold",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "nft",
+          "type": "address"
+        },
+        {
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "payToken",
+          "type": "address"
+        },
+        {
+          "name": "newPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "ItemUpdated",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "name": "platformFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "UpdatePlatformFee",
+      "type": "Event"
+    },
+    {
+      "inputs": [
+        {
+          "name": "platformFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "UpdatePlatformFeeRecipient",
+      "type": "Event"
+    },
+    {
+      "outputs": [
+        {
+          "name": "paytoken",
+          "type": "address"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "name": "AllowedCrypto",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_paytoken",
+          "type": "address"
+        }
+      ],
+      "name": "addCurrency",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_nftAddress",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_payToken",
+          "type": "address"
+        },
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "buyItem",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_nftAddress",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancelListing",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "name": "feeReceipient",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_nftAddress",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_quantity",
+          "type": "uint256"
+        },
+        {
+          "name": "_payToken",
+          "type": "address"
+        },
+        {
+          "name": "_pricePerItem",
+          "type": "uint256"
+        }
+      ],
+      "name": "listItem",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "outputs": [
+        {
+          "name": "quantity",
+          "type": "uint256"
+        },
+        {
+          "name": "payToken",
+          "type": "address"
+        },
+        {
+          "name": "pricePerItem",
+          "type": "uint256"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "address"
+        },
+        {
+          "type": "uint256"
+        },
+        {
+          "type": "address"
+        }
+      ],
+      "name": "listings",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "name": "owner",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "address"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "address"
+        },
+        {
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "uint256"
+        }
+      ],
+      "name": "platformFee",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "outputs": [
+        {
+          "type": "bool"
+        }
+      ],
+      "inputs": [
+        {
+          "name": "_payToken",
+          "type": "address"
+        }
+      ],
+      "name": "registeredToken",
+      "stateMutability": "View",
+      "type": "Function"
+    },
+    {
+      "name": "renounceOwnership",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_nftAddress",
+          "type": "address"
+        },
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "name": "_payToken",
+          "type": "address"
+        },
+        {
+          "name": "_newPrice",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateListing",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_platformFee",
+          "type": "uint16"
+        }
+      ],
+      "name": "updatePlatformFee",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_platformFeeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "updatePlatformFeeRecipient",
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+}

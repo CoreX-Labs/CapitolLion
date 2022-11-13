@@ -118,7 +118,7 @@ const onFormSubmit = async (data) => {
 																<Input {...register('username')} type="text" id="input-label" class="text-black py-3 px-4 block w-full text-sm focus:ring-[#5B2E9D] focus:border-[#5B2E9D]" placeholder="e.g 'johnny'" autofocus />
 																<p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.username?.message}</p>
 														</div>
-														{/*  */}
+														{/*  */
 														<div class="px-4 py-[14px] overflow-y-auto">
 																<label for="input-label" class="block text-sm font-medium mb-2 dark:text-white">Enter Legal name</label>
 																<Input {...register('legalname')} type="text" id="input-label" class="text-black py-3 px-4 block w-full text-sm focus:ring-[#5B2E9D] focus:border-[#5B2E9D]" placeholder="e.g John Doe" autofocus />
@@ -145,9 +145,11 @@ const onFormSubmit = async (data) => {
                  Connect
                </motion.button>
 														</div>
-													{/* </form> */} */}
+</li>
+													 
 												</div>
 										</div>
+										
 								</div>
 							</li>
 					</ul>
