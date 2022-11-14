@@ -55,7 +55,7 @@ const Carousel = () => {
       <h2 className="mb-12 text-4xl font-semibold leading-8 text-slate-100 ml-9">
         Upcoming drops
       </h2>
-	  <small className='text-slate-100 ml-9'>SEE All</small>
+
       <div className="relative overflow-hidden">
         <div className="absolute flex justify-between w-full h-full top left">
           <button
@@ -124,7 +124,7 @@ const Carousel = () => {
                 </a>
                 <a
                   href={resource.link}
-                  className="absolute top-0 left-0 z-10 block w-full h-full transition-opacity duration-300 opacity-0 aspect-square hover:opacity-50 bg-purple-700/75"
+                  className="absolute top-0 left-0 z-10 block w-full h-full transition-opacity duration-300 opacity-0 aspect-square "
                 >
                   <h3 className="px-3 py-6 mx-auto text-xl text-white">
                     {resource.title}
@@ -140,3 +140,5 @@ const Carousel = () => {
 };
 
 export default Carousel;
+
+// <small className='text-slate-100 ml-9'>SEE All</small>

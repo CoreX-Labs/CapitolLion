@@ -69,24 +69,20 @@ const Footer = () => {
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 ml-6 mt-4 mr-7">© 2022 <a href="https://flowbite.com/" class="hover:underline">Capitol Lion™</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+
                   <a href="http://localhost:3000/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                    
+                    <img src={Discord} alt='discord' />
+                    <span class="sr-only">discord pages</span>
                   </a>
                   <a href="http://localhost:3000/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <img src={Discord} alt='discord' />     
-                  <span class="sr-only">discord pages</span>
-                  </a>
-                  <a href="http://localhost:3000/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <img src={Instagram} alt='instagram' />     
+                    <img src={Instagram} alt='instagram' />
                     <span class="sr-only">Twitter page</span>
                   </a>
                   <a href="http://localhost:3000/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                  <img src={Twitter} alt='twitter' />     
+                    <img src={Twitter} alt='twitter' />
                     <span class="sr-only">Twitter page</span>
                   </a>
-                  <a href="http://localhost:3000/" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                    
-                  </a>
+
                 </div>
               </div>
             </footer>
