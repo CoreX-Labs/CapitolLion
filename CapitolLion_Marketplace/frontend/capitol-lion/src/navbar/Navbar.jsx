@@ -23,7 +23,7 @@ const Navbar = () => {
 					{showNav ? (
 						<img className='pr-[10px]' src='/close-icon.png' alt='close-icon' />
 					) : (
-						<img src='/menu.png' alt='Hamburger-menu' />
+						<img src='/menu.png' alt='Hamburger-menu' /> 
 					)}
 				</div>
 				{/* dropdown */}
