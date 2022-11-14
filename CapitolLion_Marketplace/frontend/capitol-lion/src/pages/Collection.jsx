@@ -16,49 +16,49 @@ const onsale = [
 	{
 		id       : 2,
 		nftimage : '/six.png',
-		title    : 'face of man',
+		title    : 'walled',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 3,
 		nftimage : '/four.png',
-		title    : 'face of man',
+		title    : 'sculpt',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 4,
 		nftimage : '/one.png',
-		title    : 'face of man',
+		title    : 'face',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 5,
 		nftimage : '/two.png',
-		title    : 'face of man',
+		title    : 'galaxy',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 6,
 		nftimage : '/five.png',
-		title    : 'face of man',
+		title    : 'flagged',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 7,
 		nftimage : '/five.png',
-		title    : 'face of man',
+		title    : 'flagged',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 8,
 		nftimage : '/two.png',
-		title    : 'face of man',
+		title    : 'galaxy',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 9,
 		nftimage : '/one.png',
-		title    : 'face of man',
+		title    : 'face',
 		price    : 'by Angie_00'
 	}
 ];
@@ -91,15 +91,15 @@ const notify = () =>
 
 		// Styling
 		style     : {
-			border: '1px solid #5b2e9d',
-			borderRadius: '20px',
-			padding: '16px',
-			color: '#ffffff',
-			background: '#121212',
-			boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
-			fontSize: '18px',
-			fontFamily: 'orbitron-light',
-			marginTop: '20px'
+			border       : '1px solid #5b2e9d',
+			borderRadius : '20px',
+			padding      : '16px',
+			color        : '#ffffff',
+			background   : '#121212',
+			boxShadow    : '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
+			fontSize     : '18px',
+			fontFamily   : 'orbitron-light',
+			marginTop    : '20px'
 		},
 		className : '',
 
@@ -128,7 +128,7 @@ const Collection = () => {
 	};
 
 	const handleCopyEvent = async () => {
-		await navigator.clipboard.writeText('random');
+		await navigator.clipboard.writeText('TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ');
 		await notify();
 	};
 
@@ -138,19 +138,27 @@ const Collection = () => {
 				<Toaster />
 				<Navbar />
 				<div className=''>
-					<img className='h-[200px] md:h-[404px] w-[100vw] object-cover object-top' src={banner} alt='Banner' />
+					<img
+						className='h-[200px] md:h-[404px] w-[100vw] object-cover object-top'
+						src={banner}
+						alt='Banner'
+					/>
 				</div>
 				<div className='flex justify-end items-center -mt-[38px] cursor-pointer absolute right-[10px]'>
 					<form>
 						<input type='file' name='picture' id='file-input' onChange={handleBannerChange} />
 						<label className='cursor-pointer' htmlFor='file-input'>
-							<img className="" src='/camera.png' alt='camera' />
+							<img className='' src='/camera.png' alt='camera' />
 						</label>
 					</form>
 				</div>
 				<div className='flex justify-center items-center -mt-[60px] md:-mt-[90px]'>
 					<div>
-						<img className='rounded-full md:w-[208px] md:h-[208px] object-cover w-[120px] h-[120px]' src={profilePic} alt='User' />
+						<img
+							className='rounded-full md:w-[208px] md:h-[208px] object-cover w-[120px] h-[120px]'
+							src={profilePic}
+							alt='User'
+						/>
 					</div>
 				</div>
 				<div className=''>
@@ -172,86 +180,105 @@ const Collection = () => {
 					</h1>
 				</div>
 				<h1 className='orbitron-light font-[400] text-[16px] leading-[31px] text-center'>
-					TRxvdndjdgsvsgndfgdjkdfsdfg
+					TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ
 				</h1>
 				<div className='flex justify-center mt-[10px] gap-[10px]'>
 					<CopyButton>
 						<form>
-						<input type='file' name='picture' id='dp-input' onChange={handleProfilePicChange} />
-						<label className='cursor-pointer' htmlFor='dp-input'>
-							Edit
-						</label>
-					</form>
+							<input type='file' name='picture' id='dp-input' onChange={handleProfilePicChange} />
+							<label className='cursor-pointer' htmlFor='dp-input'>
+								Edit
+							</label>
+						</form>
 					</CopyButton>
 					<CopyButton onClick={handleCopyEvent}>Copy</CopyButton>
 				</div>
-     {/*  */}
-					<div className="flex gap-[0.5506rem] justify-center items-center mt-[40px] md:mt-[50px]">
-						<select id="tab-select" class="sm:hidden py-3 px-4 pr-9 block w-full rounded-md text-sm" aria-label="Tabs" role="tablist">
-								<option value="#hs-tab-to-select-1">On Sale</option>
-								<option value="#hs-tab-to-select-2">Owned</option>
-						</select>
-						{/*  */}
-						<div class="hidden sm:block border-b border-gray-200 dark:border-gray-700">
-								<nav class="flex space-x-2" aria-label="Tabs" role="tablist" hs-data-tab-select="#tab-select">
-										<button type="button" class="hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active" id="hs-tab-to-select-item-1" data-hs-tab="#hs-tab-to-select-1" aria-controls="hs-tab-to-select-1" role="tab">
-												On Sale
-										</button>
-										<button type="button" class="hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active" id="hs-tab-to-select-item-2" data-hs-tab="#hs-tab-to-select-2" aria-controls="hs-tab-to-select-2" role="tab">
-												Owned
-										</button>
-								</nav>
+				{/*  */}
+				<div className='flex gap-[0.5506rem] justify-center items-center mt-[40px] md:mt-[50px]'>
+					<select
+						id='tab-select'
+						class='sm:hidden py-3 px-4 pr-9 block w-full rounded-md text-sm'
+						aria-label='Tabs'
+						role='tablist'>
+						<option value='#hs-tab-to-select-1'>On Sale</option>
+						<option value='#hs-tab-to-select-2'>Owned</option>
+					</select>
+					{/*  */}
+					<div class='hidden sm:block border-b border-gray-200 dark:border-gray-700'>
+						<nav class='flex space-x-2' aria-label='Tabs' role='tablist' hs-data-tab-select='#tab-select'>
+							<button
+								type='button'
+								class='hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active'
+								id='hs-tab-to-select-item-1'
+								data-hs-tab='#hs-tab-to-select-1'
+								aria-controls='hs-tab-to-select-1'
+								role='tab'>
+								On Sale
+							</button>
+							<button
+								type='button'
+								class='hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active'
+								id='hs-tab-to-select-item-2'
+								data-hs-tab='#hs-tab-to-select-2'
+								aria-controls='hs-tab-to-select-2'
+								role='tab'>
+								Owned
+							</button>
+						</nav>
+					</div>
+				</div>
+				<div class='mt-3'>
+					<div id='hs-tab-to-select-1' role='tabpanel' aria-labelledby='hs-tab-to-select-item-1'>
+						<div className='flex justify-center items-center mt-[30px]'>
+							<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
+								{onsale.map((item, idx) => (
+									<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
+										<img
+											className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
+											src={item.nftimage}
+											alt='NFT pic'
+										/>
+										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
+											<div>
+												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
+												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
+												<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
+											</div>
+										</div>
+									</Card>
+								))}
+							</div>
 						</div>
 					</div>
-					<div class="mt-3">
-							<div id="hs-tab-to-select-1" role="tabpanel" aria-labelledby="hs-tab-to-select-item-1">
-								<div className='flex justify-center items-center mt-[30px]'>
-									<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
-										{onsale.map((item, idx) => (
-												<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
-													<img
-														className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
-														src={item.nftimage}
-														alt='NFT pic'
-													/>
-													<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
-														<div>
-															<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
-															<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
-															<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
-														</div>
-													</div>
-												</Card>
-										))}
-									</div>
-								</div>
-							</div>
-							<div id="hs-tab-to-select-2" class="hidden" role="tabpanel" aria-labelledby="hs-tab-to-select-item-2">
-								<div className='flex justify-center items-center mt-[30px]'>
-										<div className='md:grid md:grid-cols-2 md:gap-[30px] lg:grid lg:grid-cols-2'>
-											{owned.map((item, idx) => (
-													<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
-														<img
-															className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
-															src={item.nftimage}
-															alt='NFT pic'
-														/>
-														<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
-															<div>
-																<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
-																<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
-																<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
-															</div>
-														</div>
-													</Card>
-											))}
+					<div
+						id='hs-tab-to-select-2'
+						class='hidden'
+						role='tabpanel'
+						aria-labelledby='hs-tab-to-select-item-2'>
+						<div className='flex justify-center items-center mt-[30px]'>
+							<div className='md:grid md:grid-cols-2 md:gap-[30px] lg:grid lg:grid-cols-2'>
+								{owned.map((item, idx) => (
+									<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
+										<img
+											className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
+											src={item.nftimage}
+											alt='NFT pic'
+										/>
+										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
+											<div>
+												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
+												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
+												<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
+											</div>
 										</div>
-									</div>
+									</Card>
+								))}
 							</div>
+						</div>
 					</div>
-					<Footer /> 
+				</div>
+				<Footer />
 			</div>
-			
 		</React.Fragment>
 	);
 };
@@ -263,7 +290,7 @@ const CopyButton = styled.button`
 	height: 30px;
 	background: #5b2e9d;
 	border-radius: 5px;
-  font-family: orbitron-light;
+	font-family: orbitron-light;
 `;
 
 const Card = styled.div`

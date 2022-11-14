@@ -21,89 +21,89 @@ const Nfts = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.13ETH',
+			dollarprice : '$2,736'
 		},
 		{
 			id          : 2,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/one.png',
+			title       : 'face',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.50ETH',
+			dollarprice : '$1,330'
 		},
 		{
 			id          : 3,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/five.png',
+			title       : 'flaged',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.22ETH',
+			dollarprice : '$2,000'
 		},
 		{
 			id          : 4,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/three.png',
+			title       : 'paint',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.65ETH',
+			dollarprice : '$3,976'
 		},
 		{
 			id          : 5,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/two.png',
+			title       : 'abstract',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.40ETH',
+			dollarprice : '$1,500'
 		},
 		{
 			id          : 6,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/one.png',
+			title       : 'face01',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.32ETH',
+			dollarprice : '$5,126'
 		},
 		{
 			id          : 7,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/four.png',
+			title       : 'sculpt',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
 			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			dollarprice : '$8,233'
 		},
 		{
 			id          : 8,
 			nftimage    : '/nft.png',
-			title       : 'serickism',
+			title       : 'wall',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.03ETH',
+			dollarprice : '$3,333'
 		},
 		{
 			id          : 9,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/one.png',
+			title       : 'face',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.12ETH',
+			dollarprice : '$4,500'
 		},
 		{
 			id          : 10,
-			nftimage    : '/nft.png',
-			title       : 'serickism',
+			nftimage    : '/five.png',
+			title       : 'flaged',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
-			dollarprice : '$8,976'
+			ethprice    : '0.17ETH',
+			dollarprice : '$1,988'
 		}
 	];
 	return (
@@ -165,6 +165,7 @@ const Card = styled.div`
 	backdrop-filter: blur(7.5px);
 	border-radius: 20px;
 	margin-bottom: 25px;
+	cursor: pointer;
 	@media (max-width: 568px) {
 		width: 340px;
 	}

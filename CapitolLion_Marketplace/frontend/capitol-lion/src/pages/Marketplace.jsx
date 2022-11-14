@@ -9,55 +9,55 @@ const market = [
 	{
 		id       : 1,
 		nftimage : '/one.png',
-		title    : 'face of man',
+		title    : 'face',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 2,
 		nftimage : '/four.png',
-		title    : 'face of man',
+		title    : 'sculpt',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 3,
 		nftimage : '/three.png',
-		title    : 'face of man',
+		title    : 'coloured',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 4,
 		nftimage : '/four.png',
-		title    : 'face of man',
+		title    : 'no name',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 5,
 		nftimage : '/two.png',
-		title    : 'face of man',
+		title    : 'galaxy',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 6,
 		nftimage : '/six.png',
-		title    : 'face of man',
+		title    : 'walled',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 7,
 		nftimage : '/five.png',
-		title    : 'face of man',
+		title    : 'flagged',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 8,
 		nftimage : '/two.png',
-		title    : 'face of man',
+		title    : 'galaxy',
 		price    : 'by Angie_00'
 	},
 	{
 		id       : 9,
 		nftimage : '/one.png',
-		title    : 'face of man',
+		title    : 'face',
 		price    : 'by Angie_00'
 	}
 ];
@@ -246,7 +246,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 37px;
+	margin-bottom: 75px;
 	@media (max-width: 600px) {
 		height: 200px;
 		h1 {
