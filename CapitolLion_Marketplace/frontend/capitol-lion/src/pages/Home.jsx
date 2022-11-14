@@ -76,7 +76,7 @@ export const Launchpad = () => {
 				{/* <div>
 					<img src='/label.png' alt='Texture' />
 				</div> */}
-				<div className="md:pl-[60px]">
+				<div className="md:pl-[20px]">
 					<video className="rounded-lg" width="600px" height="100px" src="vid.webm" autoPlay loop muted></video>
 				</div>
 			</div>
@@ -97,7 +97,7 @@ export const Launchpad = () => {
 						<a href='https://kraftly.io/mintable/111/gallery?page=1' target='_blank' rel='noreferrer' className='tracking-wide orbitron-light'>View Song</a>
 					</HeroButtonOne>
 				</div>
-				<div className='tracking-widest orbitron-light'>
+				<div className='tracking-widest orbitron-light pb-[30px]'>
 					<HeroButtonTwo onClick={setNotification}>
 						<div>
 							<img src='/bell.png' alt='Bell Icon' />
@@ -107,21 +107,25 @@ export const Launchpad = () => {
 						</div>
 					</HeroButtonTwo>
 				</div>
+				{/*  */}
+				<div className="block sm:hidden">
+					<video className="rounded-lg" width="600px" height="100px" src="vid.webm" autoPlay loop muted></video>
+				</div>
 			</Sub>
 		</Container>
 	);
 };
 
 const Container = styled.div`
-	margin-top: 170px;
+	margin-top: 140px;
 	height: 122px;
 	display: flex;
-	gap: 135px;
+	gap: 120px;
 	align-items: center;
-	padding-left: 90px;
+	padding-left: 40px;
 	@media (max-width: 568px) {
-			margin-top: 6.25rem;
-   padding-left: 0.625rem;
+			margin-top: 13.75rem;
+   padding-left: 7px;
   }
 `;
 
