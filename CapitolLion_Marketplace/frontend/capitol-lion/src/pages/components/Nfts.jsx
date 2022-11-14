@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../App.css';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
-import axios from "axios";
 
 const Nfts = () => {
-
-	// const [databaseData, setDatabaseData] = useState({});
-
-	// useEffect(() => {
-	// 		axios.get('http://localhost:8080/createsingle')
-	// 		.then(response => setDatabaseData(response))
-	// }, [])
-	
 
 	const popularnfts = [
 		{
