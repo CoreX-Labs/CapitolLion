@@ -84,6 +84,38 @@ const owned = [
 	}
 ];
 
+const notification = () => toast('Wallet not connected, connect to your wallet.', {
+	duration: 5000,
+	position: 'top-center',
+
+	// Styling
+	style: {
+			border: '1px solid #5b2e9d',
+			borderRadius: '20px',
+			padding: '16px',
+			color: '#ffffff',
+			background: '#121212',
+			boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
+			fontSize: '18px',
+			fontFamily: 'orbitron-light',
+			marginTop: '20px'
+	},
+	className: '',
+
+	// Custom Icon
+	icon: '⚠️',
+
+	// Aria
+	ariaProps: {
+			role: 'status',
+			'aria-live': 'polite',
+	},
+});
+
+const handleClick = () => {
+	notification();
+}
+
 const notify = () =>
 	toast('Copied to Clipboard', {
 		duration  : 1500,
@@ -242,7 +274,7 @@ const Collection = () => {
 											<div>
 												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
 												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
-												<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
+												<button onClick={handleClick} className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>list for sale</button>
 											</div>
 										</div>
 									</Card>
@@ -256,7 +288,7 @@ const Collection = () => {
 						role='tabpanel'
 						aria-labelledby='hs-tab-to-select-item-2'>
 						<div className='flex justify-center items-center mt-[30px]'>
-							<div className='md:grid md:grid-cols-2 md:gap-[30px] lg:grid lg:grid-cols-2'>
+							<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
 								{owned.map((item, idx) => (
 									<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
 										<img
@@ -268,7 +300,7 @@ const Collection = () => {
 											<div>
 												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
 												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
-												<button className='uppercase font-[700] text-[20px] text-[#5B2E9D]'>Place a Bid</button>
+												<button onClick={handleClick} className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>up for sale</button>
 											</div>
 										</div>
 									</Card>
