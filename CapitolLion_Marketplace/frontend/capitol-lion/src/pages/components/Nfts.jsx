@@ -297,6 +297,40 @@ export const MobileNftCardSection = () => {
 			dollarprice : '$8,976'
 		}
 	];
+
+
+	const notification = () => toast('Wallet not connected, connect to your wallet.', {
+		duration: 5000,
+		position: 'top-center',
+	
+		// Styling
+		style: {
+				border: '1px solid #5b2e9d',
+				borderRadius: '20px',
+				padding: '16px',
+				color: '#ffffff',
+				background: '#121212',
+				boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
+				fontSize: '18px',
+				fontFamily: 'orbitron-light',
+				marginTop: '20px'
+		},
+		className: '',
+	
+		// Custom Icon
+		icon: '⚠️',
+	
+		// Aria
+		ariaProps: {
+				role: 'status',
+				'aria-live': 'polite',
+		},
+	});
+	
+	const handleClick = () => {
+		notification();
+	}
+	
 	return (
 		<div className='flex-col overflow-y-scroll h-[500px]'>
 			{popularnfts.map((nft, idx) => (
@@ -317,7 +351,7 @@ export const MobileNftCardSection = () => {
 								</div>
 							</div>
 							<div>
-								<Button>Bid</Button>
+								<Button onClick={handleClick}>Bid</Button>
 								<p className='text-center pt-[18px]'>{nft.dollarprice}</p>
 							</div>
 						</div>
