@@ -193,12 +193,12 @@ export const Timer = () => {
 	});
 
 	return (
-		<div className=''>
+		<div className='pb-[20px]'>
 			<section className='timer-container'>
 				<section className='timer'>
 					<div className='time'>
 						<section>
-							<h3 className='orbitron-header font-[400] text-[48px] leading-[52px] tracking-wider'>
+							<h3 className='orbitron-header font-[400] text-[43px] leading-[52px] tracking-wider'>
 								{timerDays}
 							</h3>
 							<h3>
@@ -207,7 +207,7 @@ export const Timer = () => {
 						</section>
 						<span className='font-[400] text-[52px] leading-[52px] -mt-[30px]'>:</span>
 						<section>
-							<h3 className='orbitron-header font-[400] text-[48px] leading-[52px] tracking-wider'>
+							<h3 className='orbitron-header font-[400] text-[43px] leading-[52px] tracking-wider'>
 								{timerHours}
 							</h3>
 							<h3>
@@ -216,7 +216,7 @@ export const Timer = () => {
 						</section>
 						<span className='font-[400] text-[52px] leading-[52px] -mt-[30px]'>:</span>
 						<section>
-							<h3 className='orbitron-header font-[400] text-[48px] leading-[52px] tracking-wider'>
+							<h3 className='orbitron-header font-[400] text-[43px] leading-[52px] tracking-wider'>
 								{timerMinutes}
 							</h3>
 							<h3>
@@ -225,7 +225,7 @@ export const Timer = () => {
 						</section>
 						<span className='font-[400] text-[52px] leading-[52px] -mt-[30px]'>:</span>
 						<section>
-							<h3 className='orbitron-header font-[400] text-[48px] leading-[52px] tracking-wider'>
+							<h3 className='orbitron-header font-[400] text-[43px] leading-[52px] tracking-wider'>
 								{timerSeconds}
 							</h3>
 							<h3>

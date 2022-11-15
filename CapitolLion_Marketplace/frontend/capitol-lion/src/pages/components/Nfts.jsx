@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Nfts = () => {
 
@@ -97,8 +98,42 @@ const Nfts = () => {
 			dollarprice : '$1,988'
 		}
 	];
+
+	const notification = () => toast('Wallet not connected, connect to your wallet.', {
+		duration: 5000,
+		position: 'top-center',
+	
+		// Styling
+		style: {
+				border: '1px solid #5b2e9d',
+				borderRadius: '20px',
+				padding: '16px',
+				color: '#ffffff',
+				background: '#121212',
+				boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
+				fontSize: '18px',
+				fontFamily: 'orbitron-light',
+				marginTop: '20px'
+		},
+		className: '',
+	
+		// Custom Icon
+		icon: '⚠️',
+	
+		// Aria
+		ariaProps: {
+				role: 'status',
+				'aria-live': 'polite',
+		},
+	});
+	
+	const handleClick = () => {
+		notification();
+	}
+	
 	return (
 		<React.Fragment>
+		<Toaster />
 			<div className='pb-[135px] px-[24px] md:px-[70px] 2xl:px-[300px]'>
 				<h1 className='text-center font-[500] text-[24px] md:text-[36px] leading-[80px] orbitron-light pb-[42px]'>
 					Popular Items
@@ -122,7 +157,7 @@ const Nfts = () => {
 										</div>
 									</div>
 									<div>
-										<Button>Bid</Button>
+										<Button onClick={handleClick}>Bid</Button>
 										<p className='text-center pt-[18px]'>{nft.dollarprice}</p>
 									</div>
 								</div>
@@ -139,7 +174,7 @@ const Nfts = () => {
 						} */}
 					</div>
 				</div>
-				<div className='md:hidden flex justify-center items-center'>
+				<div className='flex items-center justify-center md:hidden'>
 					<MobileNftCardSection />
 				</div>
 			</div>
