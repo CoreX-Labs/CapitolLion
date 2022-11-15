@@ -160,7 +160,7 @@ const Collection = () => {
 	};
 
 	const handleCopyEvent = async () => {
-		await navigator.clipboard.writeText('TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ');
+		await navigator.clipboard.writeText('TPvu2GA1u2PthLCNgEDUDCygxE...');
 		await notify();
 	};
 
