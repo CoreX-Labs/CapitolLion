@@ -81,7 +81,7 @@ const CreateMultiple = () => {
             <InputSection>
               <div>
                 <h1 className='text-center orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px]'>
-                  PNG, JPG, GIF WEBP or MP4. Max 200MB
+                  MP3 or MP4. Max 200MB
                 </h1>
                 <div className='flex items-center justify-center pt-[24px]'>
                   <input accept=".mp4,.mp3"  className="file:mr-4 file:py-2 file:px-4
@@ -96,7 +96,7 @@ const CreateMultiple = () => {
             <div>
               
                 <label>
-                  <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
+                  <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Minting Price</h1>
                 </label>
                 <Input
                   className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'

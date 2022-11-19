@@ -13,7 +13,7 @@ const Nfts = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.13ETH',
+			ethprice    : '0.13TRX',
 			dollarprice : '$2,736'
 		},
 		{
@@ -22,7 +22,7 @@ const Nfts = () => {
 			title       : 'face',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.50ETH',
+			ethprice    : '0.50TRX',
 			dollarprice : '$1,330'
 		},
 		{
@@ -31,7 +31,7 @@ const Nfts = () => {
 			title       : 'flaged',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.22ETH',
+			ethprice    : '0.22TRX',
 			dollarprice : '$2,000'
 		},
 		{
@@ -40,7 +40,7 @@ const Nfts = () => {
 			title       : 'paint',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.65ETH',
+			ethprice    : '0.65TRX',
 			dollarprice : '$3,976'
 		},
 		{
@@ -49,7 +49,7 @@ const Nfts = () => {
 			title       : 'abstract',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.40ETH',
+			ethprice    : '0.40TRX',
 			dollarprice : '$1,500'
 		},
 		{
@@ -58,7 +58,7 @@ const Nfts = () => {
 			title       : 'face01',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.32ETH',
+			ethprice    : '0.32TRX',
 			dollarprice : '$5,126'
 		},
 		{
@@ -67,7 +67,7 @@ const Nfts = () => {
 			title       : 'sculpt',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,233'
 		},
 		{
@@ -76,7 +76,7 @@ const Nfts = () => {
 			title       : 'wall',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.03ETH',
+			ethprice    : '0.03TRX',
 			dollarprice : '$3,333'
 		},
 		{
@@ -85,7 +85,7 @@ const Nfts = () => {
 			title       : 'face',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.12ETH',
+			ethprice    : '0.12TRX',
 			dollarprice : '$4,500'
 		},
 		{
@@ -94,7 +94,7 @@ const Nfts = () => {
 			title       : 'flaged',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.17ETH',
+			ethprice    : '0.17TRX',
 			dollarprice : '$1,988'
 		}
 	];
@@ -140,7 +140,7 @@ const Nfts = () => {
 				</h1>
 				<div className='hidden md:flex md:gap-[40px] md:overflow-x-scroll overflow-hidden'>
 					{popularnfts.map((nft, idx) => (
-						<Fade key={idx} right>
+						<div key={idx} right>
 							<Card>
 								<img className='object-cover' src={nft.nftimage} alt='NFT pic' />
 								<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
@@ -162,7 +162,7 @@ const Nfts = () => {
 									</div>
 								</div>
 							</Card>
-						</Fade>
+						</div>
 					))}
 					<div>
 						{/* {
@@ -212,7 +212,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -221,7 +221,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -230,7 +230,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -239,7 +239,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -248,7 +248,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -257,7 +257,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -266,7 +266,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -275,7 +275,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -284,7 +284,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		},
 		{
@@ -293,7 +293,7 @@ export const MobileNftCardSection = () => {
 			title       : 'serickism',
 			author      : 'by Angie_00',
 			ethlogo     : '/eth.png',
-			ethprice    : '0.23ETH',
+			ethprice    : '0.23TRX',
 			dollarprice : '$8,976'
 		}
 	];

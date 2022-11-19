@@ -80,7 +80,7 @@ const CreateSingle = () => {
               <InputSection>
                 <div>
                   <h1 className='text-center orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px]'>
-                    PNG, JPG, GIF WEBP or MP4. Max 200MB
+                    MP3 or MP4. Max 200MB
                   </h1>
                   <div className='flex items-center justify-center pt-[24px]'>
                     <input accept=".mp4,.mp3" className="file:mr-4 file:py-2 file:px-4
@@ -93,26 +93,6 @@ const CreateSingle = () => {
                 </div>
               </InputSection>
               <div>
-
-                  <label>
-                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
-                  </label>
-                  <Input
-                    className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
-                    type='number'
-                    placeholder='enter price for one item (TRX)'
-                    {...register('price')}
-                  />
-                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.price?.message}</p>
-                  {/*  */}
-                  <label>
-                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
-                      Choose collection
-                    </h1>
-                  </label>
-                  <Input className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]' type='text' placeholder='Choose collection' {...register('collection')} />
-                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.collection?.message}</p>
-                  {/*  */}
                   <label>
                     <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Title</h1>
                   </label>
@@ -140,7 +120,7 @@ const CreateSingle = () => {
                   <Input
                     className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
                     type=''
-                    placeholder='suggested: 10%, 20%. Max is 70%'
+                    placeholder='suggested: 1%, 4%. Max is 7%'
                     {...register('royalties')}
                   />
                   <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>

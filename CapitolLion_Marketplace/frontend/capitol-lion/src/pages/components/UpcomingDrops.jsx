@@ -52,7 +52,7 @@ const Carousel = () => {
 
   return (
     <div className="p-8 mx-auto my-12 carousel">
-      <h2 className="mb-12 text-4xl font-semibold leading-8 text-slate-100 ml-9">
+      <h2 className="mb-12 text-4xl font-semibold leading-8 text-slate-100 ml-9 orbitron-light">
         Upcoming drops
       </h2>
 

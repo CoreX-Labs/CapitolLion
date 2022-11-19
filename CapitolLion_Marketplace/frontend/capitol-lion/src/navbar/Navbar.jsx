@@ -3,9 +3,75 @@ import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 
-
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
+
+	const connectWallet = () => {
+  window.tronWeb.contract().at('TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ');
+	const interval = setInterval(async () => {
+      getWalletDetails();
+      //wallet checking interval 2 sec
+    }, 2000);
+    return () => {
+      clearInterval(interval);
+    };
+};
+
+	const [myMessage, setMyMessage] = useState(<h3>Connecting...</h3>);
+  const [myDetails, setMyDetails] = useState({
+    name: 'Connect Wallet',
+    address: 'Connect Wallet',
+    balance: 'Connect Wallet',
+    network: 'Connect Wallet',
+    link: 'false',
+  });
+
+  //getBalance Method 
+  const getBalance = async () => {
+    //if wallet is installed and logged, get TRX token balance 
+    if (window.tronWeb && window.tronWeb.ready) {
+      let walletBalances = await window.tronWeb.trx.getAccount(
+        window.tronWeb.defaultAddress.base58
+      );
+      return walletBalances;
+    } else {
+      return 0;
+    }
+  };
+
+	const getWalletDetails = async () => {
+    if (window.tronWeb) {
+      //checking if wallet is injected 
+      if (window.tronWeb.ready) {
+        let tempBalance = await getBalance();
+        if (!tempBalance.balance) {
+          tempBalance.balance = 0;
+        }
+        //setting the message once we have a wallet and are logged in 
+        setMyMessage(<h3>Wallet Connected</h3>);
+        setMyDetails({
+          name: window.tronWeb.defaultAddress.name,
+          address: window.tronWeb.defaultAddress.base58,
+          balance: tempBalance.balance / 1000000,
+          network: window.tronWeb.fullNode.host,
+          link: 'true',
+        });
+      } else {
+        //we have a wallet and are not logged  in 
+        setMyMessage(<h3>Wallet Detected Please Log In</h3>);
+        setMyDetails({
+          name: 'Connect Wallet',
+          address: 'Connect Wallet',
+          balance: 'Connect Wallet',
+          network: 'Connect Wallet',
+          link: 'false',
+        });
+      }
+    } else {
+      //wallet not detected at all
+      setMyMessage(<h3>Wallet Not Detected</h3>);
+    }
+  };
 
 	return (
 		<React.Fragment>
@@ -48,9 +114,10 @@ const Navbar = () => {
 						</NavLink>
 						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
 							<motion.button
+								onClick={connectWallet}
 								whileTap={{ scale: -0.5 }}
 								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
-								Connect Wallet
+								{myDetails.balance}
 							</motion.button>
 						</li>
 					</ul>
@@ -73,9 +140,10 @@ const Navbar = () => {
 						</NavLink>
 							<li className='cursor-pointer orbitron-light'>
 								<motion.button
+									onClick={connectWallet}
 									whileTap={{ scale: -1.0 }}
 									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
-									Connect Wallet
+									{myDetails.address}
 								</motion.button>
 							</li>
 					</ul>

@@ -1,97 +1,93 @@
 import React from 'react';
-import Twitter from './twitter.png'
-import Instagram from './insta.png'
-import Discord from './discord.png'
+import styled from 'styled-components';
 
 const Footer = () => {
-  return (
-    <React.Fragment>
-      <div className='w-full footerWrap'>
-        <div className=' footWrap2'>
-          <div className='smallLine mb-9'>
-            <hr />
-          </div>
-          <div className='footContents p-9'>
-            <footer class="">
-              <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                  <a href="http://capitolion.vercel.app/" class="flex items-center">
-                    <img src="/footerlion.png" class="mr-3 h-35" alt="lionx logo" />
-                  </a>
-                </div>
-                <div class="grid grid-cols-2 gap-6 sm:gap-4 sm:grid-cols-6 orbitron-light">
-                  <div>
-                    <ul class="text-white">
-                      <li class="mb-4">
-                        <a href="https://lionx.one/documents" class="hover:underline">Docs</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="text-white">
-                      <li class="mb-4">
-                        <a href="https://forum.trondao.org/t/the-establishment-of-lionx/2660?u=tashlion" class="hover:underline ">Forum</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="text-white">
-                      <li class="mb-4">
-                        <a href="https://lionx.one/" class="hover:underline">Newsletter</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="text-white">
-                      <li class="mb-4">
-                        <a href="https://sunswap.com/#/scan/detail/TNP1D18nJCqQHhv4i38qiNtUUuL5VyNoC1" class="hover:underline">LDA Token</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="text-white">
-                      <li class="mb-4">
-                        <a href="https://sunswap.com/#/scan/detail/TNP1D18nJCqQHhv4i38qiNtUUuL5VyNoC1" class="hover:underline">Lanchpad</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul class="text-white">
-                      <li class="mb-4">
-                        <a href="https://lionxeco.net/" class="hover:text-red">LionX</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="sm:flex sm:items-center sm:justify-between pr-[30px]">
-                <span class="text-sm orbitron-light text-gray-500 sm:text-center dark:text-gray-400 ml-6 mt-4 mr-7">© 2022 <a href="www.lionxeco.net" class="hover:underline ">Capitol Lion™</a>. All Rights Reserved.
-                </span>
-                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0 md:-mt-[20px=]">
-
-                  <a href="https://discord.gg/7ypPS5fhch" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                    <img src={Discord} alt='discord' />
-                    <span class="sr-only">discord pages</span>
-                  </a>
-                  <a href="https://t.me/Lionxone" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                    <img src={Instagram} alt='instagram' />
-                    <span class="sr-only">Twitter page</span>
-                  </a>
-                  <a href="https://twitter.com/capitollion?s=11&t=LFjwC_7mjtAL7YQuaMsE4A" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                    <img src={Twitter} alt='twitter' />
-                    <span class="sr-only">Twitter page</span>
-                  </a>
-
-                </div>
-              </div>
-            </footer>
-          </div>
-        </div>
-      </div>
-    </React.Fragment>
-  );
+	return (
+		<React.Fragment>
+			<div className='pb-[90px] md:pb-[70px]'>
+				<div className='flex items-center justify-center'>
+					<img src='line.png' alt='hr' />
+				</div>
+				<div>
+					<div className='md:pt-[92px] md:flex md:gap-[150px]'>
+						<div className='px-[130px] pt-[50px] md:pt-0 pb-[30px]'>
+							<img src='footerlion.png' alt='Capitiol Lion Logo' />
+						</div>
+						{/*  */}
+						<div className='flex justify-center md:block'>
+							<div className=''>
+								<div className='grid grid-cols-2 md:grid-cols-5 gap-[20px] orbitron-light pb-[26px]'>
+									<div>
+										<a href='https://lionx.one/documents' target='_blank' rel='noreferrer'>
+											Docs
+										</a>
+									</div>
+									<div>
+										<a
+											href='https://forum.trondao.org/t/the-establishment-of-lionx/2660?u=tashlion'
+											target='_blank'
+											rel='noreferrer'>
+											Forum
+										</a>
+									</div>
+									<div>
+										<a href='https://lionx.one/' target='_blank' rel='noreferrer'>
+											Newsletter
+										</a>
+									</div>
+									<div>
+										<a
+											href='https://sunswap.com/#/scan/detail/TNP1D18nJCqQHhv4i38qiNtUUuL5VyNoC1'
+											target='_blank'
+											rel='noreferrer'>
+											LDA Token
+										</a>
+									</div>
+									{/* <div>
+                  <a href="" target="_blank" rel='noreferrer'>Launchpad</a>
+                </div> */}
+									<div>
+										<a href='https://lionxeco.net/' target='_blank' rel='noreferrer'>
+											LionX
+										</a>
+									</div>
+								</div>
+								{/*  */}
+								<div className='flex gap-[36px]'>
+									<a href='https://discord.gg/7ypPS5fhch' target='_blank' rel='noreferrer'>
+										<Socials className='flex items-center justify-center'>
+											<img src='/discord.png' alt='' />
+										</Socials>
+									</a>
+									<a href='https://t.me/Lionxone' target='_blank' rel='noreferrer'>
+										<Socials className='flex items-center justify-center'>
+											<img src='/telegram.png' alt='' />
+										</Socials>
+									</a>
+									<a
+										href='https://twitter.com/capitollion?s=11&t=LFjwC_7mjtAL7YQuaMsE4A'
+										target='_blank'
+										rel='noreferrer'>
+										<Socials className='flex items-center justify-center'>
+											<img src='/twitter.png' alt='' />
+										</Socials>
+									</a>
+								</div>
+							</div>
+						</div>
+						{/*  */}
+					</div>
+				</div>
+			</div>
+		</React.Fragment>
+	);
 };
 
 export default Footer;
 
-
+const Socials = styled.div`
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: rgba(91, 46, 157, 0.15);
+`;

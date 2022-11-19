@@ -18,12 +18,12 @@ const Hero = () => {
             Capitol Lion is a Self Governed NFT Platform
             <br /> Fueled by Music & Entertainment.
           </p>
-          <motion.button
+          {/* <motion.button
             whileTap={{ scale: -0.5 }}
             className='orbitron-light w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 mb-[30px]'
           >
             Connect Wallet
-          </motion.button>
+          </motion.button> */}
           <div className='md:flex md:gap-[24px] orbitron-light font-[700] text-[18px] leading-[23px] md:text-[28px] md:leading-[35px]'>
             <div className="pb-[28px]">
               <h1>

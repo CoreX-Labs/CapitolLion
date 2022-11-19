@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Artists from './components/Artists';
-// import Hero from './components/Hero';
+import Hero from './components/Hero';
 import Nfts from './components/Nfts';
 import Partners from './components/Partners';
 import Step from './components/Step';
@@ -11,6 +11,7 @@ import Navbar from '../navbar/Navbar';
 import Objective from '../pages/components/Objective';
 import UpcomingDrops from './components/UpcomingDrops';
 import toast, { Toaster } from 'react-hot-toast';
+import Swiper from './components/Swiper';
 
 const notify = () => toast('Notification set successfully', {
 	duration: 5000,
@@ -51,8 +52,9 @@ const Home = () => {
 						<Launchpad />
 					</div>
 				</div>
-				{/* <Hero /> */}
-				<UpcomingDrops />
+				<Swiper />
+				{/* <UpcomingDrops /> */}
+				<Hero />
 				<Partners />
 				<Objective />
 				<Nfts />
@@ -67,9 +69,11 @@ const Home = () => {
 export default Home;
 
 export const Launchpad = () => {
+	
 	const setNotification = () => {
 		notify();
 	}
+	
 	return (
 		<Container>
 			<div className="hidden sm:block md:flex">
