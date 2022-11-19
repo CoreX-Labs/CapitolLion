@@ -2,46 +2,13 @@ import React, { useState } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
-import toast, { Toaster } from 'react-hot-toast';
 
-const notification = () => toast('Oops, you do not have a wallet...', {
-	duration: 5000,
-	position: 'top-center',
-
-	// Styling
-	style: {
-			border: '1px solid #5b2e9d',
-			borderRadius: '20px',
-			padding: '16px',
-			color: '#ffffff',
-			background: '#121212',
-			boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
-			fontSize: '18px',
-			fontFamily: 'orbitron-light',
-			marginTop: '20px'
-	},
-	className: '',
-
-	// Custom Icon
-	icon: '❗',
-
-	// Aria
-	ariaProps: {
-			role: 'status',
-			'aria-live': 'polite',
-	},
-});
-
-const handleClick = () => {
-	notification();
-}
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
 
 	return (
 		<React.Fragment>
-		<Toaster />
 			<div className='w-screen h-[64px] p-[55px] text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px]'>
 				<Link to='/'>
 					<div className='cursor-pointer'>
@@ -81,7 +48,6 @@ const Navbar = () => {
 						</NavLink>
 						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
 							<motion.button
-								onClick={handleClick}
 								whileTap={{ scale: -0.5 }}
 								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
 								Connect Wallet
@@ -107,7 +73,6 @@ const Navbar = () => {
 						</NavLink>
 							<li className='cursor-pointer orbitron-light'>
 								<motion.button
-								onClick={handleClick}
 									whileTap={{ scale: -1.0 }}
 									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
 									Connect Wallet
