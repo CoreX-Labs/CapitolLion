@@ -93,7 +93,7 @@ const CreateSingle = () => {
                 </div>
               </InputSection>
               <div>
-                
+
                   <label>
                     <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>Price</h1>
                   </label>
@@ -149,7 +149,7 @@ const CreateSingle = () => {
                       Create Item
                     </motion.button>
                   </div>
-                
+
               </div>
             </form>
           </div>
