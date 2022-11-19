@@ -143,7 +143,7 @@ const Navbar = () => {
 									onClick={connectWallet}
 									whileTap={{ scale: -1.0 }}
 									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
-									{myDetails.address}
+									{myDetails.balance}
 								</motion.button>
 							</li>
 					</ul>
