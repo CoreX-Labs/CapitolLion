@@ -46,7 +46,7 @@ const CreateSingle = () => {
     collection: yup.string().required("Please enter a collection for your NFT"),
     title: yup.string().required("Give your NFT a name"),
     description: yup.string().required("Add a description for your NFT"),
-    royalties: yup.number().positive().integer().min(0).max(70).required("Please Enter a price for your NFT"),
+    royalties: yup.number().positive().integer().min(0).max(7).required("Please Enter a price for your NFT"),
   });
 
   const { register, handleSubmit, formState: {errors} } = useForm({

@@ -5,6 +5,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import styled from 'styled-components';
 import Footer from '../footer/Footer';
 // import Fade from 'react-reveal';
+import { WalletAddress } from '../App';
+import TextTruncate from 'react-text-truncate';
 
 const onsale = [
 	{
@@ -160,7 +162,7 @@ const Collection = () => {
 	};
 
 	const handleCopyEvent = async () => {
-		await navigator.clipboard.writeText('TPvu2GA1u2PthLCNgEDUDCygxE...');
+		await navigator.clipboard.writeText("TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ");
 		await notify();
 	};
 
@@ -212,7 +214,13 @@ const Collection = () => {
 					</h1>
 				</div>
 				<h1 className='orbitron-light font-[400] text-[16px] leading-[31px] text-center'>
-					TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ
+					<WalletAddress.Consumer>
+						{
+							address => {
+								return <p className="truncate__collection">{address}</p>
+							}
+						}
+					</WalletAddress.Consumer>
 				</h1>
 				<div className='flex justify-center mt-[10px] gap-[10px]'>
 					<CopyButton>

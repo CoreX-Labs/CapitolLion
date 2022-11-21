@@ -7,7 +7,10 @@ import MusicDAO from './pages/MusicDAO';
 import Collection from './pages/Collection';
 import CreateSingle from './pages/create/CreateSingle';
 import CreateMultiple from './pages/create/CreateMultiple';
-import Nftsingles from './pages/components/Nftsingles';
+// import Nftsingles from './pages/components/Nftsingles';
+
+//The Wallet Address insored globally in a Context
+export const WalletAddress = React.createContext();
 
 function App() {
   const markets = [
@@ -67,6 +70,7 @@ function App() {
     }
   ];
   return (
+    <WalletAddress.Provider value={"TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ"}>
       <BrowserRouter>
         {/* <Navbar /> */}
         <Routes>
@@ -81,6 +85,7 @@ function App() {
           <Route path='/collection' element={<Collection />} />
         </Routes>
       </BrowserRouter>
+    </WalletAddress.Provider>
   );
 }
 

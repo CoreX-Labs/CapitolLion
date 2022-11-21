@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
+import TextTruncate from 'react-text-truncate';
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
@@ -143,7 +144,9 @@ const Navbar = () => {
 									onClick={connectWallet}
 									whileTap={{ scale: -1.0 }}
 									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
-									{myDetails.balance}
+									{/* <TextTruncate line={1} element="span" truncateText="..." text={myDetails.address}></TextTruncate> */}
+									<div className="flex items-center justify-center"></div>
+									<p className="p-1 truncate__collection">{myDetails.address}</p>
 								</motion.button>
 							</li>
 					</ul>

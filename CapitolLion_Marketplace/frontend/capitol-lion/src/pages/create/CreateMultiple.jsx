@@ -46,7 +46,7 @@ const CreateMultiple = () => {
     collection: yup.string().required("Please enter a collection for your NFT"),
     title: yup.string().required("Give your NFT a name"),
     description: yup.string().required("Add a description for your NFT"),
-    royalties: yup.number().positive().integer().min(0).max(70).required("Please Enter a price for your NFT"),
+    royalties: yup.number().positive().integer().min(0).max(7).required("Please Enter a price for your NFT"),
     numberofsupply: yup.number().positive().integer().min(1).max(90).required("Please Enter number of supplies"),
   });
 
@@ -141,7 +141,7 @@ const CreateMultiple = () => {
                 <Input
                   className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
                   type=''
-                  placeholder='suggested: 10%, 20%. Max is 70%'
+                  placeholder='suggested: 1%, 4%. Max is 7%'
                   {...register('royalties')}
                 />
                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
