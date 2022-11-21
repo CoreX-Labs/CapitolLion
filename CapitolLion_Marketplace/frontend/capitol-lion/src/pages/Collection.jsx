@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import Footer from '../footer/Footer';
 // import Fade from 'react-reveal';
 import { WalletAddress } from '../App';
-import TextTruncate from 'react-text-truncate';
 
 const onsale = [
 	{
