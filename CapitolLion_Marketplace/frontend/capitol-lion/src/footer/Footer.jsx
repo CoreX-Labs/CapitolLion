@@ -6,12 +6,12 @@ const Footer = () => {
 		<React.Fragment>
 			<div className='pb-[90px] md:pb-[70px]'>
 				<div className='flex items-center justify-center'>
-					<img src='line.png' alt='hr' />
+					<img src='/line.png' alt='hr' />
 				</div>
 				<div>
 					<div className='md:pt-[92px] md:flex md:gap-[150px]'>
 						<div className='px-[130px] pt-[50px] md:pt-0 pb-[30px]'>
-							<img src='footerlion.png' alt='Capitiol Lion Logo' />
+							<img src='/footerlion.png' alt='Capitiol Lion Logo' />
 						</div>
 						{/*  */}
 						<div className='flex justify-center md:block'>

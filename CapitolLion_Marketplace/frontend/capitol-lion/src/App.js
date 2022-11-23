@@ -7,7 +7,7 @@ import MusicDAO from './pages/MusicDAO';
 import Collection from './pages/Collection';
 import CreateSingle from './pages/create/CreateSingle';
 import CreateMultiple from './pages/create/CreateMultiple';
-// import Nftsingles from './pages/components/Nftsingles';
+import Nftsingles from './pages/components/Nftsingles';
 
 //The Wallet Address insored globally in a Context
 export const WalletAddress = React.createContext();
@@ -18,55 +18,55 @@ function App() {
       id       : 1,
       nftimage : '/one.png',
       title    : 'face',
-      price    : 'by Angie_00'
+      price    : '0.19TRX'
     },
     {
       id       : 2,
       nftimage : '/four.png',
       title    : 'sculpt',
-      price    : 'by Angie_00'
+      price    : '0.3TRX'
     },
     {
       id       : 3,
       nftimage : '/three.png',
       title    : 'coloured',
-      price    : 'by Angie_00'
+      price    : '0.53TRX'
     },
     {
       id       : 4,
       nftimage : '/four.png',
       title    : 'no name',
-      price    : 'by Angie_00'
+      price    : '0.423TRX'
     },
     {
       id       : 5,
       nftimage : '/two.png',
       title    : 'galaxy',
-      price    : 'by Angie_00'
+      price    : '0.123TRX'
     },
     {
       id       : 6,
       nftimage : '/six.png',
       title    : 'walled',
-      price    : 'by Angie_00'
+      price    : '0.03TRX'
     },
     {
       id       : 7,
       nftimage : '/five.png',
       title    : 'flagged',
-      price    : 'by Angie_00'
+      price    : '0.0123TRX'
     },
     {
       id       : 8,
       nftimage : '/two.png',
       title    : 'galaxy',
-      price    : 'by Angie_00'
+      price    : '0.43TRX'
     },
     {
       id       : 9,
       nftimage : '/one.png',
       title    : 'face',
-      price    : 'by Angie_00'
+      price    : '0.023TRX'
     }
   ];
   return (
@@ -80,7 +80,7 @@ function App() {
             <Route path="create-multiple" element={<CreateMultiple />} />
           </Route>
           <Route path='/marketplace' element={<Marketplace markets={ markets } />} />
-          {/* <Route path="/marketplace/:name" element={<Nftsingles market={ markets } />} /> */}
+          <Route path='/marketplace/:name/:price' element={<Nftsingles markets={ markets } />} />
           <Route path='/musicDAO' element={<MusicDAO />} />
           <Route path='/collection' element={<Collection />} />
         </Routes>

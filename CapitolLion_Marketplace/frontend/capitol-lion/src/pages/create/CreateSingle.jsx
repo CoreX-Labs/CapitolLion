@@ -36,17 +36,17 @@ const notify = () => toast('Successfully created NFT.', {
 });
 
 const CreateSingle = () => {
-  const [details, setDetails] = useState([]);
+  const [details, setDetails] = useState(null);
 
   const navigate = useNavigate();
 
   const schema = yup.object().shape({
     metadata: yup.mixed().required("Please provide a file"),
-    price: yup.number().positive().integer().min(1).required("Please Enter a price for your NFT"),
-    collection: yup.string().required("Please enter a collection for your NFT"),
     title: yup.string().required("Give your NFT a name"),
     description: yup.string().required("Add a description for your NFT"),
     royalties: yup.number().positive().integer().min(0).max(7).required("Please Enter a price for your NFT"),
+    hashtag: yup.string().required("Enter a Hashtag for your item"),
+    age: yup.number().positive().integer().min(18).max(100).required("You must be 18+"),
   });
 
   const { register, handleSubmit, formState: {errors} } = useForm({
@@ -124,12 +124,37 @@ const CreateSingle = () => {
                     {...register('royalties')}
                   />
                   <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.royalties?.message}</p>
+                  {/*  */}
+                  <label>
+                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
+                      Hashtag
+                    </h1>
+                  </label>
+                  <Input
+                    className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
+                    type=''
+                    placeholder='e.g #crypto item'
+                    {...register('hashtag')}
+                  />
+                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.hashtag?.message}</p>
+                  {/*  */}
+                  <label>
+                    <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
+                      Age
+                    </h1>
+                  </label>
+                  <Input
+                    className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]'
+                    type=''
+                    placeholder='must be greater than 18'
+                    {...register('age')}
+                  />
+                  <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.age?.message}</p>
                   <div className='pt-[52px]'>
                     <motion.button whileTap={{ scale: -0.8 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
                       Create Item
                     </motion.button>
                   </div>
-
               </div>
             </form>
           </div>

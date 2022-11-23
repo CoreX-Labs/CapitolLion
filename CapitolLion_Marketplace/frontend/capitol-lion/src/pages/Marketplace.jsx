@@ -4,102 +4,11 @@ import Fade from 'react-reveal';
 import Navbar from '../navbar/Navbar';
 import '../App.css';
 import Footer from '../footer/Footer';
-// import { Link } from 'react-router-dom';
-import toast, { Toaster } from 'react-hot-toast';
-
-// const market = [
-// 	{
-// 		id       : 1,
-// 		nftimage : '/one.png',
-// 		title    : 'face',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 2,
-// 		nftimage : '/four.png',
-// 		title    : 'sculpt',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 3,
-// 		nftimage : '/three.png',
-// 		title    : 'coloured',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 4,
-// 		nftimage : '/four.png',
-// 		title    : 'no name',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 5,
-// 		nftimage : '/two.png',
-// 		title    : 'galaxy',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 6,
-// 		nftimage : '/six.png',
-// 		title    : 'walled',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 7,
-// 		nftimage : '/five.png',
-// 		title    : 'flagged',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 8,
-// 		nftimage : '/two.png',
-// 		title    : 'galaxy',
-// 		price    : 'by Angie_00'
-// 	},
-// 	{
-// 		id       : 9,
-// 		nftimage : '/one.png',
-// 		title    : 'face',
-// 		price    : 'by Angie_00'
-// 	}
-// ];
-
-const notify = () => toast('Wallet not connected, connect to your wallet.', {
-	duration: 5000,
-	position: 'top-center',
-
-	// Styling
-	style: {
-			border: '1px solid #5b2e9d',
-			borderRadius: '20px',
-			padding: '16px',
-			color: '#ffffff',
-			background: '#121212',
-			boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
-			fontSize: '18px',
-			fontFamily: 'orbitron-light',
-			marginTop: '20px'
-	},
-	className: '',
-
-	// Custom Icon
-	icon: '⚠️',
-
-	// Aria
-	ariaProps: {
-			role: 'status',
-			'aria-live': 'polite',
-	},
-});
-
-const handleClick = () => {
-	notify();
-}
+import { Link } from 'react-router-dom';
 
 const Marketplace = ({ markets }) => {
 	return (
 		<React.Fragment>
-		<Toaster />
 			<div className='bg-[#121212] h-auto text-white'>
 				<Navbar />
 				<div className='px-[24px] md:px-[30px] 2xl:px-[300px]'>
@@ -251,9 +160,9 @@ const Marketplace = ({ markets }) => {
 												<div>
 													<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{market.title}</h3>
 													<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{market.price}</p>
-													{/* <Link to={`${market.title}`}> */}
-														<button onClick={handleClick} className='uppercase font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>Buy Item</button>
-													{/* </Link> */}
+													<Link to={`${market.title}/${market.price}`}>
+														<button  className='uppercase font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>Buy Item</button>
+													</Link>
 												</div>
 											</div>
 										</Card>
