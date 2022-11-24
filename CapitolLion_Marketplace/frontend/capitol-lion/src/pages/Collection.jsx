@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import Footer from '../footer/Footer';
 // import Fade from 'react-reveal';
 import { WalletAddress } from '../App';
+import { useCapitolLionZustandGlobalAppStore } from '../zustandstore/zustandGlobalStore';
 
 const onsale = [
 	{
@@ -147,16 +148,19 @@ const notify = () =>
 	});
 
 const Collection = () => {
+	// const dp = useCapitolLionZustandGlobalAppStore(state => state.profilepic);
+	// const setdp = useCapitolLionZustandGlobalAppStore(state => state.handleProfilePicChange);
+	
 	const [ profilePic, setProfilePicture ] = useState('/blank.png');
 	const [ banner, setBanner ] = useState('/banner.png');
 
 	const handleProfilePicChange = (e) => {
-		console.log(e.target.files);
+		// console.log(e.target.files);
 		setProfilePicture(URL.createObjectURL(e.target.files[0]));
 	};
 
 	const handleBannerChange = (e) => {
-		console.log(e.target.files);
+		// console.log(e.target.files);
 		setBanner(URL.createObjectURL(e.target.files[0]));
 	};
 
