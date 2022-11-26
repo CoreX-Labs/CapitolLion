@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
+//import { useCapitolLionZustandGlobalAppStore } from '../zustandstore/zustandGlobalStore';
 
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
@@ -116,8 +117,8 @@ const Navbar = () => {
 							<motion.button
 								onClick={connectWallet}
 								whileTap={{ scale: -0.5 }}
-								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
-								{myDetails.balance}
+								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500  truncate__collection__mobile'>
+								{myDetails.address}
 							</motion.button>
 						</li>
 					</ul>
@@ -143,7 +144,6 @@ const Navbar = () => {
 									onClick={connectWallet}
 									whileTap={{ scale: -1.0 }}
 									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
-									{/* <TextTruncate line={1} element="span" truncateText="..." text={myDetails.address}></TextTruncate> */}
 									<div className="flex items-center justify-center"></div>
 									<p className="p-1 truncate__collection">{myDetails.address}</p>
 								</motion.button>

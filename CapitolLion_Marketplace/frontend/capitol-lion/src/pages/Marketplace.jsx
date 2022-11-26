@@ -20,7 +20,10 @@ const Marketplace = ({ markets }) => {
 							<div>
 								<SearchInput>
 									<div>
-										<input className='bg-transparent w-[210px] focus:outline-none border-none focus:border-none' type='text' />
+										<input
+											className='bg-transparent w-[210px] focus:outline-none border-none focus:border-none'
+											type='text'
+										/>
 									</div>
 									<div>
 										<img src='/search.png' alt='Search Icon' />
@@ -73,7 +76,7 @@ const Marketplace = ({ markets }) => {
 										id='hs-dropdown-hover-event'
 										type='button'
 										className='hs-dropdown-toggle py-3 px-[20px] inline-flex justify-center items-center gap-2 rounded-md bg-[#121212]  text-white align-middle focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm orbitron-light font-[700] dropdown__menu'>
-										Buy 
+										Buy
 										<svg
 											className='hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-'
 											width='16'
@@ -156,12 +159,21 @@ const Marketplace = ({ markets }) => {
 												src={market.nftimage}
 												alt='NFT pic'
 											/>
-											<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
+											<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[9px]'>
 												<div>
 													<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{market.title}</h3>
-													<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{market.price}</p>
+													<div className=''>
+														<div>
+															<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{market.author}</p>
+														</div>
+														<div>
+															<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[3px]'>{market.price}</p>
+														</div>
+													</div>
 													<Link to={`${market.title}/${market.price}`}>
-														<button  className='uppercase font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>Buy Item</button>
+														<button className='uppercase font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>
+															Buy Item
+														</button>
 													</Link>
 												</div>
 											</div>
@@ -172,7 +184,7 @@ const Marketplace = ({ markets }) => {
 						</div>
 					</div>
 				</div>
-				<Footer /> 
+				<Footer />
 			</div>
 		</React.Fragment>
 	);

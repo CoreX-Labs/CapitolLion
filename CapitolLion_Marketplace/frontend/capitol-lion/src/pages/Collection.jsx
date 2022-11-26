@@ -6,62 +6,71 @@ import styled from 'styled-components';
 import Footer from '../footer/Footer';
 // import Fade from 'react-reveal';
 import { WalletAddress } from '../App';
-import { useCapitolLionZustandGlobalAppStore } from '../zustandstore/zustandGlobalStore';
+//import { useCapitolLionZustandGlobalAppStore } from '../zustandstore/zustandGlobalStore';
 
 const onsale = [
 	{
 		id       : 1,
 		nftimage : '/three.png',
 		title    : 'face of man',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 2,
 		nftimage : '/six.png',
 		title    : 'walled',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 3,
 		nftimage : '/four.png',
 		title    : 'sculpt',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 4,
 		nftimage : '/one.png',
 		title    : 'face',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 5,
 		nftimage : '/two.png',
 		title    : 'galaxy',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 6,
 		nftimage : '/five.png',
 		title    : 'flagged',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 7,
 		nftimage : '/five.png',
 		title    : 'flagged',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 8,
 		nftimage : '/two.png',
 		title    : 'galaxy',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	},
 	{
 		id       : 9,
 		nftimage : '/one.png',
 		title    : 'face',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'By Angie__00'
 	}
 ];
 
@@ -70,53 +79,57 @@ const owned = [
 		id       : 1,
 		nftimage : '/two.png',
 		title    : 'face of man',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'User45948'
 	},
 	{
 		id       : 2,
 		nftimage : '/four.png',
 		title    : 'face of man',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'User45948'
 	},
 	{
 		id       : 3,
 		nftimage : '/five.png',
 		title    : 'face of man',
-		price    : 'by Angie_00'
+		price    : '0.04 TRX',
+		author   : 'User45948'
 	}
 ];
 
-const notification = () => toast('Wallet not connected, connect to your wallet.', {
-	duration: 5000,
-	position: 'top-center',
+const notification = () =>
+	toast('Wallet not connected, connect to your wallet.', {
+		duration  : 5000,
+		position  : 'top-center',
 
-	// Styling
-	style: {
-			border: '1px solid #5b2e9d',
-			borderRadius: '20px',
-			padding: '16px',
-			color: '#ffffff',
-			background: '#121212',
-			boxShadow: '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
-			fontSize: '18px',
-			fontFamily: 'orbitron-light',
-			marginTop: '20px'
-	},
-	className: '',
+		// Styling
+		style     : {
+			border       : '1px solid #5b2e9d',
+			borderRadius : '20px',
+			padding      : '16px',
+			color        : '#ffffff',
+			background   : '#121212',
+			boxShadow    : '1px 1px 29px 3px rgba(91, 46, 157, 0.3), inset 0px 4px 50px rgba(0, 0, 0, 0.8)',
+			fontSize     : '18px',
+			fontFamily   : 'orbitron-light',
+			marginTop    : '20px'
+		},
+		className : '',
 
-	// Custom Icon
-	icon: '⚠️',
+		// Custom Icon
+		icon      : '⚠️',
 
-	// Aria
-	ariaProps: {
-			role: 'status',
-			'aria-live': 'polite',
-	},
-});
+		// Aria
+		ariaProps : {
+			role        : 'status',
+			'aria-live' : 'polite'
+		}
+	});
 
 const handleClick = () => {
 	notification();
-}
+};
 
 const notify = () =>
 	toast('Copied to Clipboard', {
@@ -150,7 +163,7 @@ const notify = () =>
 const Collection = () => {
 	// const dp = useCapitolLionZustandGlobalAppStore(state => state.profilepic);
 	// const setdp = useCapitolLionZustandGlobalAppStore(state => state.handleProfilePicChange);
-	
+
 	const [ profilePic, setProfilePicture ] = useState('/blank.png');
 	const [ banner, setBanner ] = useState('/banner.png');
 
@@ -165,7 +178,7 @@ const Collection = () => {
 	};
 
 	const handleCopyEvent = async () => {
-		await navigator.clipboard.writeText("TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ");
+		await navigator.clipboard.writeText('TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ');
 		await notify();
 	};
 
@@ -218,11 +231,9 @@ const Collection = () => {
 				</div>
 				<h1 className='orbitron-light font-[400] text-[16px] leading-[31px] text-center'>
 					<WalletAddress.Consumer>
-						{
-							address => {
-								return <p className="truncate__collection">{address}</p>
-							}
-						}
+						{(address) => {
+							return <p className='truncate__collection'>{address}</p>;
+						}}
 					</WalletAddress.Consumer>
 				</h1>
 				<div className='flex justify-center mt-[10px] gap-[10px]'>
@@ -281,11 +292,18 @@ const Collection = () => {
 											src={item.nftimage}
 											alt='NFT pic'
 										/>
-										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
+										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[9px]'>
 											<div>
 												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
-												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
-												<button onClick={handleClick} className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>list for sale</button>
+												<div>
+													<div><p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.author}</p></div>
+													<div><p className='capitalize font-[400] text-[14px] leading-[16px] pb-[3px]'>{item.price}</p></div>
+												</div>
+												<button
+													onClick={handleClick}
+													className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>
+													on sale
+												</button>
 											</div>
 										</div>
 									</Card>
@@ -307,11 +325,16 @@ const Collection = () => {
 											src={item.nftimage}
 											alt='NFT pic'
 										/>
-										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[22px]'>
+										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[9px]'>
 											<div>
 												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
-												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.price}</p>
-												<button onClick={handleClick} className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>up for sale</button>
+												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.author}</p>
+												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[3px]'>{item.price}</p>
+												<button
+													onClick={handleClick}
+													className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>
+													list for sale
+												</button>
 											</div>
 										</div>
 									</Card>

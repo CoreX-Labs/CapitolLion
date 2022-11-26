@@ -56,12 +56,12 @@ const Footer = () => {
 								<div className='flex gap-[36px]'>
 									<a href='https://discord.gg/7ypPS5fhch' target='_blank' rel='noreferrer'>
 										<Socials className='flex items-center justify-center'>
-											<img src='/discord.png' alt='' />
+											<img src='/discord.png' alt='Discord Logo' />
 										</Socials>
 									</a>
 									<a href='https://t.me/Lionxone' target='_blank' rel='noreferrer'>
 										<Socials className='flex items-center justify-center'>
-											<img src='/telegram.png' alt='' />
+											<img src='/telegram.png' alt='Telegram Logo' />
 										</Socials>
 									</a>
 									<a
@@ -69,7 +69,7 @@ const Footer = () => {
 										target='_blank'
 										rel='noreferrer'>
 										<Socials className='flex items-center justify-center'>
-											<img src='/twitter.png' alt='' />
+											<img src='/twitter.png' alt='Twitter Logo' />
 										</Socials>
 									</a>
 								</div>

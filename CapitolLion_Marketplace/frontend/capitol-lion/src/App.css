@@ -96,3 +96,10 @@ input#dp-input {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.truncate__collection__mobile {
+	width: 177px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

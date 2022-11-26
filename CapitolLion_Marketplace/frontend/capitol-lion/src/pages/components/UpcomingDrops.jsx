@@ -111,25 +111,11 @@ const Carousel = () => {
                 key={index}
                 className="relative w-64 h-64 text-center carousel-item snap-start"
               >
-                <a
-                  href={resource.link}
-                  className="z-0 block w-full h-full bg-left-top bg-no-repeat bg-cover aspect-square bg-origin-padding"
-                  style={{ backgroundImage: `url(${resource.imageUrl || ''})` }}
-                >
                   <img
                     src={resource.imageUrl || ''}
                     alt={resource.title}
-                    className="hidden w-full aspect-square"
+                    className="object-contain w-full h-full gap-[30px]"
                   />
-                </a>
-                <a
-                  href={resource.link}
-                  className="absolute top-0 left-0 z-10 block w-full h-full transition-opacity duration-300 opacity-0 aspect-square "
-                >
-                  <h3 className="px-3 py-6 mx-auto text-xl text-white">
-                    {resource.title}
-                  </h3>
-                </a>
               </div>
             );
           })}
