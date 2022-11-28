@@ -108,7 +108,7 @@ const CreateMultiple = () => {
                 {/*  */}
                 <label>
                   <h1 className='orbitron-light font-[400] text-[22px] leading-[28px] pt-[39px] pb-[18px]'>
-                    Choose collection
+                    Collection Type
                   </h1>
                 </label>
                 <Input className='orbitron-light focus:ring-[#5B2E9D] focus:border-[#5B2E9D]' type='text' placeholder='Choose collection' {...register('collection')} />
