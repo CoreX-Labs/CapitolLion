@@ -7,6 +7,16 @@
     src: url('../public/Orbitron-Black.ttf');
 }
 
+@layer utilities {
+    .pictures {
+        width: 33em;
+    }
+
+    .purple {
+        color: #6000AA;
+    }
+}
+
 .orbitron-header {
     font-family: orbitron-header;
 }

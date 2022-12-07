@@ -1,9 +1,11 @@
 import React, { } from 'react';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 // import axios from "axios";
 import LogoMusicDAO from '../Assets/Logo.png'
 import './musicDAO.css'
 import LandImg from '../pages/MusicDaoAssets/Landimage.png'
 import LogoImagery from '../Assets/imagery.png'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const MusicDAO = () => {
@@ -43,9 +45,9 @@ const MusicDAO = () => {
 	return (
 		<React.Fragment>
 
-			<div className='allBackground bg-gray-900'>
+			<div className='allBackground bg-black'>
 				<div class="flex mb-4">
-					<div class="w-full bg-gray-900 h-12">
+					<div class="w-full bg-black h-12">
 						<div class="flex mt-6">
 							<div class="w-1/2 h-12">
 								<img width="90px" src={LogoMusicDAO} />
@@ -57,26 +59,48 @@ const MusicDAO = () => {
 					</div>
 				</div>
 
-				<div className='md:container md:mx-auto max-width:768px columns-2 p-9 mt-9'>
-					<div>
-						<img className='sm:block imgs' src={LandImg} alt="music dao img" />
-					</div>
-					<div>
-						<img className='sm:block' src={LogoImagery} alt="music dao img" />
-						<p className='tx12'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							
-							<button className='bottonGradient'>Mint Now 1000 Trx</button>
-							<p className='tokentxt mt-8'>My Token IDs <br />
-							.........................</p>
+				<div className='md:container md:mx-auto md:px-20 mt-20'>
+					<div className='p-8 mt-9 gap-20 md:grid md:grid-cols-2 '>
+						<div className='col-md-6 '>
+							<img className='' src={LogoImagery} alt="music dao img" />
+							<p className='tx1 mb-13'>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+
+							</p>
+							<button className='bottonGradient'>Mint Now 1000 TRX</button>
+							<p className='tokentxt'>My Token IDs <br /> .................</p>
+
+						</div>
+						<div className='col-md-6'>
+							<img className='pictures' src={LandImg} alt="music dao img" />
+						</div>
+
 					</div>
 				</div>
 
+				<div className='md:container md:mx-auto md:px-20 mt-20'>
+					<div className='p-8 mt-9 gap-20 md:grid md:grid-cols-2 '>
+						<div>
+							<div className='text-7xl henesis text-center'>Genesis NFT <br />
+								<div className='flex items-center justify-center gap-6'><small className='o tx1 text-center font-bold'>0</small> <small className='tx1 text-center'>of 1111 Minted</small></div>
+							</div>
+
+						</div>
+						<div className='p-8 mt-9 gap-20 md:grid md:grid-cols-3 text-center txs'>
+							<div className='mb-7'><h2 className='text-6xl mb-4'>1,111</h2><small className='purple'>Total NFTs</small></div>
+							<div><h2 className='text-6xl mb-4'>80</h2> <small className='purple'>Total Owners</small></div>
+							<div><h2 className='text-6xl mb-4'>0</h2><small className='purple mt-9'>Floor Price [TRX]</small></div>
+						</div>
+					</div>
+				</div>
+
+				
+
 			</div>
+
 
 		</React.Fragment>
 	);

@@ -15,67 +15,67 @@ export const WalletAddress = React.createContext();
 function App() {
 	const markets = [
 		{
-			id       : 1,
-			nftimage : '/one.png',
-			title    : 'face',
-			price    : '0.19TRX',
-			author   : 'By Angie__00'
+			id: 1,
+			nftimage: '/one.png',
+			title: 'face',
+			price: '0.19TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 2,
-			nftimage : '/four.png',
-			title    : 'sculpt',
-			price    : '0.3TRX',
-			author   : 'By Angie__00'
+			id: 2,
+			nftimage: '/four.png',
+			title: 'sculpt',
+			price: '0.3TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 3,
-			nftimage : '/three.png',
-			title    : 'coloured',
-			price    : '0.53TRX',
-			author   : 'By Angie__00'
+			id: 3,
+			nftimage: '/three.png',
+			title: 'coloured',
+			price: '0.53TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 4,
-			nftimage : '/four.png',
-			title    : 'no name',
-			price    : '0.423TRX',
-			author   : 'By Angie__00'
+			id: 4,
+			nftimage: '/four.png',
+			title: 'no name',
+			price: '0.423TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 5,
-			nftimage : '/two.png',
-			title    : 'galaxy',
-			price    : '0.123TRX',
-			author   : 'By Angie__00'
+			id: 5,
+			nftimage: '/two.png',
+			title: 'galaxy',
+			price: '0.123TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 6,
-			nftimage : '/six.png',
-			title    : 'walled',
-			price    : '0.03TRX',
-			author   : 'By Angie__00'
+			id: 6,
+			nftimage: '/six.png',
+			title: 'walled',
+			price: '0.03TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 7,
-			nftimage : '/five.png',
-			title    : 'flagged',
-			price    : '0.0123TRX',
-			author   : 'By Angie__00'
+			id: 7,
+			nftimage: '/five.png',
+			title: 'flagged',
+			price: '0.0123TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 8,
-			nftimage : '/two.png',
-			title    : 'galaxy',
-			price    : '0.43TRX',
-			author   : 'By Angie__00'
+			id: 8,
+			nftimage: '/two.png',
+			title: 'galaxy',
+			price: '0.43TRX',
+			author: 'By Angie__00'
 		},
 		{
-			id       : 9,
-			nftimage : '/one.png',
-			title    : 'face',
-			price    : '0.023TRX',
-			author   : 'By Angie__00'
+			id: 9,
+			nftimage: '/one.png',
+			title: 'face',
+			price: '0.023TRX',
+			author: 'By Angie__00'
 		}
 	];
 	return (
