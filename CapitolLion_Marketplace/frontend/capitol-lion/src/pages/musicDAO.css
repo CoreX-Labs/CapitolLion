@@ -1,6 +1,6 @@
 
 .allBackground{
-    height: 300em;
+    height: 260em;
 }
 
 .supportBtn {
@@ -37,13 +37,22 @@
     text-align: justify;
 }
 
-/* @media only screen and (max-width: 390px){
-	.tx12{
-        color: white;
-        text-align: justify;
-        font-size: small;
+
+
+@media only screen and (max-width: 390px){
+	.allBackground{
+        height: 450em;
     }
-} */
+    
+} 
+
+
+@media only screen and (max-width: 414px){
+	.allBackground{
+        height: 450em;
+    }
+    
+} 
 
 
 
@@ -57,6 +66,14 @@
     margin-bottom: 1em;
 
 } 
+.btngradient{
+    background-image: linear-gradient(96.64deg,#8F01FC -1.68%, rgba(0, 0, 0, 0) 111.25%);
+    width: 16em;
+    color: white;
+    height: 3em;
+    height: 5em;
+    margin-bottom: 1em;
+}
 
 .tokentxt{
     color: #FFE700;
@@ -68,31 +85,42 @@ h1, h2, h3{
     color: white;
 }
 
+.txtabout{
+    font-size: 16px;
+}
+
 .henesis{
     color: #6000AA;
 }
 
-/* media screeen alone */
-/* @media only screen and (max-width: 390px){
-	.tx12{
-        color: white;
-        text-align: justify;
-        font-size: small;
-    }
-
-    .bottonGradient{
-        background-image: linear-gradient(96.64deg, #8F01FC -1.68%, rgba(48, 17, 237, 0) 111.25%);
-        width: 10em;
-        color: white;
-        height: 3em;
-        margin-top: 1em;
-        border-radius: 7px;
-        
-    }
-} */
 
 .o{
     font-size: 70px;
     
+}
+
+.boxModel{
+    position: relative;
+    background-image: linear-gradient(96.64deg,#8F01FC -1.68%, rgba(0, 0, 0, 0) 111.25%);
+    height: 18em;
+    width: 16em;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    
+}
+
+.txheads{
+    font-size: 25px;
+    position: relative;
+    top: 1em;
+}
+
+.titles{
+    font-size: 20px;
+}
+
+.boxtitle{
+    margin-top: 2em;
 }
 

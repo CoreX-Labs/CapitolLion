@@ -15,6 +15,19 @@
     .purple {
         color: #6000AA;
     }
+    .yellow{
+        color: #FADF00;
+    }
+    .white{
+        color: white;
+    }
+    .smalls{
+        font-size: 20px;
+    }
+
+    .justifier{
+        text-align: justify;
+    }
 }
 
 .orbitron-header {
