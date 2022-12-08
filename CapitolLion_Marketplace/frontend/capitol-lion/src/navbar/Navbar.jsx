@@ -7,73 +7,84 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
 
-	const connectWallet = () => {
-  window.tronWeb.contract().at('TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ');
-	const interval = setInterval(async () => {
-      getWalletDetails();
-      //wallet checking interval 2 sec
-    }, 2000);
-    return () => {
-      clearInterval(interval);
-    };
-};
+   const [errorMessage, setErrorMessage]= useState(null)
 
-	const [myMessage, setMyMessage] = useState(<h3>Connecting...</h3>);
-  const [myDetails, setMyDetails] = useState({
-    name: 'Connect Wallet',
-    address: 'Connect Wallet',
-    balance: 'Connect Wallet',
-    network: 'Connect Wallet',
-    link: 'false',
-  });
+   const [userBalance, setUserBalance]=useState(null)
+   const [connectButtonText, setConnectButtonText]= useState({addres:"connect Wallet"})
+   //const [truncAddress, setTruncAddress]=useState(null)
 
-  //getBalance Method 
-  const getBalance = async () => {
-    //if wallet is installed and logged, get TRX token balance 
-    if (window.tronWeb && window.tronWeb.ready) {
-      let walletBalances = await window.tronWeb.trx.getAccount(
-        window.tronWeb.defaultAddress.base58
-      );
-      return walletBalances;
-    } else {
-      return 0;
+   const connectWalletHandler=async()=>{
+    if (window.tronWeb){
+       //[TronLink] We recommend that DApp developers use tronLink.request({method: 'tron_requestAccounts'}) 
+       //to request users’ account information at the earliest time possible in order to get a complete TronWeb 
+       //sinjection and to ensure proper connection of your DApp to TronLink extension wallet.
+        window.tronLink.request({method: "tron_requestAccounts"})
+        .then(result=>{
+            console.log(result)
+            if (result.code=="200"){
+                 //setConnectButtonText("connected")
+                  accountChangeHandler(window.tronWeb.defaultAddress.base58)
+            }else{
+                console.log("not connected")
+            }
+          
+         
+        })
+       
+    //an error message pops up if tronLink is not installed in the user's browser
+    } else{
+        setErrorMessage("Install Tronlink")
     }
-  };
+   }
 
-	const getWalletDetails = async () => {
-    if (window.tronWeb) {
-      //checking if wallet is injected 
-      if (window.tronWeb.ready) {
-        let tempBalance = await getBalance();
-        if (!tempBalance.balance) {
-          tempBalance.balance = 0;
+   //this get the default address and truncates it
+   const SetTruncAddress=()=>{
+	setConnectButtonText({
+		addres: (window.tronWeb.defaultAddress.base58).substr(0,5) + "....." + (window.tronWeb.defaultAddress.base58).substr((window.tronWeb.defaultAddress.base58).length - 5)
+	});
+       
+   }
+   //this is called when the default account changes so as to update the address and the balance to that
+   //of the current address
+
+   const accountChangeHandler=(newAccount)=>{
+      //setDefaultAccount(newAccount)
+      SetTruncAddress()
+      getUserBalance(newAccount)
+   }
+
+//this gets the user balance
+   const getUserBalance=(address)=>{
+       window.tronWeb.trx.getBalance(address)
+       .then(balance=>{
+        setUserBalance(parseFloat(window.tronWeb.fromSun(balance)).toFixed(3))
+       })
+   }
+
+   //this listens to setAccount account action i.e it reloads if the account changes
+   window.addEventListener('message', (res) => {
+    if (res.data.message && res.data.message.action == "setAccount") {
+      if (window.tronWeb) {
+        if (res.data.message.data.address != window.tronWeb.defaultAddress.base58) {
+          console.log('changed');
+            window.location.reload();
         }
-        //setting the message once we have a wallet and are logged in 
-        setMyMessage(<h3>Wallet Connected</h3>);
-        setMyDetails({
-          name: window.tronWeb.defaultAddress.name,
-          address: window.tronWeb.defaultAddress.base58,
-          balance: tempBalance.balance / 1000000,
-          network: window.tronWeb.fullNode.host,
-          link: 'true',
-        });
-      } else {
-        //we have a wallet and are not logged  in 
-        setMyMessage(<h3>Wallet Detected Please Log In</h3>);
-        setMyDetails({
-          name: 'Connect Wallet',
-          address: 'Connect Wallet',
-          balance: 'Connect Wallet',
-          network: 'Connect Wallet',
-          link: 'false',
-        });
       }
-    } else {
-      //wallet not detected at all
-      setMyMessage(<h3>Wallet Not Detected</h3>);
     }
-  };
+     if (res.data.message && res.data.message.action == "disconnect") {
+            console.log("disconnect event", res.data.message.isTronLink)
+            window.location.reload()
+        }
 
+        
+  
+    //this listens to setNode action i.e it reloads if the node changes(mainnet to testnet and vice-versa)
+    if (res.data.message && res.data.message.action == "setNode") {
+      window.location.reload();
+   
+    }
+
+ });
 	return (
 		<React.Fragment>
 			<div className='w-screen h-[64px] p-[55px] text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px]'>
@@ -115,10 +126,10 @@ const Navbar = () => {
 						</NavLink>
 						<li className='h-[56px] px-[12px] orbitron-light pt-[18px]'>
 							<motion.button
-								onClick={connectWallet}
+								onClick={connectWalletHandler}
 								whileTap={{ scale: -0.5 }}
 								className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500  truncate__collection__mobile'>
-								{myDetails.address}
+								{connectButtonText.addres}
 							</motion.button>
 						</li>
 					</ul>
@@ -141,11 +152,12 @@ const Navbar = () => {
 						</NavLink>
 							<li className='cursor-pointer orbitron-light'>
 								<motion.button
-									onClick={connectWallet}
+									onClick={connectWalletHandler}
 									whileTap={{ scale: -1.0 }}
 									className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500'>
 									<div className="flex items-center justify-center"></div>
-									<p className="p-1 truncate__collection">{myDetails.address}</p>
+									<p className="p-1 truncate__collection">{connectButtonText.addres}</p>
+									
 								</motion.button>
 							</li>
 					</ul>
