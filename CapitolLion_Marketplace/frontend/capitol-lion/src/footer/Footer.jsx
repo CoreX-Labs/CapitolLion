@@ -18,12 +18,12 @@ const Footer = () => {
 							<div className=''>
 								<div className='grid grid-cols-2 md:grid-cols-5 gap-[20px] orbitron-light pb-[26px]'>
 									<div>
-										<a href='https://lionx.one/documents' target='_blank' rel='noreferrer'>
+										<a className='white' href='https://lionx.one/documents' target='_blank' rel='noreferrer'>
 											Docs
 										</a>
 									</div>
 									<div>
-										<a
+										<a	className='white'
 											href='https://forum.trondao.org/t/the-establishment-of-lionx/2660?u=tashlion'
 											target='_blank'
 											rel='noreferrer'>
@@ -31,12 +31,12 @@ const Footer = () => {
 										</a>
 									</div>
 									<div>
-										<a href='https://lionx.one/' target='_blank' rel='noreferrer'>
+										<a className='white' href='https://lionx.one/' target='_blank' rel='noreferrer'>
 											Newsletter
 										</a>
 									</div>
 									<div>
-										<a
+										<a	className='white'
 											href='https://sunswap.com/#/scan/detail/TNP1D18nJCqQHhv4i38qiNtUUuL5VyNoC1'
 											target='_blank'
 											rel='noreferrer'>
@@ -47,7 +47,7 @@ const Footer = () => {
                   <a href="" target="_blank" rel='noreferrer'>Launchpad</a>
                 </div> */}
 									<div>
-										<a href='https://lionxeco.net/' target='_blank' rel='noreferrer'>
+										<a className='white' href='https://lionxeco.net/' target='_blank' rel='noreferrer'>
 											LionX
 										</a>
 									</div>
