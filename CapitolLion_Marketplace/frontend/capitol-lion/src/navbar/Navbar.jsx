@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect,createContext } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 //import { useCapitolLionZustandGlobalAppStore } from '../zustandstore/zustandGlobalStore';
-
+export const userAddress = createContext();
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
 
+	//not in use
    const [errorMessage, setErrorMessage]= useState(null)
-
    const [userBalance, setUserBalance]=useState(null)
+
+
    const [connectButtonText, setConnectButtonText]= useState({addres:"connect Wallet"})
    //const [truncAddress, setTruncAddress]=useState(null)
 
@@ -53,6 +55,7 @@ const Navbar = () => {
       getUserBalance(newAccount)
    }
 
+   //not in use yet
 //this gets the user balance
    const getUserBalance=(address)=>{
        window.tronWeb.trx.getBalance(address)
@@ -86,6 +89,7 @@ const Navbar = () => {
 
  });
 	return (
+		<userAddress.Provider value={connectButtonText.addres}>
 		<React.Fragment>
 			<div className='w-screen h-[64px] p-[55px] text-white flex justify-between items-center px-[24px] md:px-[70px] 2xl:px-[300px]'>
 				<Link to='/'>
@@ -164,6 +168,7 @@ const Navbar = () => {
 				</div>
 			</div>
 		</React.Fragment>
+		</userAddress.Provider>
 	);
 };
 
