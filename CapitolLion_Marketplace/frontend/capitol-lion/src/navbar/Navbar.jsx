@@ -131,11 +131,14 @@ const Navbar = () => {
 						<NavLink to='/marketplace'>
 							<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Marketplace</li>
 						</NavLink>
-						<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>
+						<NavLink to='/musicDAO'>
+							<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>MusicDAO</li>
+						</NavLink>
+						{/* <li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>
 							<a href='https://lionxeco.net/capitol-lion-genesis.html' target='_blank' rel='noreferrer'>
 								<p className='text-[14px]'>MusicDAO</p>
 							</a>
-						</li>
+						</li> */}
 						<NavLink to='/collection'>
 							<li className='cursor-pointer orbitron-light font-[500] text-[14px] leading-[18px]'>Collection</li>
 						</NavLink>
