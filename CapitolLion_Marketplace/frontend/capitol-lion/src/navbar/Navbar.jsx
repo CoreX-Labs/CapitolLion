@@ -3,15 +3,11 @@ import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 import { atom, useRecoilState  } from 'recoil';
-import { recoilPersist } from 'recoil-persist';
 export const userAddress = createContext();
-
-const { persistAtom } = recoilPersist()
 
 const addressAtom = atom({
   key: 'walletaddress',
   default: ({ address: "Connect Wallet"}),
-	effects_UNSTABLE: [persistAtom],
 })
 
 const Navbar = () => {
