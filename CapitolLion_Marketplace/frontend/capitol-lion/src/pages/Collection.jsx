@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../navbar/Navbar';
 import '../App.css';
 import toast, { Toaster } from 'react-hot-toast';
 import styled from 'styled-components';
 import Footer from '../footer/Footer';
-// import Fade from 'react-reveal';
 import { WalletAddress } from '../App';
-//import { useCapitolLionZustandGlobalAppStore } from '../zustandstore/zustandGlobalStore';
+import { atom, useRecoilState  } from 'recoil';
+import { recoilPersist } from 'recoil-persist';
+
+const { persistAtom } = recoilPersist()
+
+const profilePictureAtom = atom({
+  key: 'profile-atom',
+  default: '/blank.png',
+	effects_UNSTABLE: [persistAtom],
+})
+
+const bannerPictureAtom = atom({
+	key: 'banner-atom',
+	default: '/banner.png',
+	effects_UNSTABLE: [persistAtom],
+})
 
 const onsale = [
 	{
@@ -161,20 +175,15 @@ const notify = () =>
 	});
 
 const Collection = () => {
-	// const dp = useCapitolLionZustandGlobalAppStore(state => state.profilepic);
-	// const setdp = useCapitolLionZustandGlobalAppStore(state => state.handleProfilePicChange);
-
-	const [ profilePic, setProfilePicture ] = useState('/blank.png');
-	const [ banner, setBanner ] = useState('/banner.png');
+	const [profilePicture, setProfilePicture] = useRecoilState(profilePictureAtom);
+	const [bannerPicture, setBannerPicture] = useRecoilState(bannerPictureAtom);
 
 	const handleProfilePicChange = (e) => {
-		// console.log(e.target.files);
 		setProfilePicture(URL.createObjectURL(e.target.files[0]));
 	};
 
 	const handleBannerChange = (e) => {
-		// console.log(e.target.files);
-		setBanner(URL.createObjectURL(e.target.files[0]));
+		setBannerPicture(URL.createObjectURL(e.target.files[0]));
 	};
 
 	const handleCopyEvent = async () => {
@@ -190,7 +199,7 @@ const Collection = () => {
 				<div className=''>
 					<img
 						className='h-[200px] md:h-[404px] w-[100vw] object-cover object-top'
-						src={banner}
+						src={bannerPicture}
 						alt='Banner'
 					/>
 				</div>
@@ -206,7 +215,7 @@ const Collection = () => {
 					<div>
 						<img
 							className='rounded-full md:w-[208px] md:h-[208px] object-cover w-[120px] h-[120px]'
-							src={profilePic}
+							src={profilePicture}
 							alt='User'
 						/>
 					</div>

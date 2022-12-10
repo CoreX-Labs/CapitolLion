@@ -1,8 +1,6 @@
 import React from 'react';
 // import axios from "axios";
-import LogoMusicDAO from '../Assets/Logo.png';
 import './musicDAO.css';
-import LandImg from '../pages/MusicDaoAssets/Landimage.png';
 import LogoImagery from '../Assets/imagery.png';
 import Abouts from '../Assets/about.png';
 import Footer from '../footer/Footer.jsx';
