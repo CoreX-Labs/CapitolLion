@@ -1,5 +1,5 @@
-import React from 'react';
-// import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import './musicDAO.css';
 import LogoImagery from '../Assets/imagery.png';
 import Abouts from '../Assets/about.png';
@@ -7,12 +7,20 @@ import Footer from '../footer/Footer.jsx';
 import Navbar from '../navbar/Navbar';
 import styled from 'styled-components';
 
-const MusicDAO = () => (
+const MusicDAO = () => {
+	const [data, setData] = useState([]);
+	const baseUrl = process.env.REACT_APP_TRONSCAN_APILIST
+	useEffect(() => {
+    axios.get(baseUrl)
+    .then(response => setData(response.data.trc20_tokens[0].holders_count))
+  }, [baseUrl])
+
+	return (
 	<React.Fragment>
-		<div className='allBackground bg-black'>
+		<div className='bg-black allBackground'>
 			<Navbar />
-			<div className='md:container md:mx-auto md:px-20 mt-10'>
-				<div className='p-8 mt-9 gap-20 md:grid md:grid-cols-2 '>
+			<div className='mt-10 md:container md:mx-auto md:px-20'>
+				<div className='gap-20 p-8 mt-9 md:grid md:grid-cols-2 '>
 					<div className='col-md-6 '>
 						<img className='' src={LogoImagery} alt='music dao img' />
 						<p className='tx1 mb-13'>
@@ -38,65 +46,65 @@ const MusicDAO = () => (
 				</div>
 			</div>
 
-			<div className='md:container md:mx-auto md:px-20 mt-20'>
-				<div className='p-8 mt-9 gap-20 md:grid md:grid-cols-2 '>
+			<div className='mt-20 md:container md:mx-auto md:px-20'>
+				<div className='gap-20 p-8 mt-9 md:grid md:grid-cols-2 '>
 					<div>
-						<div className='text-7xl henesis text-center'>
+						<div className='text-center text-7xl henesis'>
 							Genesis NFT <br />
 							<div className='flex items-center justify-center gap-6'>
-								<small className='o tx1 text-center font-bold'>0</small>{' '}
-								<small className='tx1 text-center'>of 1111 Minted</small>
+								<small className='font-bold text-center o tx1'>0</small>{' '}
+								<small className='text-center tx1'>of 1111 Minted</small>
 							</div>
 						</div>
 					</div>
-					<div className='p-8 mt-9 gap-20 md:grid md:grid-cols-3 text-center txs'>
+					<div className='gap-20 p-8 text-center mt-9 md:grid md:grid-cols-3 txs'>
 						<div className='mb-7'>
-							<h2 className='text-6xl mb-4'>1,111</h2>
+							<h2 className='mb-4 text-6xl'>1,111</h2>
 							<small className='purple'>Total NFTs</small>
 						</div>
 						<div>
-							<h2 className='text-6xl mb-4'>80</h2> <small className='purple'>Total Owners</small>
+							<h2 key={data} className='mb-4 text-6xl'>{data}</h2> <small className='purple'>Total Owners</small>
 						</div>
 						<div>
-							<h2 className='text-6xl mb-4'>0</h2>
+							<h2 className='mb-4 text-6xl'>0</h2>
 							<small className='purple mt-9'>Floor Price [TRX]</small>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div className='flex justify-center items-center'>
+			<div className='flex items-center justify-center'>
 				<div>
 					<div className=''>
 						<div />
-						<div className='md:pr-4 text-center'>
-							<h2 className='yellow text-4xl font-bold text-center'>How To Mint</h2>
+						<div className='text-center md:pr-4'>
+							<h2 className='text-4xl font-bold text-center yellow'>How To Mint</h2>
 						</div>
 						<div />
 						<div />
 					</div>
 
 					<div className='md:container md:grid md:grid-cols-4 py-12 md:px-40 md:gap-[120px]'>
-						<div className='md:pr-4 text-center mb-7'>
-							<h2 className='white text-4xl font-bold md:mb-7'>1</h2>
+						<div className='text-center md:pr-4 mb-7'>
+							<h2 className='text-4xl font-bold white md:mb-7'>1</h2>
 							<small className='white smalls'>
 								Confirm <br />Connected
 							</small>
 						</div>
-						<div className='md:pr-4 text-center mb-7'>
-							<h2 className='white text-4xl font-bold md:mb-7'>2</h2>
+						<div className='text-center md:pr-4 mb-7'>
+							<h2 className='text-4xl font-bold white md:mb-7'>2</h2>
 							<small className='white smalls'>
 								Click Mint <br />Now
 							</small>
 						</div>
-						<div className='md:pr-4 text-center mb-7'>
-							<h2 className='white text-4xl font-bold md:mb-7'>3</h2>
+						<div className='text-center md:pr-4 mb-7'>
+							<h2 className='text-4xl font-bold white md:mb-7'>3</h2>
 							<small className='white smalls'>
 								Confirm <br />Transaction
 							</small>
 						</div>
-						<div className='md:pr-4 text-center mb-7'>
-							<h2 className='white text-4xl font-bold md:mb-7'>4</h2>
+						<div className='text-center md:pr-4 mb-7'>
+							<h2 className='text-4xl font-bold white md:mb-7'>4</h2>
 							<small className='white smalls'>
 								Receive<br />Your NFTs
 							</small>
@@ -105,13 +113,13 @@ const MusicDAO = () => (
 				</div>
 			</div>
 
-			<div className='md:container md:grid md:grid-cols-2 py-12 md:px-40'>
+			<div className='py-12 md:container md:grid md:grid-cols-2 md:px-40'>
 				<div className='p-5 mt-[60px]'>
 					<img className='pictures' src={Abouts} alt='about' />
 				</div>
 				<div className='p-5'>
 					<div className='md:pr-4 mb-[18px]'>
-						<h2 className='yellow text-4xl font-bold '>About Us</h2>
+						<h2 className='text-4xl font-bold yellow '>About Us</h2>
 					</div>
 					<p className='white justifier txtabout'>
 						We’re seeking to create a Globalized Network on The Tron Blockchain which Main focus is to evolve
@@ -127,7 +135,7 @@ const MusicDAO = () => (
 				</div>
 			</div>
 
-			<div className='md:container md:grid md:grid-cols-5 py-12 md:px-40 white p-9'>
+			<div className='py-12 md:container md:grid md:grid-cols-5 md:px-40 white p-9'>
 				<div />
 				<div>
 					<div>
@@ -144,7 +152,7 @@ const MusicDAO = () => (
 				<div />
 			</div>
 
-			<div className='md:container md:grid md:grid-cols-5 py-12 md:px-40 white p-9'>
+			<div className='py-12 md:container md:grid md:grid-cols-5 md:px-40 white p-9'>
 				<div />
 				<div />
 				<div />
@@ -161,7 +169,7 @@ const MusicDAO = () => (
 				<div />
 			</div>
 
-			<div className='md:container md:grid md:grid-cols-5 py-12 md:px-40 white p-9'>
+			<div className='py-12 md:container md:grid md:grid-cols-5 md:px-40 white p-9'>
 				<div />
 				<div>
 					<div>
@@ -178,10 +186,10 @@ const MusicDAO = () => (
 				<div />
 			</div>
 
-			<div className='md:container md:grid md:grid-cols-4 mb-9 mt-20'>
+			<div className='mt-20 md:container md:grid md:grid-cols-4 mb-9'>
 				<div />
-				<div className='md:pr-4 text-center'>
-					<h2 className='yellow text-4xl font-bold '>ROADMAP</h2>
+				<div className='text-center md:pr-4'>
+					<h2 className='text-4xl font-bold yellow '>ROADMAP</h2>
 				</div>
 				<div />
 				<div />
@@ -194,10 +202,10 @@ const MusicDAO = () => (
 							<h2 className='text-center txheads'>Phase 01</h2>
 						</div>
 						<div className='boxbody'>
-							<h2 className='white titles text-center mt-5 titles'>
+							<h2 className='mt-5 text-center white titles'>
 								Pre Mint Launch <br />(Q2 2022)
 							</h2>
-							<p className='white text-center mt-5'>
+							<p className='mt-5 text-center white'>
 								Build Twitter Following <br />
 								Whitelist <br />
 								Contest / Giveaways <br />
@@ -212,10 +220,10 @@ const MusicDAO = () => (
 							<h2 className='text-center txheads'>Phase 22</h2>
 						</div>
 						<div className='boxbody'>
-							<h2 className='white titles text-center mt-5 titles'>
+							<h2 className='mt-5 text-center white titles'>
 								Mint <br />(Q2 2022)
 							</h2>
-							<p className='white text-center mt-5'>
+							<p className='mt-5 text-center white'>
 								Public Sales <br />
 								AMA with Corex<br />
 							</p>
@@ -228,10 +236,10 @@ const MusicDAO = () => (
 							<h2 className='text-center txheads'>Phase 03</h2>
 						</div>
 						<div className='boxbody'>
-							<h2 className='white titles text-center mt-5 titles'>
+							<h2 className='mt-5 text-center white titles'>
 								Tesm Building Phase <br /> (Q4 2022)
 							</h2>
-							<p className='white text-center mt-5'>
+							<p className='mt-5 text-center white'>
 								Team Building <br />
 								MetaVerse Networking<br />
 								Staking Capabilities <br />
@@ -246,10 +254,10 @@ const MusicDAO = () => (
 							<h2 className='text-center txheads'>Phase 04</h2>
 						</div>
 						<div className='boxbody'>
-							<h2 className='white titles text-center mt-5 titles'>
+							<h2 className='mt-5 text-center white titles'>
 								LaunchPad Ignition <br />(Q1 2023)
 							</h2>
-							<p className='white text-center mt-5'>
+							<p className='mt-5 text-center white'>
 								LaunchPad Activated<br />
 								LaunchPad Resourcea<br />
 								NFT Rewards<br />
@@ -264,11 +272,11 @@ const MusicDAO = () => (
 							<h2 className='text-center txheads'>Phase 05</h2>
 						</div>
 						<div className='boxbody'>
-							<h2 className='white titles text-center mt-5 titles'>
+							<h2 className='mt-5 text-center white titles'>
 								Marketplace <br />
 								(Q2 2023)
 							</h2>
-							<p className='white text-center mt-5'>
+							<p className='mt-5 text-center white'>
 								Buy & Sale Native NFTs<br />
 								Build Catalog of NFTs<br />
 							</p>
@@ -280,7 +288,8 @@ const MusicDAO = () => (
 			<Footer />
 		</div>
 	</React.Fragment>
-);
+	)
+};
 
 export default MusicDAO;
 
