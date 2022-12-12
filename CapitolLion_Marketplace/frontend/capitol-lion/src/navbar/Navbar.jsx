@@ -1,8 +1,9 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 import '../App.css';
 import { motion } from 'framer-motion';
 import { Link, NavLink } from 'react-router-dom';
 import { atom, useRecoilState  } from 'recoil';
+import { Context } from '../Context';
 export const userAddress = createContext();
 
 const addressAtom = atom({
@@ -13,6 +14,8 @@ const addressAtom = atom({
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
 	const [walletAddress, setWalletAddress] = useRecoilState(addressAtom);
+	const { address, setAddress } = useContext(Context);
+	console.log(address)
 
 	//not in use
   const [errorMessage, setErrorMessage] = useState(null);
@@ -40,11 +43,15 @@ const Navbar = () => {
     }
   }
    //this get the default address and truncates it
-  const SetTruncAddress = () => {
-		setWalletAddress({
+  const SetTruncAddress = async () => {
+		await setWalletAddress({
 			address: (window.tronWeb.defaultAddress.base58).substr(0,5) + "....." + (window.tronWeb.defaultAddress.base58).substr((window.tronWeb.defaultAddress.base58).length - 5
 		)
 		});
+		await setAddress({
+			address: (window.tronWeb.defaultAddress.base58).substr(0,5) + "....." + (window.tronWeb.defaultAddress.base58).substr((window.tronWeb.defaultAddress.base58).length - 5
+		)
+		})
   }
    //this is called when the default account changes so as to update the address and the balance to that
    //of the current address
