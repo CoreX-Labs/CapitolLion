@@ -7,6 +7,8 @@ import Footer from '../footer/Footer';
 import { WalletAddress } from '../App';
 import { atom, useRecoilState  } from 'recoil';
 import { recoilPersist } from 'recoil-persist';
+import { addressAtom } from '../atoms';
+import { getRecoil } from 'recoil-nexus'
 
 const { persistAtom } = recoilPersist()
 
@@ -177,17 +179,17 @@ const notify = () =>
 const Collection = () => {
 	const [profilePicture, setProfilePicture] = useRecoilState(profilePictureAtom);
 	const [bannerPicture, setBannerPicture] = useRecoilState(bannerPictureAtom);
-
+      const address = getRecoil(addressAtom)
 	const handleProfilePicChange = (e) => {
 		setProfilePicture(URL.createObjectURL(e.target.files[0]));
 	};
-
+ 
 	const handleBannerChange = (e) => {
 		setBannerPicture(URL.createObjectURL(e.target.files[0]));
 	};
 
 	const handleCopyEvent = async () => {
-		await navigator.clipboard.writeText('TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ');
+		await navigator.clipboard.writeText();
 		await notify();
 	};
 
@@ -239,11 +241,13 @@ const Collection = () => {
 					</h1>
 				</div>
 				<h1 className='orbitron-light font-[400] text-[16px] leading-[31px] text-center'>
-					<WalletAddress.Consumer>
+					{/* <WalletAddress.Consumer>
 						{(address) => {
 							return <p className='truncate__collection'>{address}</p>;
 						}}
-					</WalletAddress.Consumer>
+					</WalletAddress.Consumer> */}
+					{address.address} 
+				 
 				</h1>
 				<div className='flex justify-center mt-[10px] gap-[10px]'>
 					<CopyButton>

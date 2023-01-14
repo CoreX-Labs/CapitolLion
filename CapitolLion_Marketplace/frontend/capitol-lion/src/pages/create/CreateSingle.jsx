@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getRecoil } from 'recoil-nexus'
 import styled from 'styled-components';
 import { useForm } from 'react-hook-form';
 import * as yup from "yup";
@@ -6,6 +7,17 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom';
+import { addressAtom } from '../../atoms';
+window.Buffer = window.Buffer || require("buffer").Buffer;
+
+const TronWeb = require('tronweb')
+
+//this should be stored in .env file if 
+const tronWeb = new TronWeb({
+    fullHost: 'https://nile.trongrid.io',
+    headers: { "TRON-PRO-API-KEY": "ed608383-db9a-45df-9ec3-f29039761861"},
+    privateKey: 'c0dbe88da9ae08a7aafcb3ed2fb5e47c6c98ab2494490ab370c13b33218be12f'
+})
 
 const notify = () => toast('Successfully created NFT.', {
   duration: 5000,
@@ -36,9 +48,31 @@ const notify = () => toast('Successfully created NFT.', {
 });
 
 const CreateSingle = () => {
-  const [details, setDetails] = useState(null);
 
+
+  const [details, setDetails] = useState(null);
+  const address = getRecoil(addressAtom)
+
+
+console.log(window.tronlink);
+console.log("..........");
+console.log(TronWeb);
+console.log(".......");
+console.log(tronWeb);
+console.log("......");
+console.log(window.tronWeb);
+  
   const navigate = useNavigate();
+  
+//    const f=async()=>{
+// var instance = await tronWeb.contract().at("TGFT2a97b1MKahZQDkRBVr1EzRB5DDdnat")
+//    let res = await instance.serialMint(address).send({
+//     feeLimit:100_000_000,
+//     shouldPollResponse:true
+//    })
+//    return res
+// }
+// f().then(res => console.log(res));
 
   const schema = yup.object().shape({
     metadata: yup.mixed().required("Please provide a file"),
@@ -52,7 +86,18 @@ const CreateSingle = () => {
   const { register, handleSubmit, formState: {errors} } = useForm({
     resolver: yupResolver(schema)
   });
+  const f = async () => {
+    try {
+      const instance = await  tronWeb.contract().at("TGFT2a97b1MKahZQDkRBVr1EzRB5DDdnat")
+        await  instance.serialMint(address.address).send({
+       feeLimit:100_000_000,
+      shouldPollResponse:true
+   })
 
+    } catch (error) {
+      console.log(error)
+    }
+}
   const onFormSubmit = async (data) => {
     console.log(data);
     const details = setDetails(data);
@@ -151,7 +196,9 @@ const CreateSingle = () => {
                   />
                   <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.age?.message}</p>
                   <div className='pt-[52px]'>
-                    <motion.button whileTap={{ scale: -0.8 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+                    <motion.button
+                    onClick={() => f()}
+                     whileTap={{ scale: -0.8 }}  className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
                       Create Item
                     </motion.button>
                   </div>

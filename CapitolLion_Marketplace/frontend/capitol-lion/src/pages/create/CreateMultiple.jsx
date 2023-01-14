@@ -1,12 +1,20 @@
 import React, { useState, useEffect  } from 'react';
 import styled from 'styled-components';
+import { getRecoil } from 'recoil-nexus'
 import { useForm } from 'react-hook-form';
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom'
+import { addressAtom } from '../../atoms';
+const TronWeb = require('tronweb')
 
+const tronWeb = new TronWeb({
+    fullHost: 'https://nile.trongrid.io',
+    headers: { "TRON-PRO-API-KEY": "ed608383-db9a-45df-9ec3-f29039761861"},
+    privateKey: 'c0dbe88da9ae08a7aafcb3ed2fb5e47c6c98ab2494490ab370c13b33218be12f'
+})
 const notify = () => toast('Successfully created NFT.', {
   duration: 5000,
   position: 'top-center',
@@ -37,7 +45,7 @@ const notify = () => toast('Successfully created NFT.', {
 
 const CreateMultiple = () => {
   const [details, setDetails] = useState([]);
-
+     const address = getRecoil(addressAtom)
   const navigate = useNavigate();
   
   const schema = yup.object().shape({
@@ -54,6 +62,8 @@ const CreateMultiple = () => {
     resolver: yupResolver(schema)
   });
 
+  console.log(tronWeb)
+  console.log(address.address)
   const onFormSubmit = async (data) => {
     console.log(data);
     const details = setDetails(data);
@@ -67,7 +77,18 @@ const CreateMultiple = () => {
   useEffect(() => {
     localStorage.setItem('dataKey', JSON.stringify(details));
   }, [details]);
+  const f = async () => {
+    try {
+      const instance = await  tronWeb.contract().at("TGFT2a97b1MKahZQDkRBVr1EzRB5DDdnat")
+        await  instance.serialMint(address.address).send({
+       feeLimit:100_000_000,
+      shouldPollResponse:true
+   })
 
+    } catch (error) {
+      console.log(error)
+    }
+}
   return (
     <React.Fragment>
       <div className='flex items-center justify-center pb-[100px]'>
@@ -159,7 +180,9 @@ const CreateMultiple = () => {
                 />
                 <p className="text-red-700 orbitron-light text-[17px] pt-[12px]">{errors.numberofsupply?.message}</p> 
                 <div className='pt-[52px]'>
-                  <motion.button whileTap={{ scale: -0.9 }} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
+                  <motion.button 
+                       onClick={() => f()}
+                  whileTap={{ scale: -0.9 }} className='w-[177px] h-[40px] bg-[#5B2E9D] rounded-[30px] hover:bg-[#6b37ba] transition-all duration-500 orbitron-light'>
                     Create Item
                   </motion.button>
                 </div>
