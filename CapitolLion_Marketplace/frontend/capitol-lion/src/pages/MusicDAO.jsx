@@ -24,9 +24,7 @@ const MusicDAO = () => {
 					<div className='col-md-6 '>
 						<img className='' src={LogoImagery} alt='music dao img' />
 						<p className='tx1 mb-13'>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-							et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						The Development of a Decentralized Multi Chain Social app Built around Music & Entertainment is the Ultimate Goal. A Self Governed environment Where Creators of all kinds can showcase their work in the form of Non Fungible Tokens. We also want to create opportunities for creators to Perform their Tokenized work in a wide variety of Metaverse Environments (Native to Capitol Lion as well as Strategic Partnered Networks).This transition will allow users to create a profile within Capitol Lion and build their Reputation through Contributions, Engagement, &/or Networking. The Activity & Credibility of Creators, Communities, & Collectibles will become easily viewable with these brand new social experiences.This will be a great opportunity to bring communities and collectibles to life.
 						</p>
 						<button className='bottonGradient'>Mint Now 1000 TRX</button>
 						<p className='tokentxt'>

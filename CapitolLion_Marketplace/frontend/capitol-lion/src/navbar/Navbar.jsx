@@ -14,6 +14,7 @@ const addressAtom = atom({
 const Navbar = () => {
 	const [ showNav, setShowNav ] = useState(false);
 	const [walletAddress, setWalletAddress] = useRecoilState(addressAtom);
+	
 	const { address, setAddress } = useContext(Context);
 	console.log(address)
 
