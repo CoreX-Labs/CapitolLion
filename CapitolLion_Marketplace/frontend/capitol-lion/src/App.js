@@ -9,7 +9,7 @@ import CreateSingle from './pages/create/CreateSingle';
 import CreateMultiple from './pages/create/CreateMultiple';
 import Nftsingles from './pages/components/Nftsingles';
 import { ContextProvider } from './Context';
-import { Context } from './Context';
+// import { Context } from './Context';
 
 //The Wallet Address insored globally in a Context
 export const WalletAddress = React.createContext();
@@ -82,7 +82,7 @@ function App() {
 	];
 	return (
 		<ContextProvider>
-			<WalletAddress.Provider value={'TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ'}>
+			<WalletAddress.Provider value={"TPvu2GA1u2PthLCNgEDUDCygxE4DK9qJwZ"}>
 				<BrowserRouter>
 					{/* <Navbar /> */}
 					<Routes>

@@ -6,7 +6,7 @@ import { atom, useRecoilState  } from 'recoil';
 import { Context } from '../Context';
 export const userAddress = createContext();
 
-const addressAtom = atom({
+export const addressAtom = atom({
   key: 'walletaddress',
   default: ({ address: "Connect Wallet"}),
 })
