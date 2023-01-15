@@ -24,7 +24,7 @@ const MusicDAO = () => {
 					<div className='col-md-6 '>
 						<img className='' src={LogoImagery} alt='music dao img' />
 						<p className='tx1 mb-13'>
-						The Development of a Decentralized Multi Chain Social app Built around Music & Entertainment is the Ultimate Goal. A Self Governed environment Where Creators of all kinds can showcase their work in the form of Non Fungible Tokens. We also want to create opportunities for creators to Perform their Tokenized work in a wide variety of Metaverse Environments (Native to Capitol Lion as well as Strategic Partnered Networks).This transition will allow users to create a profile within Capitol Lion and build their Reputation through Contributions, Engagement, &/or Networking. The Activity & Credibility of Creators, Communities, & Collectibles will become easily viewable with these brand new social experiences.This will be a great opportunity to bring communities and collectibles to life.
+						The Development of a Decentralized Multi Chain Social app Built around Music & Entertainment is the Ultimate Goal. A Self Governed environment Where Creators of all kinds can showcase their work in the form of Non Fungible Tokens. We also want to create opportunities for creators to Perform their Tokenized work in a wide variety of Metaverse Environments (Native to Capitol Lion as well as Strategic Partnered Networks). This transition will allow users to create a profile within Capitol Lion and build their Reputation through Contributions, Engagement, &/or Networking. The Activity & Credibility of Creators, Communities, & Collectibles will become easily viewable with these brand new social experiences.This will be a great opportunity to bring communities and collectibles to life.
 						</p>
 						<button className='bottonGradient'>Mint Now 1000 TRX</button>
 						<p className='tokentxt'>
@@ -64,7 +64,7 @@ const MusicDAO = () => {
 							<h2 key={data} className='mb-4 text-6xl'>{data}</h2> <small className='purple'>Total Owners</small>
 						</div>
 						<div>
-							<h2 className='mb-4 text-6xl'>0</h2>
+							<h2 className='mb-4 text-6xl'>N/A</h2>
 							<small className='purple mt-9'>Floor Price [TRX]</small>
 						</div>
 					</div>
@@ -86,7 +86,7 @@ const MusicDAO = () => {
 						<div className='text-center md:pr-4 mb-7'>
 							<h2 className='text-4xl font-bold white md:mb-7'>1</h2>
 							<small className='white smalls'>
-								Confirm <br />Connected
+								Confirm <br />Connection
 							</small>
 						</div>
 						<div className='text-center md:pr-4 mb-7'>
@@ -104,7 +104,7 @@ const MusicDAO = () => {
 						<div className='text-center md:pr-4 mb-7'>
 							<h2 className='text-4xl font-bold white md:mb-7'>4</h2>
 							<small className='white smalls'>
-								Receive<br />Your NFTs
+								Receive<br />Your Asset
 							</small>
 						</div>
 					</div>
@@ -120,7 +120,7 @@ const MusicDAO = () => {
 						<h2 className='text-4xl font-bold yellow '>About Us</h2>
 					</div>
 					<p className='white justifier txtabout'>
-						We’re seeking to create a Globalized Network on The Tron Blockchain which Main focus is to evolve
+						We’re seeking to create a Globalized Network within The Tron Blockchain which Main focus is to evolve
 						the Traditional Music Industry. The NFT standard will create situations where things become
 						successfully automated without the need of Human Interference. This Business Motto is Naturally
 						changing Traditional Operating systems of all kinds. We want to show the world that shared
@@ -128,7 +128,7 @@ const MusicDAO = () => {
 						Platform is built up into (3) Main Foundational Features which consist of a MusicDAO, MusicNFT
 						Launchpad, & Market Place better known as (MusicMarkets). Our Network will develop opportunities
 						through Products, Services, Tools & Resources that will promote productivity of the Evolution of
-						Music.
+						Music & Entertainment.
 					</p>
 				</div>
 			</div>
@@ -197,17 +197,17 @@ const MusicDAO = () => {
 				<div>
 					<div className='boxModel'>
 						<div className='boxtitle'>
-							<h2 className='text-center txheads'>Phase 01</h2>
+							<h2 className='text-center txheads'>Phase X</h2>
 						</div>
 						<div className='boxbody'>
 							<h2 className='mt-5 text-center white titles'>
-								Pre Mint Launch <br />(Q2 2022)
+								Beta Phase <br />(Q1 2023)
 							</h2>
 							<p className='mt-5 text-center white'>
-								Build Twitter Following <br />
-								Whitelist <br />
-								Contest / Giveaways <br />
-								Whiteslist Sale <br />
+								- Launchpad  <br />
+								- Asset Creation <br />
+								- Live Marketplace <br />
+								- Social <br />
 							</p>
 						</div>
 					</div>
@@ -215,15 +215,16 @@ const MusicDAO = () => {
 				<div>
 					<div className='boxModel'>
 						<div className='boxtitle'>
-							<h2 className='text-center txheads'>Phase 22</h2>
+							<h2 className='text-center txheads'>Phase XX</h2>
 						</div>
 						<div className='boxbody'>
 							<h2 className='mt-5 text-center white titles'>
-								Mint <br />(Q2 2022)
+								DAO <br />(Q2 2023)
 							</h2>
 							<p className='mt-5 text-center white'>
-								Public Sales <br />
-								AMA with Corex<br />
+								Established <br />
+								Governance <br />
+								by Genesis holders <br />
 							</p>
 						</div>
 					</div>
@@ -231,17 +232,17 @@ const MusicDAO = () => {
 				<div>
 					<div className='boxModel'>
 						<div className='boxtitle'>
-							<h2 className='text-center txheads'>Phase 03</h2>
+							<h2 className='text-center txheads'>Phase XXX</h2>
 						</div>
 						<div className='boxbody'>
 							<h2 className='mt-5 text-center white titles'>
-								Tesm Building Phase <br /> (Q4 2022)
+								Community Focus <br /> (Q3 2023)
 							</h2>
 							<p className='mt-5 text-center white'>
-								Team Building <br />
+								Social fully integrated <br />
 								MetaVerse Networking<br />
-								Staking Capabilities <br />
-								Submission Realm <br />
+								AI Language Model <br />
+								Colab Events <br />
 							</p>
 						</div>
 					</div>
@@ -249,17 +250,16 @@ const MusicDAO = () => {
 				<div>
 					<div className='boxModel'>
 						<div className='boxtitle'>
-							<h2 className='text-center txheads'>Phase 04</h2>
+							<h2 className='text-center txheads'>Phase C</h2>
 						</div>
 						<div className='boxbody'>
 							<h2 className='mt-5 text-center white titles'>
-								LaunchPad Ignition <br />(Q1 2023)
+								Network Ignition <br />(Q4 2023)
 							</h2>
 							<p className='mt-5 text-center white'>
-								LaunchPad Activated<br />
-								LaunchPad Resourcea<br />
-								NFT Rewards<br />
-								Genesis Revenue<br />
+								Content Creation <br />
+								Merged with <br />
+								Social & AI <br />
 							</p>
 						</div>
 					</div>
@@ -267,16 +267,16 @@ const MusicDAO = () => {
 				<div>
 					<div className='boxModel'>
 						<div className='boxtitle'>
-							<h2 className='text-center txheads'>Phase 05</h2>
+							<h2 className='text-center txheads'>Phase CL</h2>
 						</div>
 						<div className='boxbody'>
 							<h2 className='mt-5 text-center white titles'>
-								Marketplace <br />
-								(Q2 2023)
+								Establishment <br />
+								(Q1 2024)
 							</h2>
 							<p className='mt-5 text-center white'>
-								Buy & Sale Native NFTs<br />
-								Build Catalog of NFTs<br />
+								Streaming Activated <br />
+								Quality Entertainment <br />
 							</p>
 						</div>
 					</div>

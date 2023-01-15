@@ -86,11 +86,11 @@ export const Launchpad = () => {
 			</div>
 			<Sub>
 				<div>
-					<p className='orbitron-light font-[400] text-[14px] leading-[26px] pb-[25px] capitalize'>Tron</p>
+					<p className='orbitron-light font-[400] text-[14px] leading-[26px] pb-[25px] capitalize'>OneM1nd</p>
 				</div>
 				<div>
 					<h2 className='orbitron-light font-[700] text-[32px] leading-[48px] pb-[25px] capitalize'>
-						Tron soundup
+						Tronics Anthem
 					</h2>
 				</div>
 				<div className='pb-[12px]'>
@@ -164,7 +164,7 @@ export const Timer = () => {
 	let interval = useRef();
 
 	const startTimer = () => {
-		const countdownDate = new Date('December 16 2022 00:00:00').getTime();
+		const countdownDate = new Date('January 31 2023 06:00:00').getTime();
 
 		interval = setInterval(() => {
 			const now = new Date().getTime();

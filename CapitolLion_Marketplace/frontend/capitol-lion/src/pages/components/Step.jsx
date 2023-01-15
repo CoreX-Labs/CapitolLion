@@ -43,7 +43,7 @@ const Step = () => {
                   <Card
                     icon='/heart.png'
                     title='Collect NFT'
-                    detail='Build your collection with the Music Platform.'
+                    detail='Build your collection within the Platform.'
                   />
                   </div>
             </div>

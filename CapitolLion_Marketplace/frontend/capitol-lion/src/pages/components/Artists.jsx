@@ -7,55 +7,55 @@ const Artists = () => {
       id: 1,
       artistpicture: "/image.png",
       artistname: "Shaun P.",
-      worth: "3.2 ETH"
+      worth: "900 TRX"
     },
     {
       id: 2,
       artistpicture: "/image.png",
       artistname: "Carlos M.",
-      worth: "3.2 ETH"
+      worth: "800 TRX"
     },
     {
       id: 3,
       artistpicture: "/image.png",
       artistname: "Sarah M.",
-      worth: "3.2 ETH"
+      worth: "789 TRX"
     },
     {
       id: 4,
       artistpicture: "/image.png",
       artistname: "Chandler S.",
-      worth: "3.2 ETH"
+      worth: "750 TRX"
     },
     {
       id: 5,
       artistpicture: "/image.png",
       artistname: "Anne K.",
-      worth: "3.2 ETH"
+      worth: "725 TRX"
     },
     {
       id: 6,
       artistpicture: "/image.png",
       artistname: "Connor M.",
-      worth: "3.2 ETH"
+      worth: "625 TRX"
     },
     {
       id: 7,
       artistpicture: "/image.png",
       artistname: "Pedro O.",
-      worth: "3.2 ETH"
+      worth: "619 TRX"
     },
     {
       id: 8,
       artistpicture: "/image.png",
       artistname: "Elon M.",
-      worth: "3.2 ETH"
+      worth: "612 TRX"
     },
     {
       id: 9,
       artistpicture: "/image.png",
       artistname: "Deark G.",
-      worth: "3.2 ETH"
+      worth: "605 TRX"
     },
   ]
   return (

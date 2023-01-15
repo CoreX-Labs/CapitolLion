@@ -11,7 +11,7 @@ const Hero = () => {
           </p>
           <h1 className='orbitron-header font-[700] text-[28px] md:text-[50px] leading-[35px] md:leading-[63px] tracking-wide pb-[30px]'>
             Create, Trade and
-            <br /> collect digital assets.
+            <br /> Collect Digital Assets.
           </h1>
           <p className='orbitron-light font-[700] text-[12px] md:text-[18px] leading-[23px] text-[#a2a2a2] pb-[30px]'>
             Capitol Lion is a Self Governed NFT Platform
