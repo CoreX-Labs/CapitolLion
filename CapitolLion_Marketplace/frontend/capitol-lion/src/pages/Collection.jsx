@@ -192,170 +192,220 @@ const Collection = () => {
 	};
 
 	return (
-		<React.Fragment>
-			<div className='bg-[#121212] h-auto text-white'>
-				<Toaster />
-				<Navbar />
-				<div className=''>
-					<img
-						className='h-[200px] md:h-[404px] w-[100vw] object-cover object-top'
-						src={bannerPicture}
-						alt='Banner'
-					/>
-				</div>
-				<div className='flex justify-end items-center -mt-[38px] cursor-pointer absolute right-[10px]'>
-					<form>
-						<input type='file' name='picture' id='file-input' onChange={handleBannerChange} />
-						<label className='cursor-pointer' htmlFor='file-input'>
-							<img className='' src='/camera.png' alt='camera' />
-						</label>
-					</form>
-				</div>
-				<div className='flex justify-center items-center -mt-[60px] md:-mt-[90px]'>
-					<div>
-						<img
-							className='rounded-full md:w-[208px] md:h-[208px] object-cover w-[120px] h-[120px]'
-							src={profilePicture}
-							alt='User'
-						/>
-					</div>
-				</div>
-				<div className=''>
-					{/* <form>
+    <React.Fragment>
+      <div className="bg-[#121212] h-auto text-white">
+        <Toaster />
+        <Navbar />
+        <div className="">
+          <img
+            className="h-[200px] md:h-[404px] w-[100vw] object-cover object-top"
+            src={bannerPicture}
+            alt="Banner"
+          />
+        </div>
+        <div className="flex justify-end items-center -mt-[38px] cursor-pointer absolute right-[10px]">
+          <form>
+            <input
+              type="file"
+              name="picture"
+              id="file-input"
+              onChange={handleBannerChange}
+            />
+            <label className="cursor-pointer" htmlFor="file-input">
+              <img className="" src="/camera.png" alt="camera" />
+            </label>
+          </form>
+        </div>
+        <div className="flex justify-center items-center -mt-[60px] md:-mt-[90px]">
+          <div>
+            <img
+              className="rounded-full md:w-[208px] md:h-[208px] object-cover w-[120px] h-[120px]"
+              src={profilePicture}
+              alt="User"
+            />
+          </div>
+        </div>
+        <div className="">
+          {/* <form>
 						<input type='file' name='picture' id='dp-input' onChange={handleProfilePicChange} />
 						<label className='cursor-pointer' htmlFor='dp-input'>
 							<img src='/dpcamera.png' alt='camera' />
 						</label>
 					</form> */}
-				</div>
-				{/*  */}
-				<div className='flex justify-center mt-[30px]'>
-					<h1 className='orbitron-light font-[500] text-[24px] leading-[31px] text-center inline-flex items-center gap-[10px]'>
-						User45948{' '}
-						<span className='flex w-3 h-3'>
-							<span className='animate-ping absolute inline-flex h-[13px] w-[13px] rounded-full bg-[#008000]  -mt-[1px]' />
-							<span className='relative inline-flex rounded-full h-3 w-3 bg-[#008000]' />
-						</span>
-					</h1>
-				</div>
-				<h1 className='orbitron-light font-[400] text-[16px] leading-[31px] text-center'>
-					<WalletAddress.Consumer>
+        </div>
+        {/*  */}
+        <div className="flex justify-center mt-[30px]">
+          <h1 className="orbitron-light font-[500] text-[24px] leading-[31px] text-center inline-flex items-center gap-[10px]">
+            User45948{" "}
+            <span className="flex w-3 h-3">
+              <span className="animate-ping absolute inline-flex h-[13px] w-[13px] rounded-full bg-[#008000]  -mt-[1px]" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#008000]" />
+            </span>
+          </h1>
+        </div>
+        <h1 className="orbitron-light font-[400] text-[16px] leading-[31px] text-center">
+          {/* <WalletAddress.Consumer>
 						{(address) => {
 							return <p className='truncate__collection'>{address}</p>;
 						}}
-					</WalletAddress.Consumer>
-				</h1>
-				<div className='flex justify-center mt-[10px] gap-[10px]'>
-					<CopyButton>
-						<form>
-							<input type='file' name='picture' id='dp-input' onChange={handleProfilePicChange} />
-							<label className='cursor-pointer' htmlFor='dp-input'>
-								Edit
-							</label>
-						</form>
-					</CopyButton>
-					<CopyButton onClick={handleCopyEvent}>Copy</CopyButton>
-				</div>
-				{/*  */}
-				<div className='flex gap-[0.5506rem] justify-center items-center mt-[40px] md:mt-[50px]'>
-					<select
-						id='tab-select'
-						class='sm:hidden py-3 px-4 pr-9 block w-full rounded-md text-sm'
-						aria-label='Tabs'
-						role='tablist'>
-						<option value='#hs-tab-to-select-1'>On Sale</option>
-						<option value='#hs-tab-to-select-2'>Owned</option>
-					</select>
-					{/*  */}
-					<div class='hidden sm:block border-b border-gray-200 dark:border-gray-700'>
-						<nav class='flex space-x-2' aria-label='Tabs' role='tablist' hs-data-tab-select='#tab-select'>
-							<button
-								type='button'
-								class='hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active'
-								id='hs-tab-to-select-item-1'
-								data-hs-tab='#hs-tab-to-select-1'
-								aria-controls='hs-tab-to-select-1'
-								role='tab'>
-								On Sale
-							</button>
-							<button
-								type='button'
-								class='hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active'
-								id='hs-tab-to-select-item-2'
-								data-hs-tab='#hs-tab-to-select-2'
-								aria-controls='hs-tab-to-select-2'
-								role='tab'>
-								Owned
-							</button>
-						</nav>
-					</div>
-				</div>
-				<div class='mt-3'>
-					<div id='hs-tab-to-select-1' role='tabpanel' aria-labelledby='hs-tab-to-select-item-1'>
-						<div className='flex justify-center items-center mt-[30px]'>
-							<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
-								{onsale.map((item, idx) => (
-									<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
-										<img
-											className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
-											src={item.nftimage}
-											alt='NFT pic'
-										/>
-										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[9px]'>
-											<div>
-												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
-												<div>
-													<div><p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.author}</p></div>
-													<div><p className='capitalize font-[400] text-[14px] leading-[16px] pb-[3px]'>{item.price}</p></div>
-												</div>
-												<button
-													onClick={handleClick}
-													className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>
-													on sale
-												</button>
-											</div>
-										</div>
-									</Card>
-								))}
-							</div>
-						</div>
-					</div>
-					<div
-						id='hs-tab-to-select-2'
-						class='hidden'
-						role='tabpanel'
-						aria-labelledby='hs-tab-to-select-item-2'>
-						<div className='flex justify-center items-center mt-[30px]'>
-							<div className='lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3'>
-								{owned.map((item, idx) => (
-									<Card key={idx} className='w-[347px] h-[428px] bg-[#121212] cursor-pointer'>
-										<img
-											className='object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100'
-											src={item.nftimage}
-											alt='NFT pic'
-										/>
-										<div className='px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[9px]'>
-											<div>
-												<h3 className='font-[700] text-[18px] leading-[21px] pb-[6px] capitalize'>{item.title}</h3>
-												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[6px]'>{item.author}</p>
-												<p className='capitalize font-[400] text-[14px] leading-[16px] pb-[3px]'>{item.price}</p>
-												<button
-													onClick={handleClick}
-													className='capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all'>
-													list for sale
-												</button>
-											</div>
-										</div>
-									</Card>
-								))}
-							</div>
-						</div>
-					</div>
-				</div>
-				<Footer />
-			</div>
-		</React.Fragment>
-	);
+					</WalletAddress.Consumer> */}
+
+          {window.tronWeb.defaultAddress.base58}
+          {/* or use {address.address} */}
+        </h1>
+        <div className="flex justify-center mt-[10px] gap-[10px]">
+          <CopyButton>
+            <form>
+              <input
+                type="file"
+                name="picture"
+                id="dp-input"
+                onChange={handleProfilePicChange}
+              />
+              <label className="cursor-pointer" htmlFor="dp-input">
+                Edit
+              </label>
+            </form>
+          </CopyButton>
+          <CopyButton onClick={handleCopyEvent}>Copy</CopyButton>
+        </div>
+        {/*  */}
+        <div className="flex gap-[0.5506rem] justify-center items-center mt-[40px] md:mt-[50px]">
+          <select
+            id="tab-select"
+            class="sm:hidden py-3 px-4 pr-9 block w-full rounded-md text-sm"
+            aria-label="Tabs"
+            role="tablist"
+          >
+            <option value="#hs-tab-to-select-1">On Sale</option>
+            <option value="#hs-tab-to-select-2">Owned</option>
+          </select>
+          {/*  */}
+          <div class="hidden sm:block border-b border-gray-200 dark:border-gray-700">
+            <nav
+              class="flex space-x-2"
+              aria-label="Tabs"
+              role="tablist"
+              hs-data-tab-select="#tab-select"
+            >
+              <button
+                type="button"
+                class="hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active"
+                id="hs-tab-to-select-item-1"
+                data-hs-tab="#hs-tab-to-select-1"
+                aria-controls="hs-tab-to-select-1"
+                role="tab"
+              >
+                On Sale
+              </button>
+              <button
+                type="button"
+                class="hs-tab-active:bg-[#5b2e9d] hs-tab-active:border-b-transparent hs-tab-active:text-white -mb-px py-3 px-4 inline-flex items-center gap-2 bg-white text-sm font-medium text-center text-[#5b2e9d] orbitron-light tracking-wider rounded-t-lg active"
+                id="hs-tab-to-select-item-2"
+                data-hs-tab="#hs-tab-to-select-2"
+                aria-controls="hs-tab-to-select-2"
+                role="tab"
+              >
+                Owned
+              </button>
+            </nav>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div
+            id="hs-tab-to-select-1"
+            role="tabpanel"
+            aria-labelledby="hs-tab-to-select-item-1"
+          >
+            <div className="flex justify-center items-center mt-[30px]">
+              <div className="lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3">
+                {onsale.map((item, idx) => (
+                  <Card
+                    key={idx}
+                    className="w-[347px] h-[428px] bg-[#121212] cursor-pointer"
+                  >
+                    <img
+                      className="object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100"
+                      src={item.nftimage}
+                      alt="NFT pic"
+                    />
+                    <div className="px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[9px]">
+                      <div>
+                        <h3 className="font-[700] text-[18px] leading-[21px] pb-[6px] capitalize">
+                          {item.title}
+                        </h3>
+                        <div>
+                          <div>
+                            <p className="capitalize font-[400] text-[14px] leading-[16px] pb-[6px]">
+                              {item.author}
+                            </p>
+                          </div>
+                          <div>
+                            <p className="capitalize font-[400] text-[14px] leading-[16px] pb-[3px]">
+                              {item.price}
+                            </p>
+                          </div>
+                        </div>
+                        <button
+                          onClick={handleClick}
+                          className="capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all"
+                        >
+                          on sale
+                        </button>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div
+            id="hs-tab-to-select-2"
+            class="hidden"
+            role="tabpanel"
+            aria-labelledby="hs-tab-to-select-item-2"
+          >
+            <div className="flex justify-center items-center mt-[30px]">
+              <div className="lg:grid lg:gap-[54px] md:grid md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 lg:grid-rows-3">
+                {owned.map((item, idx) => (
+                  <Card
+                    key={idx}
+                    className="w-[347px] h-[428px] bg-[#121212] cursor-pointer"
+                  >
+                    <img
+                      className="object-cover transition-all duration-300 lg:opacity-50 lg:hover:opacity-100"
+                      src={item.nftimage}
+                      alt="NFT pic"
+                    />
+                    <div className="px-[1.4375rem] flex align-center gap-[44px] orbitron-light pt-[9px]">
+                      <div>
+                        <h3 className="font-[700] text-[18px] leading-[21px] pb-[6px] capitalize">
+                          {item.title}
+                        </h3>
+                        <p className="capitalize font-[400] text-[14px] leading-[16px] pb-[6px]">
+                          {item.author}
+                        </p>
+                        <p className="capitalize font-[400] text-[14px] leading-[16px] pb-[3px]">
+                          {item.price}
+                        </p>
+                        <button
+                          onClick={handleClick}
+                          className="capitalize font-[700] text-[20px] text-[#5B2E9D] hover:text-[#874edd] transition-all"
+                        >
+                          list for sale
+                        </button>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </React.Fragment>
+  );
 };
 
 export default Collection;
