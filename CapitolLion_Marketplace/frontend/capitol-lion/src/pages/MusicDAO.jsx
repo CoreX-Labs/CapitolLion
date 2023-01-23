@@ -10,7 +10,7 @@ const tronWeb = require("tronweb");
 
 const MusicDAO = () => {
   const [data, setData] = useState([]);
- 
+
   //this is the contract address of the smartcontract
   const contractAddress = "TTTXgjwP2Hd2DRTxo4cXdwL39bp4yysgfx";
   const baseUrl = process.env.REACT_APP_TRONSCAN_APILIST;
@@ -40,26 +40,46 @@ const MusicDAO = () => {
 
   //get user token
   ////////////////////////////////////////////////////////////////
-  const getUserToken= async()=>{
-	 try {
-     const contract = await window.tronWeb.contract().at(contractAddress);
-     const tx = await contract.getUserTokens().call();
-   } catch (err) {
-     
-       console.error(err);
-     }
-   }
-  
-   /////////////////////////////////////////////////////////////////
-   //get totalSupply
-   const totalSupply= async()=>{
-	 try {
-     const contract = await window.tronWeb.contract().at(contractAddress);
-     const tx = await contract.totalSupply().call();
-   } catch (err) {
-     console.error(err);
-   }
-   }
+  const getUserToken = async () => {
+    try {
+      const contract = await window.tronWeb.contract().at(contractAddress);
+      const tx = await contract.getUserTokens().call();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  /////////////////////////////////////////////////////////////////
+  //get totalSupply
+  const totalSupply = async () => {
+    try {
+      const contract = await window.tronWeb.contract().at(contractAddress);
+      const tx = await contract.totalSupply().call();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  ///get number of token holders
+// async function getUser() {
+//   try {
+//     const response = await axios.get("/user?ID=12345");
+//     console.log(response);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+  const getTokenHolders = async () => {
+    
+    try {
+      const response= await axios.get(`https://apilist.tronscan.org/api/token_trc20?contract=TTTXgjwP2Hd2DRTxo4cXdwL39bp4yysgfx`)
+      console.log(response.data.trc20_tokens[0].holders_count);
+    } catch (error) {
+      console.error(error)
+    }
+
+  }
+
   return (
     <React.Fragment>
       <div className="bg-black allBackground">
